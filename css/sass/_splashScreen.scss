@@ -1,0 +1,44 @@
+.splashScreen {
+    height: 100%;
+    background: $blue;
+
+    &__title {
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__flowers {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        img {
+            position: absolute;
+            transition: 1s;
+        }
+
+        img:nth-child(1) {
+            top: 0;
+            left: 50px;
+        }
+
+        img:nth-child(2) {
+            bottom: -10px;
+            right: 50px;
+        }
+    }
+}
+
+.leave .splashScreen__flowers {
+    img:nth-child(1) {
+        transform: translate(-50px, -250px);
+    }
+
+    img:nth-child(2) {
+        transform: translate(50px, 250px);
+    }
+}

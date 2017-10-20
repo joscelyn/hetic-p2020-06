@@ -1,4 +1,7 @@
 /*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
 # Imports
 --------------------------------------------------------------*/
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -395,3 +398,38 @@ template {
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
+html, body {
+  height: 100%; }
+
+/*--------------------------------------------------------------
+# Imports
+--------------------------------------------------------------*/
+.splashScreen {
+  height: 100%;
+  background: #1e243c; }
+  .splashScreen__title {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .splashScreen__flowers {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+    .splashScreen__flowers img {
+      position: absolute;
+      transition: 1s; }
+    .splashScreen__flowers img:nth-child(1) {
+      top: 0;
+      left: 50px; }
+    .splashScreen__flowers img:nth-child(2) {
+      bottom: -10px;
+      right: 50px; }
+
+.leave .splashScreen__flowers img:nth-child(1) {
+  transform: translate(-50px, -250px); }
+
+.leave .splashScreen__flowers img:nth-child(2) {
+  transform: translate(50px, 250px); }
