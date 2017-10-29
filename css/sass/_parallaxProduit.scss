@@ -1,0 +1,66 @@
+$grey:#c3c3c3;
+$blue: #1e243c;
+$typoSerif:"Playfair Display", serif;
+$typoSansSerif: "Lato", sans-serif;
+
+.bloc__produit {
+  height: 100%;
+  margin-top: 5%;
+
+
+    &__fond {
+      position: absolute;
+      opacity: 0.1;
+      background: #616576;
+      height: 70%;
+      width: 25%;
+
+    }
+
+    &__titre {
+    /* Délices: */
+    position: absolute;
+    left: -10%;
+    transform: rotate(-90deg);
+    font-family: PlayfairDisplay-Bold;
+    font-size: 8rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    }
+
+    &__boite img{
+    	width: 60%;
+    	margin-left: 2%;
+    }
+
+    &__texte {
+    	width: 70%;
+    	height: auto;
+    	background-color: #FFFFFF;
+    	margin: 0 auto;
+      margin-left: 60%;
+
+        &__surtitre {
+          font-size: 0.8rem;
+          text-transform: uppercase;
+          color: $grey;
+          font-family: $typoSerif;
+          padding-top: 3rem;
+        }
+
+        h4 {
+          color: $blue;
+          font-family: $typoSansSerif;
+          font-style: bold;
+          color: $blue;
+          font-size: 2rem;
+          text-transform: uppercase;
+        }
+
+        p {
+          font-family: $typoSansSerif;
+          font-weight: lighter;
+          font-size: 1rem;
+        }
+    }
+}

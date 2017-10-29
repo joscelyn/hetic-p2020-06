@@ -4,6 +4,7 @@
   "description": "Projet de front-end G6 P2020",
   "author": "Joscelyn Gainié - Loic Aaron Tuil - Clarisse Garcia - Lola Calmejane - Maud Frichement - Thomas Hénault",
   "devDependencies": {
+    "browserslist": "latest",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "latest",
     "gulp-cssmin": "latest",
@@ -12,7 +13,6 @@
     "gulp-rename": "latest",
     "gulp-sass": "latest",
     "gulp-webserver": "latest",
-    "imagemin-pngquant": "latest",
-    "browserslist": "latest"
+    "imagemin-pngquant": "latest"
   }
 }

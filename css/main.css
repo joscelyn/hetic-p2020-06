@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*--------------------------------------------------------------
 # Variables
 --------------------------------------------------------------*/
@@ -433,3 +434,101 @@ html, body {
 
 .leave .splashScreen__flowers img:nth-child(2) {
   transform: translate(50px, 250px); }
+
+.citation {
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20%;
+  margin-bottom: 20%;
+  height: 100%; }
+  .citation__first {
+    width: 10%;
+    height: 10%;
+    background-color: white;
+    animation-name: opacité, mouvement;
+    animation-duration: 8s, 10s;
+    animation-iteration-count: 1, infinite;
+    animation-direction: normal, alternate;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear, linear; }
+  .citation__second {
+    width: 10%;
+    height: 10%;
+    background-color: white;
+    animation-name: opacité, mouvement;
+    animation-duration: 8s, 10s;
+    animation-iteration-count: 1, infinite;
+    animation-direction: normal, alternate;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear, linear;
+    animation-delay: 0s, 2s; }
+  .citation__text {
+    font-size: 3rem;
+    width: 50%;
+    text-align: center;
+    color: #0E215D; }
+
+@keyframes opacité {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes mouvement {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(2deg); }
+  50% {
+    transform: rotate(0deg) translateY(5px); }
+  75% {
+    transform: rotate(-3deg); }
+  100% {
+    transform: rotate(0deg) translateY(-5px); } }
+
+.bloc__produit {
+  height: 100%;
+  margin-top: 5%; }
+  .bloc__produit__fond {
+    position: absolute;
+    opacity: 0.1;
+    background: #616576;
+    height: 70%;
+    width: 25%; }
+  .bloc__produit__titre {
+    /* Délices: */
+    position: absolute;
+    left: -10%;
+    transform: rotate(-90deg);
+    font-family: PlayfairDisplay-Bold;
+    font-size: 8rem;
+    text-transform: uppercase;
+    color: #FFFFFF; }
+  .bloc__produit__boite img {
+    width: 60%;
+    margin-left: 2%; }
+  .bloc__produit__texte {
+    width: 70%;
+    height: auto;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    margin-left: 60%; }
+    .bloc__produit__texte__surtitre {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: #c3c3c3;
+      font-family: "Playfair Display", serif;
+      padding-top: 3rem; }
+    .bloc__produit__texte h4 {
+      color: #1e243c;
+      font-family: "Lato", sans-serif;
+      font-style: bold;
+      color: #1e243c;
+      font-size: 2rem;
+      text-transform: uppercase; }
+    .bloc__produit__texte p {
+      font-family: "Lato", sans-serif;
+      font-weight: lighter;
+      font-size: 1rem; }
