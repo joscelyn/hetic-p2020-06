@@ -444,6 +444,10 @@ html, body {
   margin-bottom: 20%;
   height: 100%; }
   .citation__first {
+    opacity: 0; }
+  .citation__second {
+    opacity: 0; }
+  .citation__first.active {
     width: 10%;
     height: 10%;
     background-color: white;
@@ -453,7 +457,7 @@ html, body {
     animation-direction: normal, alternate;
     animation-fill-mode: forwards;
     animation-timing-function: linear, linear; }
-  .citation__second {
+  .citation__second.active {
     width: 10%;
     height: 10%;
     background-color: white;

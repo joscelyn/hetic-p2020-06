@@ -23,10 +23,18 @@
     height: 100%;
 
     &__first {
-        @include citationGuillemets();
+      opacity: 0;
     }
 
     &__second {
+      opacity: 0;
+    }
+
+    &__first.active{
+        @include citationGuillemets();
+    }
+
+    &__second.active {
         @include citationGuillemets();
         animation-delay: 0s, 2s;
     }
