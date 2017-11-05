@@ -5,6 +5,22 @@ $blue: #1e243c;
 $grey: #c3c3c3;
 $typoSerif:"Playfair Display", serif;
 $typoSansSerif: "Lato", sans-serif;
+
+$medium: 600px;
+$large: 1024px;
+
+@mixin medium {
+  @media (min-width: #{$medium}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$large}) {
+    @content;
+  }
+}
+
 /*--------------------------------------------------------------
 # Imports
 --------------------------------------------------------------*/

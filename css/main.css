@@ -428,14 +428,42 @@ html, body {
     .splashScreen__flowers img:nth-child(2) {
       transform: rotate(50deg);
       bottom: 0%; }
+      @media (min-width: 1024px) {
+        .splashScreen__flowers img:nth-child(2) {
+          left: 2%;
+          bottom: 7%; } }
     .splashScreen__flowers img:nth-child(3) {
       transform: rotate(-190deg);
       bottom: 0%;
-      right: 5%; }
+      right: 0%; }
+      @media (min-width: 1024px) {
+        .splashScreen__flowers img:nth-child(3) {
+          right: 10%;
+          bottom: 7%; } }
     .splashScreen__flowers img:nth-child(4) {
       transform: rotate(230deg);
       top: -2%;
       right: 10%; }
+  .splashScreen__scroll {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+    margin: auto;
+    position: relative;
+    bottom: 5%; }
+    .splashScreen__scroll__line {
+      width: 20px;
+      height: 1px;
+      background: #c3c3c3; }
+    .splashScreen__scroll :nth-child(2) {
+      order: 3; }
+    .splashScreen__scroll__text {
+      order: 2;
+      font-family: Lato;
+      font-size: 12px;
+      font-weight: lighter;
+      color: #F5F6F9; }
 
 .leave .splashScreen__flowers img:nth-child(1) {
   transform: translate(-50px, -250px); }
@@ -448,6 +476,9 @@ html, body {
 
 .leave .splashScreen__flowers img:nth-child(4) {
   transform: translate(-50px, -250px); }
+
+.leave .splashScreen__scroll {
+  opacity: 0; }
 
 .citation__guillemets {
   font-size: 10rem;
@@ -503,30 +534,108 @@ html, body {
   0% {
     transform: rotate(0deg); }
   25% {
-    transform: rotate(2deg); }
+    transform: rotate(3deg); }
   50% {
-    transform: rotate(0deg) translateY(2px); }
+    transform: rotate(0deg) translateY(2px) translateX(3px); }
   75% {
-    transform: rotate(-3deg); }
+    transform: rotate(-5deg); }
   100% {
-    transform: rotate(0deg) translateY(-2px); } }
+    transform: rotate(0deg) translateY(-2px) translateX(-3px); } }
 
 .bloc__produit {
-  margin-top: 5%; }
+  margin-top: 5%;
+  background-color: white;
+  /*     "Délices" en transversal sur bloc gris     */
+  /*           [de.lis]:             */ }
+  .bloc__produit__fond {
+    display: none; }
+    @media (min-width: 1024px) {
+      .bloc__produit__fond {
+        display: block;
+        position: absolute;
+        opacity: 0.1;
+        background: #616576;
+        height: 90%;
+        width: 25%;
+        margin-top: 12%; } }
+  .bloc__produit__titre {
+    display: none; }
+    @media (min-width: 1024px) {
+      .bloc__produit__titre {
+        /* Délices: */
+        display: block;
+        font-family: "Playfair Display", serif;
+        font-size: 8rem;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        opacity: 0.5;
+        position: absolute;
+        left: -10%;
+        top: 140%; }
+        .bloc__produit__titre p {
+          writing-mode: vertical-lr; } }
   .bloc__produit__boite img {
     width: 100%;
     margin-top: 20%; }
+    @media (min-width: 600px) {
+      .bloc__produit__boite img {
+        width: 60%;
+        margin-top: -15%;
+        margin-left: -3%; } }
+    @media (min-width: 1024px) {
+      .bloc__produit__boite img {
+        margin-left: -2%; } }
+  .bloc__produit__bigTitle {
+    display: none; }
+    @media (min-width: 600px) {
+      .bloc__produit__bigTitle {
+        /* [de.lis]: */
+        display: block;
+        font-family: "Playfair Display", serif;
+        font-size: 6rem;
+        text-align: right;
+        text-transform: uppercase;
+        color: #505467;
+        opacity: 0.38;
+        position: relative;
+        margin: 0;
+        margin-top: -5%;
+        margin-right: 10%; } }
+  .bloc__produit__bloctext {
+    margin-top: -10%; }
   .bloc__produit__texte {
     width: 80%;
     height: auto;
     background-color: #FFFFFF;
-    margin-top: 10%;
+    margin-top: 0%;
     margin: auto;
     text-align: center; }
+    .bloc__produit__texte .1 {
+      display: none; }
+      @media (min-width: 600px) {
+        .bloc__produit__texte .1 {
+          display: block; } }
+    @media (min-width: 600px) {
+      .bloc__produit__texte {
+        width: 40%;
+        margin-left: 50%;
+        margin-top: -7%;
+        margin-right: 15%;
+        margin-bottom: 0;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 5%;
+        position: relative;
+        top: -200px;
+        text-align: left; } }
+    @media (min-width: 1024px) {
+      .bloc__produit__texte {
+        top: -280px;
+        margin-top: -9%; } }
     .bloc__produit__texte__surtitre {
       font-size: 0.8rem;
       text-transform: uppercase;
-      font-family: PlayfairDisplay-Regular;
+      font-family: "Playfair Display", serif, serif;
       color: #767676;
       padding-top: 3rem; }
     .bloc__produit__texte__trait {
@@ -534,16 +643,29 @@ html, body {
       height: 1px;
       margin: auto;
       background: #767676; }
+      @media (min-width: 600px) {
+        .bloc__produit__texte__trait {
+          margin-left: -10%;
+          top: -20px;
+          position: relative;
+          width: 18px; } }
     .bloc__produit__texte h4 {
       font-size: 2rem;
       text-transform: uppercase;
       color: #1e243c;
       font-family: "Lato", sans-serif;
       font-weight: bold; }
-    .bloc__produit__texte p {
+      @media (min-width: 600px) {
+        .bloc__produit__texte h4 {
+          font-size: 1.5rem; } }
+    .bloc__produit__texte__content {
       font-size: 1rem;
       font-family: "Lato", sans-serif;
       font-weight: lighter;
       color: #1e243c;
       letter-spacing: 0;
       line-height: 24px; }
+      @media (min-width: 600px) {
+        .bloc__produit__texte__content {
+          font-size: 0.9rem;
+          width: 90%; } }
