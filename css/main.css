@@ -424,10 +424,18 @@ html, body {
       transition: 1s; }
     .splashScreen__flowers img:nth-child(1) {
       top: 0;
-      left: 50px; }
+      left: 2%; }
     .splashScreen__flowers img:nth-child(2) {
-      bottom: -10px;
-      right: 50px; }
+      transform: rotate(50deg);
+      bottom: 0%; }
+    .splashScreen__flowers img:nth-child(3) {
+      transform: rotate(-190deg);
+      bottom: 0%;
+      right: 5%; }
+    .splashScreen__flowers img:nth-child(4) {
+      transform: rotate(230deg);
+      top: -2%;
+      right: 10%; }
 
 .leave .splashScreen__flowers img:nth-child(1) {
   transform: translate(-50px, -250px); }
@@ -435,44 +443,55 @@ html, body {
 .leave .splashScreen__flowers img:nth-child(2) {
   transform: translate(50px, 250px); }
 
-.citation {
-  display: flex;
-  height: 100%;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 20%;
-  margin-bottom: 20%;
-  height: 100%; }
-  .citation__first {
-    opacity: 0; }
-  .citation__second {
-    opacity: 0; }
-  .citation__first.active {
-    width: 10%;
-    height: 10%;
-    background-color: white;
-    animation-name: opacité, mouvement;
-    animation-duration: 8s, 10s;
-    animation-iteration-count: 1, infinite;
-    animation-direction: normal, alternate;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear, linear; }
-  .citation__second.active {
-    width: 10%;
-    height: 10%;
-    background-color: white;
-    animation-name: opacité, mouvement;
-    animation-duration: 8s, 10s;
-    animation-iteration-count: 1, infinite;
-    animation-direction: normal, alternate;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear, linear;
-    animation-delay: 0s, 2s; }
-  .citation__text {
-    font-size: 3rem;
-    width: 50%;
-    text-align: center;
-    color: #0E215D; }
+.leave .splashScreen__flowers img:nth-child(3) {
+  transform: translate(50px, 250px); }
+
+.leave .splashScreen__flowers img:nth-child(4) {
+  transform: translate(-50px, -250px); }
+
+.citation__guillemets {
+  font-size: 10rem;
+  color: #aaaaaa; }
+  .citation__guillemets p {
+    margin: 0; }
+
+.citation__first {
+  opacity: 0;
+  margin-top: 10%;
+  margin-bottom: 0; }
+
+.citation__second {
+  opacity: 0;
+  margin-left: 80%;
+  margin-top: -25%;
+  padding: 0;
+  z-index: -1; }
+
+.citation__first.active {
+  background-color: white;
+  animation-name: opacité, mouvement;
+  animation-duration: 8s, 10s;
+  animation-iteration-count: 1, infinite;
+  animation-direction: normal, alternate;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear, linear; }
+
+.citation__second.active {
+  background-color: white;
+  animation-name: opacité, mouvement;
+  animation-duration: 8s, 10s;
+  animation-iteration-count: 1, infinite;
+  animation-direction: normal, alternate;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear, linear;
+  animation-delay: 0s, 2s; }
+
+.citation__text {
+  font-size: 2.5rem;
+  width: 70%;
+  text-align: center;
+  color: #0E215D;
+  margin: auto; }
 
 @keyframes opacité {
   0% {
@@ -486,53 +505,45 @@ html, body {
   25% {
     transform: rotate(2deg); }
   50% {
-    transform: rotate(0deg) translateY(5px); }
+    transform: rotate(0deg) translateY(2px); }
   75% {
     transform: rotate(-3deg); }
   100% {
-    transform: rotate(0deg) translateY(-5px); } }
+    transform: rotate(0deg) translateY(-2px); } }
 
 .bloc__produit {
-  height: 100%;
   margin-top: 5%; }
-  .bloc__produit__fond {
-    position: absolute;
-    opacity: 0.1;
-    background: #616576;
-    height: 70%;
-    width: 25%; }
-  .bloc__produit__titre {
-    /* Délices: */
-    position: absolute;
-    left: -10%;
-    transform: rotate(-90deg);
-    font-family: PlayfairDisplay-Bold;
-    font-size: 8rem;
-    text-transform: uppercase;
-    color: #FFFFFF; }
   .bloc__produit__boite img {
-    width: 60%;
-    margin-left: 2%; }
+    width: 100%;
+    margin-top: 20%; }
   .bloc__produit__texte {
-    width: 70%;
+    width: 80%;
     height: auto;
     background-color: #FFFFFF;
-    margin: 0 auto;
-    margin-left: 60%; }
+    margin-top: 10%;
+    margin: auto;
+    text-align: center; }
     .bloc__produit__texte__surtitre {
       font-size: 0.8rem;
       text-transform: uppercase;
-      color: #c3c3c3;
-      font-family: "Playfair Display", serif;
+      font-family: PlayfairDisplay-Regular;
+      color: #767676;
       padding-top: 3rem; }
+    .bloc__produit__texte__trait {
+      width: 23px;
+      height: 1px;
+      margin: auto;
+      background: #767676; }
     .bloc__produit__texte h4 {
+      font-size: 2rem;
+      text-transform: uppercase;
       color: #1e243c;
       font-family: "Lato", sans-serif;
-      font-style: bold;
-      color: #1e243c;
-      font-size: 2rem;
-      text-transform: uppercase; }
+      font-weight: bold; }
     .bloc__produit__texte p {
+      font-size: 1rem;
       font-family: "Lato", sans-serif;
       font-weight: lighter;
-      font-size: 1rem; }
+      color: #1e243c;
+      letter-spacing: 0;
+      line-height: 24px; }

@@ -1,66 +1,75 @@
-$grey:#c3c3c3;
 $blue: #1e243c;
+$grey: #767676;
 $typoSerif:"Playfair Display", serif;
 $typoSansSerif: "Lato", sans-serif;
 
+
 .bloc__produit {
-  height: 100%;
   margin-top: 5%;
 
 
-    &__fond {
-      position: absolute;
-      opacity: 0.1;
-      background: #616576;
-      height: 70%;
-      width: 25%;
+    // &__fond {
+    //   position: absolute;
+    //   opacity: 0.1;
+    //   background: #616576;
+    //   height: 70%;
+    //   width: 25%;
+    //
+    // }
 
-    }
-
-    &__titre {
-    /* Délices: */
-    position: absolute;
-    left: -10%;
-    transform: rotate(-90deg);
-    font-family: PlayfairDisplay-Bold;
-    font-size: 8rem;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    }
+    // &__titre {
+    // /* Délices: */
+    // position: absolute;
+    // left: -10%;
+    // transform: rotate(-90deg);
+    // font-family: PlayfairDisplay-Bold;
+    // font-size: 8rem;
+    // text-transform: uppercase;
+    // color: #FFFFFF;
+    // }
 
     &__boite img{
-    	width: 60%;
-    	margin-left: 2%;
+    	width: 100%;
+      margin-top: 20%;
     }
 
     &__texte {
-    	width: 70%;
+    	width: 80%;
     	height: auto;
     	background-color: #FFFFFF;
-    	margin: 0 auto;
-      margin-left: 60%;
+      margin-top: 10%;
+    	margin: auto;
+      text-align: center;
+
 
         &__surtitre {
           font-size: 0.8rem;
           text-transform: uppercase;
+          font-family: PlayfairDisplay-Regular;
           color: $grey;
-          font-family: $typoSerif;
           padding-top: 3rem;
         }
-
+        &__trait {
+          width: 23px;
+          height: 1px;
+          margin: auto;
+          background: #767676;
+        }
         h4 {
-          color: $blue;
-          font-family: $typoSansSerif;
-          font-style: bold;
-          color: $blue;
           font-size: 2rem;
           text-transform: uppercase;
+          color: $blue;
+          font-family: $typoSansSerif;
+          font-weight: bold;
         }
 
         p {
+          font-size: 1rem;
           font-family: $typoSansSerif;
           font-weight: lighter;
-          font-size: 1rem;
+          color: $blue;
+          letter-spacing: 0;
+          line-height: 24px;
         }
     }
 }
