@@ -1,62 +1,111 @@
-var gulp = require('gulp'),
-	plumber = require('gulp-plumber'),
-	sass = require('gulp-sass'),
-	webserver = require('gulp-webserver'),
-	autoprefixer = require('gulp-autoprefixer'),
-	cssmin = require('gulp-cssmin'),
-    imagemin = require('gulp-imagemin'),
-    imageminPngquant = require('imagemin-pngquant'),
-    rename = require("gulp-rename");
+var del = require('del');
+var gulp = require('gulp');
+var imagemin = require('gulp-imagemin');
+var gulpif = require('gulp-if');
+var minifyCSS = require('gulp-csso');
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
+var sync = require('browser-sync').create();
+var uglify = require('gulp-uglify');
+var clone = require('gulp-clone');
+var babel = require('gulp-babel');
+var concat = require('gulp-concat');
 
+var isProd = process.env.NODE_ENV === 'production';
 
+/**
+ * PUG
+ */
 
-gulp.task('cssCompile', function () {
-	gulp.src('./css/**/*.scss')
-		.pipe(plumber())
-		.pipe(sass())
-		// A cause d'un bug lié au src, on utilise gulp-rename pour clear le path
-		.pipe(rename(function (path) {
-			path.dirname = "/css";
-		}))
-		.pipe(gulp.dest('./'));
-});
+function html() {
+    return gulp.src('src/**/*.html')
+        .pipe(clone())
+        .pipe(gulp.dest('dist/'))
+        .pipe(sync.stream());
+}
 
-gulp.task('webserver', function() {
-	gulp.src('./')
-		.pipe(webserver({
-			host: 'localhost',
-			port: '1111',
-			livereload: true,
-			directoryListing: false,
-			open: true
-		}));
-});
+/**
+ * SCSS
+ */
 
-gulp.task('watch', function(){
-	gulp.watch('./css/**/*.scss', ['cssCompile']);
-});
+function scss() {
+    return gulp.src('src/scss/main.scss')
+        .pipe(gulpif(!isProd, sourcemaps.init()))
+        .pipe(sass())
+        .pipe(gulpif(isProd, minifyCSS()))
+        .pipe(gulpif(!isProd, sourcemaps.write('.')))
+        .pipe(gulp.dest('dist/css'))
+        .pipe(sync.stream());
+}
 
+/**
+ * JS
+ */
 
-
-gulp.task('default', ['cssCompile', 'webserver', 'watch']);
-
-
-
-
-gulp.task('cssMin', function () {
-	gulp.src('./css/**/*.scss')
-		.pipe(plumber())
-		.pipe(sass())
-        .pipe(autoprefixer({
-            browsers: ['> 0.01% in FR'], // a voir selon le poid du fichier
-            remove: false,
-            grid: true // peut etre a modifier ?
+function js() {
+    return gulp.src(['src/js/main.js', 'src/js/splashScreen.js', 'src/js/guillemets.js'])
+        .pipe(concat('main.js'))
+        .pipe(babel({
+            presets: ['es2015']
         }))
-		.pipe(cssmin())
-		.pipe(rename(function (path) {
-			path.dirname = "/css";
-		}))
-		.pipe(gulp.dest('./'));
-});
+        .pipe(gulpif(!isProd, sourcemaps.init({loadMaps: true})))
+        .pipe(uglify())
+        .pipe(gulpif(!isProd, sourcemaps.write('.')))
+        .pipe(gulp.dest('dist/js'))
+        .pipe(sync.stream());
+};
 
+/**
+ * vendorsJS
+ */
 
+function vendorsJS() {
+    return gulp.src('src/js/vendors/**/*.js')
+        .pipe(concat('vendors.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js'))
+        .pipe(sync.stream());
+};
+
+/**
+ * IMAGES
+ */
+
+function images() {
+    return gulp.src('src/img/**/*')
+        .pipe(gulpif(isProd, imagemin({verbose: true})))
+        .pipe(gulp.dest('dist/img'));
+}
+
+/**
+ * FONTS
+ */
+
+function fonts() {
+    return gulp.src('src/fonts/**/*')
+        .pipe(gulp.dest('dist/fonts'));
+}
+
+/**
+ * GLOBAL
+ */
+
+function clean() {
+    return del(['dist']);
+}
+
+gulp.task('build', gulp.series(clean, gulp.parallel(html, scss, js, vendorsJS, images, fonts)));
+
+gulp.task('default', gulp.parallel(html, scss, js, vendorsJS, images, fonts, function(done) {
+    sync.init({
+        server: {
+            baseDir: './dist'
+        }
+    });
+
+    gulp.watch('src/**/*.html', html);
+    gulp.watch('src/**/*.scss', scss);
+    gulp.watch('src/**/*.js', js);
+
+    done();
+}));

@@ -1,0 +1,186 @@
+$blue: #1e243c;
+$grey: #767676;
+$typoSerif:"Playfair Display", serif;
+$typoSansSerif: "Lato", sans-serif;
+
+
+
+.bloc__produit {
+  margin-top: 5%;
+  background-color: rgb(255, 255, 255);
+
+
+    &__fond { // FOND QUI APPARAIT EN DESKTOP
+      display: none;
+
+      @include large {
+        display: block;
+        position: absolute;
+        opacity: 0.1;
+        background: #616576;
+        height: 90%;
+        width: 25%;
+        margin-top: 12%;
+      }
+
+    }
+
+        /*     "Délices" en transversal sur bloc gris     */
+    &__titre {
+
+      display: none;
+      @include large { // plus de 1018px
+        /* Délices: */
+        display: block;
+        font-family: $typoSerif;
+        font-size: 8rem;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        opacity: 0.5;
+        position: absolute;
+        left: -10%;
+        top: 140%;;
+
+        p {
+          writing-mode: vertical-lr;
+        }
+      };
+    }
+
+    &__boite img {
+    	width: 100%;
+      margin-top: 20%;
+
+      @include medium { //boite quand plus de 800 px
+        width: 60%;
+        margin-top: -15%;
+        margin-left: -3%
+      };
+
+      @include large{ // plus de 1018px
+        margin-left: -2%;
+      };
+    }
+
+
+  /*           [de.lis]:             */
+    &__bigTitle {
+      display: none;
+
+      @include medium{
+        /* [de.lis]: */
+      display: block;
+      font-family: $typoSerif;
+      font-size: 6rem;
+      text-align: right;
+      text-transform: uppercase;
+      color: #505467;
+      opacity: 0.38;
+      position: relative;
+      margin: 0;
+      margin-top: -5%;
+      margin-right: 10%;
+      }
+
+    }
+
+    &__bloctext {
+      margin-top: -10%;
+    }
+
+    &__texte {
+      // VERSION MOBILE
+    	width: 80%;
+    	height: auto;
+    	background-color: #FFFFFF;
+      margin-top: 0%;
+    	margin: auto;
+      text-align: center;
+
+        .1 {
+          display: none;
+
+          @include medium {
+            display: block;
+          };
+        }
+
+        @include medium { // partie texts a plus de 800 px
+          width: 40%;
+          margin-left: 50%;
+          margin-top: -7%;
+          margin-right: 15%;
+          margin-bottom: 0;
+          padding-left: 10%;
+          padding-right: 10%;
+          padding-bottom: 5%;
+          position: relative;
+          top: -200px;
+          text-align: left;
+
+        };
+
+        @include large {
+          top: -280px;
+          margin-top: -9%;
+
+        };
+
+
+        &__surtitre { // mobile
+          font-size: 0.8rem;
+          text-transform: uppercase;
+          font-family: $typoSerif, serif;
+          color: $grey;
+          padding-top: 3rem;
+
+          @include medium { //plus de 800 px
+
+          };
+
+        }
+
+        &__trait {
+          width: 23px;
+          height: 1px;
+          margin: auto;
+          background: #767676;
+
+          @include medium { //plus de 800 px
+          margin-left: -10%;
+          top: -20px;
+          position: relative;
+          width: 18px;
+          };
+        }
+
+
+        h4 { //mobile
+          font-size: 2rem;
+          text-transform: uppercase;
+          color: $blue;
+          font-family: $typoSansSerif;
+          font-weight: bold;
+
+          @include medium { //plus de 800 px
+              font-size: 1.5rem;
+
+          };
+        }
+
+        &__content { // mobile
+          font-size: 1rem;
+          font-family: $typoSansSerif;
+          font-weight: lighter;
+          color: $blue;
+          letter-spacing: 0;
+          line-height: 24px;
+
+          @include medium { //plus de 800px
+              font-size: 0.9rem;
+              width: 90%;
+
+          };
+        }
+    }
+}

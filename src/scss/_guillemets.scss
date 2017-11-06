@@ -1,0 +1,71 @@
+@mixin citationGuillemets(){
+
+      background-color: white;
+      animation-name: opacité, mouvement;
+      animation-duration: 8s, 10s;
+      animation-iteration-count: 1, infinite;
+      animation-direction: normal, alternate;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear, linear;
+}
+
+
+
+.citation {
+    //height: 50%;
+    //margin-top: 20%;
+    //margin-bottom: 20%;
+
+    &__guillemets {
+      font-size: 10rem;
+      color: rgb(170, 170, 170);
+
+      p {
+        margin: 0;
+      }
+
+    }
+    &__first {
+      opacity: 0;
+      margin-top: 10%;
+      margin-bottom: 0;
+    }
+
+    &__second {
+      opacity: 0;
+      margin-left: 80%;
+      margin-top: -25%;
+      padding: 0;
+      z-index: -1;
+    }
+
+    &__first.active{
+        @include citationGuillemets();
+    }
+
+    &__second.active {
+        @include citationGuillemets();
+        animation-delay: 0s, 2s;
+    }
+
+    &__text {
+        font-size: 2.5rem;
+        width: 70%;
+        text-align: center;
+        color:  #0E215D;
+        margin: auto;
+
+    }
+}
+
+@keyframes opacité {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes mouvement {
+    0% {transform:rotate(0deg);}
+    25% {transform:rotate(3deg);}
+    50% {transform:rotate(0deg) translateY(2px) translateX(3px);}
+    75% {transform:rotate(-5deg);}
+    100% {transform:rotate(0deg) translateY(-2px) translateX(-3px);}
+}
