@@ -1,16 +1,9 @@
-$blue: #1e243c;
-$grey: #767676;
-$typoSerif:"Playfair Display", serif;
-$typoSansSerif: "Lato", sans-serif;
-
-
-
-.bloc__produit {
+.bloc__product {
   margin-top: 5%;
   background-color: rgb(255, 255, 255);
 
 
-    &__fond { // FOND QUI APPARAIT EN DESKTOP
+    &__back { // back QUI APPARAIT EN DESKTOP
       display: none;
 
       @include large {
@@ -47,11 +40,11 @@ $typoSansSerif: "Lato", sans-serif;
       };
     }
 
-    &__boite img {
+    &__box img {
     	width: 100%;
       margin-top: 20%;
 
-      @include medium { //boite quand plus de 800 px
+      @include medium { //box quand plus de 800 px
         width: 60%;
         margin-top: -15%;
         margin-left: -3%
@@ -88,7 +81,7 @@ $typoSansSerif: "Lato", sans-serif;
       margin-top: -10%;
     }
 
-    &__texte {
+    &__text {
       // VERSION MOBILE
     	width: 80%;
     	height: auto;

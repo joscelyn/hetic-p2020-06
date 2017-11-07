@@ -1,7 +1,7 @@
-@mixin citationGuillemets(){
+@mixin quotationQuote(){
 
       background-color: white;
-      animation-name: opacité, mouvement;
+      animation-name: opacity, mouvement;
       animation-duration: 8s, 10s;
       animation-iteration-count: 1, infinite;
       animation-direction: normal, alternate;
@@ -11,12 +11,12 @@
 
 
 
-.citation {
+.quotation {
     //height: 50%;
     //margin-top: 20%;
     //margin-bottom: 20%;
 
-    &__guillemets {
+    &__quote {
       font-size: 10rem;
       color: rgb(170, 170, 170);
 
@@ -40,11 +40,11 @@
     }
 
     &__first.active{
-        @include citationGuillemets();
+        @include quotationQuote();
     }
 
     &__second.active {
-        @include citationGuillemets();
+        @include quotationQuote();
         animation-delay: 0s, 2s;
     }
 
@@ -58,7 +58,7 @@
     }
 }
 
-@keyframes opacité {
+@keyframes opacity {
     0%   {opacity: 0;}
     100% {opacity: 1;}
 }
