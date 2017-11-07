@@ -1,6 +1,9 @@
+<<<<<<< HEAD:js/main.js
 var body = document.getElementsByTagName('body')[0];
 
 
+=======
+>>>>>>> cacf9d81c578dbe3687086df631fe60fa6dcc071:src/js/splashScreen.js
 // ANIMATION HEADER DIPARITION DES BRANCHES AU SCROLL
 
 var lastScrollPos = 0;

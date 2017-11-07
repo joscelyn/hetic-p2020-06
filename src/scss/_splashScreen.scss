@@ -1,0 +1,107 @@
+.splashScreen {
+    height: 100%;
+    background: $blue;
+
+    &__title {
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__flowers {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        img {
+            position: absolute;
+            transition: 1s;
+        }
+
+        img:nth-child(1) {
+            top: 0;
+            left: 2%;
+        }
+
+        img:nth-child(2) { // petite bas gauche
+          transform: rotate(50deg);
+          bottom: 0%;
+          @include large{ // plus de 1018px
+            left: 2%;
+            bottom: 7%;
+          };
+        }
+
+        img:nth-child(3) { // grande bas droite
+            transform: rotate(-190deg);
+            bottom: 0%;
+            right: 0%;
+            @include large{ // plus de 1018px
+              right: 10%;
+              bottom: 7%;
+            };
+        }
+
+        img:nth-child(4) { // petite haut droite
+            transform: rotate(230deg);
+            top:-2%;
+            right:10% ;
+        }
+    }
+
+    &__scroll {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 40%;
+      margin: auto;
+      position: relative;
+      bottom: 5%;
+
+      &__line {
+        width: 20px;
+        height: 1px;
+        background: $grey;
+      }
+
+      :nth-child(2) {
+        order: 3;
+      }
+
+      &__text {
+        order: 2;
+        font-family: Lato;
+        font-size: 12px;
+        font-weight: lighter;
+        color: #F5F6F9;
+      }
+    }
+}
+
+.leave .splashScreen__flowers {
+    img:nth-child(1) {
+        transform: translate(-50px, -250px);
+    }
+
+    img:nth-child(2) {
+        transform: translate(50px, 250px);
+    }
+
+    img:nth-child(3) {
+        transform: translate(50px, 250px);
+    }
+
+    img:nth-child(4) {
+        transform: translate(-50px, -250px);
+    }
+
+
+
+}
+
+.leave .splashScreen__scroll {
+  opacity: 0;
+}
