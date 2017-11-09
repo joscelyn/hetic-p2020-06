@@ -1,3 +1,7 @@
+var babelify = require('babelify');
+var browserify = require('browserify');
+var buffer = require('vinyl-buffer');
+var source = require('vinyl-source-stream');
 var del = require('del');
 var gulp = require('gulp');
 var imagemin = require('gulp-imagemin');
@@ -8,7 +12,6 @@ var sourcemaps = require('gulp-sourcemaps');
 var sync = require('browser-sync').create();
 var uglify = require('gulp-uglify');
 var clone = require('gulp-clone');
-var babel = require('gulp-babel');
 var concat = require('gulp-concat');
 
 var isProd = process.env.NODE_ENV === 'production';
@@ -29,7 +32,7 @@ function html() {
  */
 
 function scss() {
-    return gulp.src('src/scss/main.scss')
+    return gulp.src(['src/scss/main.scss'])
         .pipe(gulpif(!isProd, sourcemaps.init()))
         .pipe(sass())
         .pipe(gulpif(isProd, minifyCSS()))
@@ -43,11 +46,11 @@ function scss() {
  */
 
 function js() {
-    return gulp.src(['src/js/main.js', 'src/js/splashScreen.js', 'src/js/guillemets.js'])
-        .pipe(concat('main.js'))
-        .pipe(babel({
-            presets: ['es2015']
-        }))
+    return browserify({entries: ['src/js/main.js'], debug: true})
+        .transform(babelify, {presets: 'es2015'})
+        .bundle()
+        .pipe(source('main.js'))
+        .pipe(buffer())
         .pipe(gulpif(!isProd, sourcemaps.init({loadMaps: true})))
         .pipe(uglify())
         .pipe(gulpif(!isProd, sourcemaps.write('.')))
@@ -60,7 +63,7 @@ function js() {
  */
 
 function vendorsJS() {
-    return gulp.src('src/js/vendors/**/*.js')
+    return gulp.src(['node_modules/rellax/rellax.min.js'])
         .pipe(concat('vendors.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
