@@ -1,3 +1,7 @@
+var babelify = require('babelify');
+var browserify = require('browserify');
+var buffer = require('vinyl-buffer');
+var source = require('vinyl-source-stream');
 var del = require('del');
 var gulp = require('gulp');
 var imagemin = require('gulp-imagemin');
@@ -8,7 +12,6 @@ var sourcemaps = require('gulp-sourcemaps');
 var sync = require('browser-sync').create();
 var uglify = require('gulp-uglify');
 var clone = require('gulp-clone');
-var babel = require('gulp-babel');
 var concat = require('gulp-concat');
 
 var babelify = require('babelify');
@@ -35,7 +38,7 @@ function html() {
  */
 
 function scss() {
-    return gulp.src('src/scss/main.scss')
+    return gulp.src(['src/scss/main.scss'])
         .pipe(gulpif(!isProd, sourcemaps.init()))
         .pipe(sass())
         .pipe(gulpif(isProd, minifyCSS()))
@@ -66,7 +69,7 @@ function js() {
  */
 
 function vendorsJS() {
-    return gulp.src('src/js/vendors/**/*.js')
+    return gulp.src(['node_modules/rellax/rellax.min.js'])
         .pipe(concat('vendors.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))

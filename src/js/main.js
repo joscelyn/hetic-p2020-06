@@ -12,5 +12,9 @@ function isInViewport(element) {
     );
 }
 
-import './guillemets'
 import './splashScreen'
+import './guillemets'
+
+import {lory} from 'lory.js';
+
+var rellax = new Rellax('.rellax');
