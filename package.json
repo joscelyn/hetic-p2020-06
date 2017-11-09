@@ -5,7 +5,6 @@
   "author": "Joscelyn Gainié - Loic Aaron Tuil - Clarisse Garcia - Lola Calmejane - Maud Frichement - Thomas Hénault",
   "devDependencies": {
     "browserslist": "latest",
-    "gulp": "^3.9.1",
     "gulp-autoprefixer": "latest",
     "gulp-cssmin": "latest",
     "gulp-imagemin": "latest",
@@ -20,7 +19,7 @@
     "browser-sync": "^2.18.13",
     "browserify": "^14.4.0",
     "del": "^3.0.0",
-    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp": "gulpjs/gulp.git#4.0",
     "gulp-babel": "^7.0.0",
     "gulp-clone": "^1.0.0",
     "gulp-concat": "^2.6.1",
