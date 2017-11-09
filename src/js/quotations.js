@@ -4,7 +4,7 @@ let isvisible= false;
 let scrollPosActual = window.scrollY;
 let scrollPosGuillemetsFirst = document.getElementById('citation__guillemets__first');
 let scrollPosGuillemetsSecond = document.getElementById('citation__guillemets__second');
-window.addEventListener("scroll", function(){
+window.addEventListener("scroll", ()=>{
 
     if (isInViewport(scrollPosGuillemetsFirst)  && (isvisible==false)) {
         scrollPosGuillemetsFirst.classList.add('active');

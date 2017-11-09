@@ -1,8 +1,8 @@
-var body = document.getElementsByTagName('body')[0];
+let body = document.getElementsByTagName('body')[0];
 
 function isInViewport(element) {
-    var rect = element.getBoundingClientRect();
-    var html = document.documentElement;
+    const rect = element.getBoundingClientRect();
+    const html = document.documentElement;
 
     return (
         rect.top >= 0 &&

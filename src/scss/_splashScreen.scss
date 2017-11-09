@@ -19,37 +19,41 @@
         img {
             position: absolute;
             transition: 1s;
-        }
 
-        img:nth-child(1) {
-            top: 0;
-            left: 2%;
-        }
+            &:nth-child(1) { // grande haut gauche
+                top: -10%;
+                left: 2%;
+                width:15%;
+            }
 
-        img:nth-child(2) { // petite bas gauche
-          transform: rotate(50deg);
-          bottom: 0%;
-          @include large{ // plus de 1018px
-            left: 2%;
-            bottom: 7%;
-          };
-        }
+            &:nth-child(4) { // petite haut droite
+              transform: rotate(30deg);
+              transform-origin: top right;
+              top: -50px;
+              right: 50px;
+              width: 20%;
+            }
 
-        img:nth-child(3) { // grande bas droite
-            transform: rotate(-190deg);
-            bottom: 0%;
-            right: 0%;
-            @include large{ // plus de 1018px
-              right: 10%;
-              bottom: 7%;
-            };
-        }
+            &:nth-child(2) { // petite bas gauche
+              transform: rotate(50deg);
+              bottom: -50px;
+              left: -150px;
+              transform-origin: bottom;
+              width: 20%;
+              @include large { // plus de 1018px
+              }
+            }
 
-        img:nth-child(4) { // petite haut droite
-            transform: rotate(230deg);
-            top:-2%;
-            right:10% ;
-        }
+            &:nth-child(3) { // grande bas droite
+                transform: rotate(-45deg);
+                bottom: 100px;
+                right: -100px;
+                transform-origin: bottom right;
+                width: 20%;
+                @include large { // plus de 1018px
+                }
+            }
+      }
     }
 
     &__scroll {
@@ -83,19 +87,19 @@
 
 .leave .splashScreen__flowers {
     img:nth-child(1) {
-        transform: translate(-50px, -250px);
+        transform: translate(-200px, -450px);
     }
 
     img:nth-child(2) {
-        transform: translate(50px, 250px);
+        transform: translate(200px, 450px);
     }
 
     img:nth-child(3) {
-        transform: translate(50px, 250px);
+        transform: translate(200px, 450px);
     }
 
     img:nth-child(4) {
-        transform: translate(-50px, -250px);
+        transform: translate(-200px, -450px);
     }
 
 

@@ -11,15 +11,15 @@
         position: absolute;
         opacity: 0.1;
         background: #616576;
-        height: 90%;
-        width: 25%;
-        margin-top: 12%;
+        height: 83%;
+        width: 30%;
+        margin-top: 8%;
       }
 
     }
 
         /*     "Délices" en transversal sur bloc gris     */
-    &__titre {
+    &__title {
 
       display: none;
       @include large { // plus de 1018px
@@ -31,8 +31,9 @@
         color: #FFFFFF;
         opacity: 0.5;
         position: absolute;
-        left: -10%;
+        left: -7%;
         top: 140%;;
+
 
         p {
           writing-mode: vertical-lr;
@@ -88,6 +89,7 @@
     	background-color: #FFFFFF;
       margin-top: 0%;
     	margin-left: 40%;
+      padding-right: 0;
       text-align: center;
 
         .1 {
@@ -105,7 +107,7 @@
           margin-right: 15%;
           margin-bottom: 0;
           padding-left: 10%;
-          padding-right: 10%;
+          padding-right: 0%;
           padding-bottom: 5%;
           position: relative;
           top: -200px;
@@ -155,6 +157,7 @@
           font-family: $typoSansSerif;
           font-weight: bold;
           margin-top: 0;
+          margin-bottom: 0%;
 
           @include medium { //plus de 800 px
               font-size: 1.5rem;
@@ -169,6 +172,7 @@
           color: $blue;
           letter-spacing: 0;
           line-height: 24px;
+          margin-right: O;
 
           @include medium { //plus de 800px
               font-size: 0.9rem;

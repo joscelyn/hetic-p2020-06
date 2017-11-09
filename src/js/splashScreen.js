@@ -1,11 +1,11 @@
-var body = document.getElementsByTagName('body')[0];
+const body = document.getElementsByTagName('body')[0];
 
 
 // ANIMATION HEADER DIPARITION DES BRANCHES AU SCROLL
 
-var lastScrollPos = 0;
-window.addEventListener("scroll", function(){
-    var scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+let lastScrollPos = 0;
+window.addEventListener("scroll", ()=>{
+    let scrollPos = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollPos > lastScrollPos){
         body.classList.add('leave')
     } else {

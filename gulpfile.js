@@ -43,7 +43,7 @@ function scss() {
  */
 
 function js() {
-    return gulp.src(['src/js/main.js', 'src/js/splashScreen.js', 'src/js/guillemets.js'])
+    return gulp.src(['src/js/main.js', 'src/js/splashScreen.js', 'src/js/quotations.js'])
         .pipe(concat('main.js'))
         .pipe(babel({
             presets: ['es2015']
