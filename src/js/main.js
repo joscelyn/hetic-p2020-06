@@ -11,3 +11,6 @@ function isInViewport(element) {
         rect.right <= (window.innerWidth || html.clientWidth)
     );
 }
+
+import './guillemets'
+import './splashScreen'

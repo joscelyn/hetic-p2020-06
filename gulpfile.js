@@ -11,6 +11,12 @@ var clone = require('gulp-clone');
 var babel = require('gulp-babel');
 var concat = require('gulp-concat');
 
+var babelify = require('babelify');
+var browserify = require('browserify')
+var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
+
+
 var isProd = process.env.NODE_ENV === 'production';
 
 /**
@@ -43,13 +49,13 @@ function scss() {
  */
 
 function js() {
-    return gulp.src(['src/js/main.js', 'src/js/splashScreen.js', 'src/js/guillemets.js'])
-        .pipe(concat('main.js'))
-        .pipe(babel({
-            presets: ['es2015']
-        }))
+    return browserify({entries: ['src/js/main.js'], debug: true})
+        .transform(babelify, {presets: 'es2015'})
+        .bundle()
+        .pipe(source('main.js'))
+        .pipe(buffer())
         .pipe(gulpif(!isProd, sourcemaps.init({loadMaps: true})))
-        .pipe(uglify())
+       // .pipe(uglify())
         .pipe(gulpif(!isProd, sourcemaps.write('.')))
         .pipe(gulp.dest('dist/js'))
         .pipe(sync.stream());
