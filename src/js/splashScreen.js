@@ -1,3 +1,6 @@
+var body = document.getElementsByTagName('body')[0];
+
+
 // ANIMATION HEADER DIPARITION DES BRANCHES AU SCROLL
 
 var lastScrollPos = 0;
