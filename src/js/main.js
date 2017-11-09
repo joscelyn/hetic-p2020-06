@@ -11,3 +11,13 @@ function isInViewport(element) {
         rect.right <= (window.innerWidth || html.clientWidth)
     );
 }
+<<<<<<< HEAD
+=======
+
+import './splashScreen'
+import './guillemets'
+
+import {lory} from 'lory.js';
+
+var rellax = new Rellax('.rellax');
+>>>>>>> 33745df0da72cf96e1d04d29c3441f12cc57efe9
