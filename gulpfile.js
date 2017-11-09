@@ -52,19 +52,11 @@ function scss() {
  */
 
 function js() {
-<<<<<<< HEAD
-    return gulp.src(['src/js/main.js', 'src/js/splashScreen.js', 'src/js/quotations.js'])
-        .pipe(concat('main.js'))
-        .pipe(babel({
-            presets: ['es2015']
-        }))
-=======
     return browserify({entries: ['src/js/main.js'], debug: true})
         .transform(babelify, {presets: 'es2015'})
         .bundle()
         .pipe(source('main.js'))
         .pipe(buffer())
->>>>>>> 33745df0da72cf96e1d04d29c3441f12cc57efe9
         .pipe(gulpif(!isProd, sourcemaps.init({loadMaps: true})))
        // .pipe(uglify())
         .pipe(gulpif(!isProd, sourcemaps.write('.')))
