@@ -52,6 +52,7 @@ function scss() {
  */
 
 function js() {
+
     return browserify({entries: ['src/js/main.js'], debug: true})
         .transform(babelify, {presets: 'es2015'})
         .bundle()
