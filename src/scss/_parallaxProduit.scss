@@ -2,7 +2,7 @@
   margin-top: 5%;
   background-color: rgb(255, 255, 255);
 
-// back QUI APPARAIT EN DESKTOP
+    // back QUI APPARAIT EN DESKTOP
     &__back {
       display: none;
 
@@ -71,7 +71,7 @@
       font-size: 6rem;
       text-align: right;
       text-transform: uppercase;
-      color: #505467;
+      color: rgba(#505467, 0.19);
       opacity: 0.38;
       position: relative;
       margin: 0;
@@ -82,15 +82,14 @@
     }
 
     &__bloctext {
-      margin-top: -10%;
+      margin-top: -5%;
     }
 
     &__text {
       // VERSION MOBILE
-    	width: 80%;
+    	width: 70%;
     	height: auto;
     	background-color: #FFFFFF;
-      margin-top: 0%;
     	margin-left: 40%;
       padding-right: 0;
       text-align: center;
@@ -119,8 +118,7 @@
         }
 
         @include large {
-          top: -280px;
-          margin-top: -9%;
+          top: -400px;
 
         }
       }
@@ -130,11 +128,12 @@
         text-transform: uppercase;
         font-family: $typoSerif, serif;
         color: $grey;
-        padding-top: 2rem;
+        margin-top: 8%;
+
 
         @include medium { //plus de 800 px
 
-        };
+        }
 
       }
 
@@ -184,4 +183,47 @@
         }
       }
 
+}
+
+.visible .product__bigTitle {
+  animation: moveTitle 2s ease-in-out forwards;
+}
+
+@keyframes moveTitle {
+  0% {
+    transform: translate(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: 0;
+    color:rgba(#505467, 0.35);
+  }
+}
+
+.visible .product__back {
+  animation: moveBloc 2s ease-in-out forwards;
+}
+
+@keyframes moveBloc {
+  0% {
+    transform: translate(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: 0;
+    color:rgba(#505467, 0.35);
+  }
+}
+
+.visible .product__bloctext {
+animation: moveText 1.5s ease-in-out forwards;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translate(50%);
+  }
+  100% {
+    transform: 0;
+  }
 }

@@ -1,6 +1,7 @@
 import {lory} from 'lory.js';
-import './splashScreen'
-import './quotations'
+import './splashScreen';
+import './quotations';
+import './parallaxProduit';
 
 var rellax = new Rellax('.rellax');
 

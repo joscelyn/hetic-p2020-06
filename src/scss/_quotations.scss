@@ -10,9 +10,7 @@
 
 
 .quotation {
-    //height: 50%;
-    //margin-top: 20%;
-    //margin-bottom: 20%;
+    height: 40vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -23,21 +21,25 @@
       //position: relative;
       font-size: 30rem;
       color: $lightColor;
-      height: 30px;
+      font-family: $typoQuote;
 
+      p {
+        margin: 0;
+        height: 50px;
+      }
       &:first-child {
         opacity: 0;
-        align-self: start;
+        align-self: flex-start;
+        top: -100px;
       }
 
       &:last-child {
         opacity: 0;
         padding: 0;
         z-index: -1;
-        align-self: baseline;
       }
 
-      &:first-child.active{
+      &:first-child.active {
           @include quotationQuote();
       }
 
@@ -45,15 +47,14 @@
           @include quotationQuote();
           animation-delay: 0s, 2s;
       }
-
     }
-
 
     &__text {
         font-size: 2.5rem;
-        width: 70%;
+        width: 60%;
         color:  #0E215D;
-
+        margin-top: 10%;
+        text-align: center;
         align-self: center;
 
     }
@@ -68,6 +69,6 @@
     0% {transform:rotate(0deg);}
     25% {transform:rotate(3deg);}
     50% {transform:rotate(0deg) translateY(2px) translateX(3px);}
-    75% {transform:rotate(-5deg);}
+    75% {transform:rotate(-3deg);}
     100% {transform:rotate(0deg) translateY(-2px) translateX(-3px);}
 }
