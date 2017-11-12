@@ -1,9 +1,9 @@
-.bloc__product {
+.product {
   margin-top: 5%;
   background-color: rgb(255, 255, 255);
 
-
-    &__back { // back QUI APPARAIT EN DESKTOP
+// back QUI APPARAIT EN DESKTOP
+    &__back {
       display: none;
 
       @include large {
@@ -13,7 +13,7 @@
         background: #616576;
         height: 83%;
         width: 30%;
-        margin-top: 8%;
+        margin-top: 5%;
       }
 
     }
@@ -26,17 +26,20 @@
         /* Délices: */
         display: block;
         font-family: $typoSerif;
-        font-size: 8rem;
+        font-size: 9rem;
         text-transform: uppercase;
         color: #FFFFFF;
         opacity: 0.5;
-        position: absolute;
-        left: -7%;
-        top: 140%;;
+        position: relative;
+        left: -23%;
+        top: 25%;
 
 
         p {
           writing-mode: vertical-lr;
+          text-align: center;
+
+
         }
       };
     }
@@ -113,72 +116,72 @@
           top: -200px;
           text-align: left;
 
-        };
+        }
 
         @include large {
           top: -280px;
           margin-top: -9%;
 
+        }
+      }
+
+      &__surtitre { // mobile
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        font-family: $typoSerif, serif;
+        color: $grey;
+        padding-top: 2rem;
+
+        @include medium { //plus de 800 px
+
         };
 
+      }
 
-        &__surtitre { // mobile
-          font-size: 0.8rem;
-          text-transform: uppercase;
-          font-family: $typoSerif, serif;
-          color: $grey;
-          padding-top: 3rem;
+      &__trait {
+        width: 23px;
+        height: 1px;
+        margin: auto;
+        background: #767676;
 
-          @include medium { //plus de 800 px
+        @include medium { //plus de 800 px
+        margin-left: -10%;
+        top: -20px;
+        position: relative;
+        width: 18px;
+        };
+      }
 
-          };
+
+      h4 { //mobile
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: $blue;
+        font-family: $typoSansSerif;
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 0%;
+
+        @include medium { //plus de 800 px
+          font-size: 1.5rem;
+
+        };
+      }
+
+      &__content { // mobile
+        font-size: 1rem;
+        font-family: $typoSansSerif;
+        font-weight: lighter;
+        color: $blue;
+        letter-spacing: 0;
+        line-height: 24px;
+        margin-right: O;
+
+        @include medium { //plus de 800px
+            font-size: 0.9rem;
+            width: 90%;
 
         }
+      }
 
-        &__trait {
-          width: 23px;
-          height: 1px;
-          margin: auto;
-          background: #767676;
-
-          @include medium { //plus de 800 px
-          margin-left: -10%;
-          top: -20px;
-          position: relative;
-          width: 18px;
-          };
-        }
-
-
-        h4 { //mobile
-          font-size: 2rem;
-          text-transform: uppercase;
-          color: $blue;
-          font-family: $typoSansSerif;
-          font-weight: bold;
-          margin-top: 0;
-          margin-bottom: 0%;
-
-          @include medium { //plus de 800 px
-              font-size: 1.5rem;
-
-          };
-        }
-
-        &__content { // mobile
-          font-size: 1rem;
-          font-family: $typoSansSerif;
-          font-weight: lighter;
-          color: $blue;
-          letter-spacing: 0;
-          line-height: 24px;
-          margin-right: O;
-
-          @include medium { //plus de 800px
-              font-size: 0.9rem;
-              width: 90%;
-
-          };
-        }
-    }
 }

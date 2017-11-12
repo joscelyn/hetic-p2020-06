@@ -64,26 +64,27 @@
       margin: auto;
       position: relative;
       bottom: 5%;
-
-      &__line {
-        width: 20px;
-        height: 1px;
-        background: $grey;
       }
 
-      :nth-child(2) {
-        order: 3;
-      }
-
-      &__text {
-        order: 2;
-        font-family: Lato;
-        font-size: 12px;
-        font-weight: lighter;
-        color: #F5F6F9;
-      }
+  &__line {
+      width: 20px;
+      height: 1px;
+      background: $grey;
     }
-}
+
+    :nth-child(2) {
+      order: 3;
+    }
+
+  &__text {
+    order: 2;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: lighter;
+    color: #F5F6F9;
+    }
+  }
+
 
 .leave .splashScreen__flowers {
     img:nth-child(1) {
@@ -99,11 +100,8 @@
     }
 
     img:nth-child(4) {
-        transform: translate(-200px, -450px);
+        transform: translate(-200px, -500px);
     }
-
-
-
 }
 
 .leave .splashScreen__scroll {
