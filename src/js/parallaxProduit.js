@@ -14,8 +14,8 @@ let isvisible= false;
 let scrollPosActual = window.scrollY;
 let ElementTitle = document.getElementById("product");
 console.log(ElementTitle);
-window.addEventListener("scroll", ()=>{
-
+window.addEventListener("scroll", (e)=>{
+    e.preventDefault();
     if (isInViewport(ElementTitle)  && (isvisible==false)) {
         ElementTitle.classList.add('visible');
         isvisible=true;

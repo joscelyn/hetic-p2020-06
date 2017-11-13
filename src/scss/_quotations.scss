@@ -15,28 +15,36 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    margin-top: 30%;
+    margin-bottom: 30%;
     //text-align: center;
 
     &__quote {
       //position: relative;
-      font-size: 30rem;
+      font-size: 20rem;
       color: $lightColor;
       font-family: $typoQuote;
+      height: 70%;
+      width: 40%;
+      @include medium{
+        font-size: 40rem;
+      }
 
       p {
         margin: 0;
-        height: 50px;
+        height: 30%;
       }
+
       &:first-child {
-        opacity: 0;
+        opacity: 1;
         align-self: flex-start;
         top: -100px;
       }
 
       &:last-child {
-        opacity: 0;
-        padding: 0;
+        opacity: 1;
         z-index: -1;
+        align-self: flex-end;
       }
 
       &:first-child.active {
@@ -50,12 +58,15 @@
     }
 
     &__text {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
         width: 60%;
         color:  #0E215D;
         margin-top: 10%;
         text-align: center;
         align-self: center;
+        @include medium{
+          font-size: 2.5rem;
+        }
 
     }
 }

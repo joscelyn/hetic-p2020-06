@@ -1,5 +1,5 @@
 .splashScreen {
-    height: 100%;
+    height: 100vh;
     background: $blue;
 
     &__title {
@@ -15,43 +15,54 @@
         left: 0;
         right: 0;
         bottom: 0;
+        overflow: hidden;
 
         img {
             position: absolute;
             transition: 1s;
 
             &:nth-child(1) { // grande haut gauche
-                top: -10%;
-                left: 2%;
+              top: -10%;
+              left: 2%;
+              width:30%;
+              @include medium {
                 width:15%;
+              }
             }
 
             &:nth-child(4) { // petite haut droite
               transform: rotate(30deg);
               transform-origin: top right;
-              top: -50px;
-              right: 50px;
-              width: 20%;
+              top: 0px;
+              right: 0px;
+              width:30%;
+              @include medium {
+                width: 20%;
+              }
             }
 
             &:nth-child(2) { // petite bas gauche
               transform: rotate(50deg);
-              bottom: -50px;
-              left: -150px;
+              bottom: 0px;
+              left: -70px;
               transform-origin: bottom;
-              width: 20%;
-              @include large { // plus de 1018px
+              width: 30%;
+              @include medium { // plus de 1018px
+                width: 20%;
               }
             }
 
             &:nth-child(3) { // grande bas droite
-                transform: rotate(-45deg);
+              transform: rotate(-45deg);
+              transform-origin: bottom right;
+              bottom: 50px;
+              right: -50px;
+              width: 30%;
+              @include medium { // plus de 1018px
+                width: 20%;
                 bottom: 100px;
                 right: -100px;
-                transform-origin: bottom right;
-                width: 20%;
-                @include large { // plus de 1018px
-                }
+              }
             }
       }
     }
@@ -64,7 +75,7 @@
       margin: auto;
       position: relative;
       bottom: 5%;
-      }
+    }
 
   &__line {
       width: 20px;
@@ -92,7 +103,7 @@
     }
 
     img:nth-child(2) {
-        transform: translate(200px, 450px);
+        transform: translate(200px, 550px);
     }
 
     img:nth-child(3) {
