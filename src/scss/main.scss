@@ -23,6 +23,18 @@ $large: 1024px;
   }
 }
 
+@mixin surtitre {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-family: $typoSerif, serif;
+  color: $grey;
+  padding-top: 15%;
+
+  @include medium { //plus de 800 px
+    margin-top: 8%;
+  }
+}
+
 /*--------------------------------------------------------------
 # Imports
 --------------------------------------------------------------*/

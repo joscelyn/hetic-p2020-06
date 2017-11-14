@@ -17,6 +17,9 @@
     align-items: center;
     margin-top: 30%;
     margin-bottom: 30%;
+    @include medium {
+      margin-top: 5%;
+    }
     //text-align: center;
 
     &__quote {

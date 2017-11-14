@@ -82,7 +82,8 @@
     }
 
     &__bloctext {
-      margin-top: -5%;
+      height: 0;
+
     }
 
     &__text {
@@ -119,22 +120,14 @@
         }
 
         @include large {
-          top: -400px;
+          top: -300px;
 
         }
       }
 
       &__surtitre { // mobile
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        font-family: $typoSerif, serif;
-        color: $grey;
-        padding-top: 15%;
 
-
-        @include medium { //plus de 800 px
-          margin-top: 8%;
-        }
+        @include surtitre;
 
       }
 
