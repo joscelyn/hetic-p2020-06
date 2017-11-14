@@ -1,0 +1,48 @@
+.gamme {
+  &__produit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 5%;
+
+  }
+
+  &__presentation {
+    width: 30%;
+    margin: auto;
+    padding-top: 8%;
+    text-align: center;
+  }
+
+  &__surtitre {
+    @include surtitre;
+    //margin-top: -5%;
+
+  }
+
+  &__trait {
+    @include trait;
+    margin: auto;
+
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: $blue;
+    font-family: $typoSansSerif;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0%;
+
+    @include medium { //plus de 800 px
+      font-size: 1.2rem;
+
+    };
+  }
+
+  img {
+
+  }
+}
