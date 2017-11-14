@@ -43,8 +43,8 @@
 
             &:nth-child(2) { // petite bas gauche
               transform: rotate(50deg);
-              bottom: 0px;
-              left: -70px;
+              bottom: -20px;
+              left: -80px;
               transform-origin: bottom;
               width: 30%;
               @include medium { // plus de 1018px

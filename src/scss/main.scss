@@ -28,13 +28,21 @@ $large: 1024px;
   text-transform: uppercase;
   font-family: $typoSerif, serif;
   color: $grey;
-  padding-top: 15%;
+  padding-top: 13%;
+  text-transform: uppercase;
 
   @include medium { //plus de 800 px
     margin-top: 8%;
   }
 }
 
+@mixin trait {
+    width: 23px;
+    height: 1px;
+    margin: auto;
+    background: #767676;
+    margin-bottom: 5%;
+}
 /*--------------------------------------------------------------
 # Imports
 --------------------------------------------------------------*/
@@ -59,3 +67,5 @@ html, body {
 @import "quotations";
 
 @import "parallaxProduit";
+
+@import "gamme";
