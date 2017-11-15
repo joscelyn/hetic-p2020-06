@@ -50,7 +50,7 @@
 
       @include medium { //box quand plus de 800 px
         width: 60%;
-        margin-top: -15%;
+        margin-top: -10%;
         margin-left: -3%
       };
 
@@ -84,6 +84,12 @@
     &__bloctext {
       height: 0;
       padding-top: 15%;
+      @include medium {
+        padding-top: 5%;
+      }
+      @include large {
+        padding-top: 15%;
+      }
     }
 
     &__text {
@@ -101,6 +107,7 @@
           @include medium {
             display: block;
             margin-left: 40%;
+            width: 90%;
           };
         }
 
