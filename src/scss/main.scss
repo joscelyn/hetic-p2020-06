@@ -24,7 +24,7 @@ $large: 1024px;
 }
 
 @mixin surtitre {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   font-family: $typoSerif, serif;
   color: $grey;
@@ -33,6 +33,7 @@ $large: 1024px;
 
   @include medium { //plus de 800 px
     margin-top: 8%;
+    font-size: 1rem;
   }
 }
 
@@ -40,8 +41,7 @@ $large: 1024px;
     width: 23px;
     height: 1px;
     margin: auto;
-    background: #767676;
-    margin-bottom: 5%;
+    background: $grey;
 }
 /*--------------------------------------------------------------
 # Imports
