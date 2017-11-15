@@ -4,7 +4,7 @@
 $blue: #1e243c;
 $lightColor:#c8c8c8;
 $grey: #c3c3c3;
-$typoSerif:"Playfair Display", serif;
+$typoSerif: "Playfair Display", serif;
 $typoSansSerif: "Lato", sans-serif;
 $typoQuote:'Great Vibes','Rozha One', serif;
 
@@ -59,3 +59,5 @@ html, body {
 @import "quotations";
 
 @import "parallaxProduit";
+
+@import "presentSlider";
