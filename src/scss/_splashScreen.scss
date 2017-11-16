@@ -22,9 +22,10 @@
             transition: 1s;
 
             &:nth-child(1) { // grande haut gauche
-              top: -10%;
-              left: 2%;
-              width:30%;
+              transform: rotate(180deg);
+              //top: -10%;
+              //left: 2%;
+              //width:30%;
               @include medium {
                 width:15%;
               }

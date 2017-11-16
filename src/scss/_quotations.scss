@@ -27,6 +27,9 @@
 
     &__surtitre {
       @include surtitre;
+      @include medium {
+        margin-top: -10%;
+      }
     }
 
     &__quote {
@@ -54,6 +57,10 @@
         left: 0%;
         z-index: -1;
         top:230%;
+        @include medium{
+          right: -10%;
+          overflow: hidden;
+        }
       }
 
       &:last-child {
@@ -84,11 +91,12 @@
         width: 70%;
         color:  #0E215D;
         margin: auto;
-        margin-top: 10%;
+        margin-top: 0%;
         text-align: center;
         align-self: center;
         @include medium{
           font-size: 2.5rem;
+          width: 60%
         }
 
     }
