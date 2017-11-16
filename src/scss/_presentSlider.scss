@@ -1,4 +1,5 @@
 .slider {
+    position: relative;
 
     .slide__img {
         width: 100%;
@@ -16,6 +17,10 @@
     position: relative;
     text-align: center;
     border: solid 3px #1e243c;
+
+    @include medium {
+        border: none;
+    }
 
     &:after, &:before {
         content: '';
@@ -64,5 +69,30 @@
         margin: 0 auto 54px;
         font-family: $typoSansSerif;
         font-size: 17px;
+    }
+}
+
+.slider__nav {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 94% 0 0 0;
+    z-index: 2;
+
+    li {
+        display: block;
+        margin: 5px;
+        height: 8px;
+        width: 8px;
+        background: rgba($blue, .35);
+        border-radius: 50%;
+        border: none;
+        transition: .2s;
+
+        &.tns-nav-active, &:hover {
+            background: rgba($blue, 8);
+        }
     }
 }
