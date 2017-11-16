@@ -17,39 +17,43 @@
         bottom: 0;
         overflow: hidden;
 
-        img {
+        object {
             position: absolute;
             transition: 1s;
 
             &:nth-child(1) { // grande haut gauche
-              transform: rotate(180deg);
-              //top: -10%;
+              transform: rotate(160deg);
+              top: -5%;
               //left: 2%;
-              //width:30%;
-              @include medium {
-                width:15%;
-              }
-            }
-
-            &:nth-child(4) { // petite haut droite
-              transform: rotate(30deg);
-              transform-origin: top right;
-              top: 0px;
-              right: 0px;
               width:30%;
               @include medium {
                 width: 20%;
               }
             }
 
+            &:nth-child(4) { // petite haut droite
+              transform: rotate(220deg);
+              transform-origin: top right;
+              top:10%;
+              right: 50%;
+              width: 30%;
+              @include medium {
+                width: 20%;
+                top: 20%;
+                right: 25%;
+              }
+            }
+
             &:nth-child(2) { // petite bas gauche
               transform: rotate(50deg);
-              bottom: -20px;
-              left: -80px;
+              bottom: -0%;
+              left: -100px;
               transform-origin: bottom;
-              width: 30%;
+              width: 35%;
               @include medium { // plus de 1018px
                 width: 20%;
+                bottom: -5%;
+                left: -100px;
               }
             }
 
@@ -63,6 +67,21 @@
                 width: 20%;
                 bottom: 100px;
                 right: -100px;
+              }
+            }
+
+            &:nth-child(5) { // milieu
+              transform: rotate(200deg);
+              transform-origin: top;
+              top: 10%;
+              right: 45%;
+              width: 20%;
+              @include medium { // plus de 1018px
+                width: 15%;
+                transform: rotate(170deg);
+                transform-origin: top;
+                top: 25%;
+                right: 55%;
               }
             }
       }
@@ -99,20 +118,24 @@
 
 
 .leave .splashScreen__flowers {
-    img:nth-child(1) {
+    object:nth-child(1) {
         transform: translate(-200px, -450px);
     }
 
-    img:nth-child(2) {
+    object:nth-child(2) {
         transform: translate(200px, 550px);
     }
 
-    img:nth-child(3) {
-        transform: translate(200px, 450px);
+    object:nth-child(3) {
+        transform: translate(300px, 450px);
     }
 
-    img:nth-child(4) {
-        transform: translate(-200px, -500px);
+    object:nth-child(4) {
+        transform: translate(700px, -700px);
+    }
+
+    object:nth-child(5) {
+        transform: translate(500px, -850px);
     }
 }
 
