@@ -1,33 +1,166 @@
 .popup {
-  //position: fixed;
-  width: 80%;
-  height: 90%;
+  //display: none;
+  z-index: 1;
+  position: fixed;
+  transform-origin: center;
+  top: 1%;
+  left: 1%;
+  width: 90%;
+  height: 94%;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 15px 2px rgba(185, 185, 185, 0.3);
+  padding: 3%;
   margin: auto;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding-right: 3%;
-  padding-left: 3%;
+  overflow: hidden;
 
+  @include medium {
+    padding-right: 10%;
+    padding-left: 10%;
+    width: 82%;
+    height: 92%;
+    transform-origin: center;
+  }
+
+  @include large {
+    width: 78%;
+    height: 87%;
+  }
+
+
+  &__blocText {
+    display: flex;
+    flex-direction: column;
+    @include medium {
+        width: 50%;
+        margin-top: 10%;
+
+    }
+  }
+
+  &__image {
+    position: relative;
+    height: 45vh;
+    margin: auto;
+    margin-top: -30%;
+
+    img {
+      width: 65%;
+      position: absolute;
+      transform-origin: center;
+      right: 20%;
+      top: 40%;
+
+    }
+
+    @include medium {
+      background-color: #EFEFF1;
+      opacity: 0.9;
+      height: 100%;
+      width: 45%;
+      position: absolute;
+      transform-origin: top right;
+      right: 0;
+      top: 0;
+      margin: 0;
+
+      img {
+        width: 65%;
+        position: absolute;
+        transform-origin: center;
+        right: 20%;
+        top: 25%;
+
+      }
+    }
+
+  }
+
+  &__number {
+    position: absolute;
+    transform-origin: top right;
+    top: -40%;
+    right: 10%;;
+    z-index: -1;
+
+    p {
+      font-family: $typoSerif;
+      font-size: 25rem;
+      color: $blue;
+      opacity: 0.2;
+      margin: 0;
+
+      @include medium {
+        font-size: 50rem;
+
+      }
+    }
+
+    @include medium {
+      top: -20%;
+    }
+
+    @include large {
+      top: -30%;
+    }
+  }
+
+  &__text {
+    padding: 5px;
+  }
 
 
   &__bigTitle {
     display: none;
+
     @include medium {
-      @include bigTitle
+      @include bigTitle;
+      color: $grey;
+      font-weight: bolder;
+      margin-top: 10%;
+    }
+    @include large {
+      margin-top: 0;
     }
   }
 
   &__surtitre {
     @include surtitre;
+    margin-left: 00px;
+    width: 100%;
+
+    &:after {
+      margin-top: 5%;
+      bottom: 5px;
+      left: -25px;
+
+      @include medium {
+        left: -50px;
+      }
+    }
+
+    @include medium {
+      font-size: 1.2rem;
+    }
+    @include large {
+      font-size: 1rem;
+    }
 
   }
 
   h4 {
     @include title;
+
     text-align: left;
     font-size: 1.6rem;
-    width: 80vw;
+    width: 98%;
 
-    @include medium ;
+    @include medium {
+      font-size: 2rem;
+    }
+
+    @include large {
+      font-size: 1.6rem;
+    }
   }
 
   h5 {
@@ -38,6 +171,47 @@
     font-family: $typoSansSerif;
     font-size: 0.9rem;
     color: $blue;
+    line-height: 24px;
+    font-weight: lighter;
+
+    @include medium {
+      font-size: 1.3rem;
+    }
+
+    @include large {
+      font-size: 1rem;
+    }
+
+  }
+
+  &__prix {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 70%;
+
+    h4 {
+      width: 40%;
+      margin: 0;
+    }
+
+    h5 {
+      margin-top: 5px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    color: black;
+    right:15px;
+    top: 15px;
+    font-size: 40px;
+    @include large {
+      right: 5%;
+      right: 15px;
+      top: 15px;
+      color: black;
+    }
   }
 
 }

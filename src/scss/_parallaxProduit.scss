@@ -27,7 +27,7 @@
         /* Délices: */
         display: block;
         font-family: $typoSerif;
-        font-size: 9rem;
+        font-size: 8rem;
         text-transform: uppercase;
         color: #FFFFFF;
         opacity: 0.5;
@@ -74,11 +74,15 @@
     &__bloctext {
       height: 0;
       padding-top: 15%;
+      display:flex;
+      flex-direction: column;
+      align-content: space-between;
+
       @include medium {
-        padding-top: 5%;
+        margin-top: 15%;
       }
       @include large {
-        padding-top: 5%;
+        margin-top: 5%;
       }
     }
 
@@ -127,17 +131,17 @@
 
         @include surtitre;
 
-      }
+        @include medium {
+          margin-bottom: 5%;
+        }
 
-      &__trait {
-        @include trait;
-        margin-bottom: 5%;
-        @include medium { //plus de 800 px
-        margin-left: -10%;
-        top: -20px;
-        position: relative;
-        width: 18px;
-        };
+        &:after {
+          margin-top: 5%;
+          bottom: 5px;
+          left: -50px;
+
+        }
+
       }
 
 
@@ -164,6 +168,7 @@
         letter-spacing: 0;
         line-height: 28px;
         margin-right: O;
+        margin-bottom: 20%;
 
         @include medium { //plus de 800px
             font-size: 0.9rem;

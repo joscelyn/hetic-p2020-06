@@ -2,6 +2,7 @@ import './splashScreen';
 import './quotations';
 import './parallaxProduit';
 import './presentSlider';
+import './popup';
 
 var rellax = new Rellax('.rellax');
 

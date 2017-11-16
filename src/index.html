@@ -72,7 +72,6 @@
 
             <div class="product__text 1 rellax" data-rellax-speed="3">
                 <p class="product__surtitre">Définition </p>
-                <div class="product__trait"></div>
                 <h4>Délice [DE.LIS]</h4>
                 <p class="product__content">Trés vif plaisir, ce qui produit ce plaisir; </br> délectation,
                     enchantement.</p>
@@ -147,7 +146,6 @@
         <div class="gamme__surtitre">
             <p>La gamme</p>
         </div>
-        <div class="gamme__trait"></div>
         <div class="gamme__title">
             <p>Découvrez toute la gamme</p>
         </div>
@@ -159,7 +157,6 @@
                 <div class="gamme__surtitre">
                     <p>[LJN]</p>
                 </div>
-                <div class="gamme__trait"></div>
                 <div class="gamme__name">
                     <p> 1 ligne </p>
                 </div>
@@ -171,7 +168,6 @@
                 <div class="gamme__surtitre">
                     <p>[KALM]</p>
                 </div>
-                <div class="gamme__trait"></div>
                 <div class="gamme__name">
                     <p> 2 calme </p>
                 </div>
@@ -183,8 +179,7 @@
                 <div class="gamme__surtitre">
                     <p>[diʒɛstif]</p>
                 </div>
-                <div class="gamme__trait"></div>
-                <div class="gamme__name">
+                <div class="gamme__name" id="gamme__name">
                     <p> 3 digestif </p>
                 </div>
                 <div class="gamme__knowMore"> En savoir plus</div>
@@ -195,7 +190,6 @@
                 <div class="gamme__surtitre">
                     <p>[tɔ.nik]</p>
                 </div>
-                <div class="gamme__trait"></div>
                 <div class="gamme__name">
                     <p> 4 tonique </p>
                 </div>
@@ -207,7 +201,6 @@
                 <div class="gamme__surtitre">
                     <p>[DELIS]</p>
                 </div>
-                <div class="gamme__trait"></div>
                 <div class="gamme__name">
                     <p> 5 délice </p>
                 </div>
@@ -219,7 +212,6 @@
                 <div class="gamme__surtitre">
                     <p>[diː.tɒks]</p>
                 </div>
-                <div class="gamme__trait"></div>
                 <div class="gamme__name">
                     <p> 6 dé-tox </p>
                 </div>
@@ -232,21 +224,35 @@
     <!----------------------------
         Popup
      ---------------------------->
-    <div class="popup">
+    <div class="popup" id="popup">
         <div class="popup__bigTitle">digestif</div>
 
-        <div class="popup__bloctext">
+        <div class="popup__image">
+          <div class="popup__number">
+            <p>3</p>
+          </div>
+          <img src="img/digestif-small.png"
+              srcset="img/digestif-small.png 300w,
+                      img/digestif-medium.png 600w,
+                     img/digestif-large.png 900w"
+            sizes="(min-width: 1024px) 50vw,
+                    (min-width: 768px) 50vw,
+                     75vw"
+              alt="Digestif - La tisane">
+        </div>
+
+        <span class="popup__close">&times;</span>
+
+        <div class="popup__blocText">
 
             <div class="popup__text">
                 <p class="popup__surtitre">Définition </p>
-                <div class="product__trait"></div>
                 <h4>digestif [ diʒɛstif ]</h4>
                 <p class="popup__content">Remontant fort que l’on boit en fin de repas, qui facilite la digestion.</p>
             </div>
 
             <div class="popup__text">
                 <p class="popup__surtitre">Ingrédients</p>
-                <div class="product__trait"></div>
                 <h4>Composition</h4>
                 <p class="popup__content">Romarin, Sauge, Thym, Menthe, Anis, Réglisse, Basilic, Cannelle, Pétales de
                     Rose, Arôme naturel de Bergamote.</p>
@@ -254,13 +260,10 @@
 
             <div class="popup__text">
                 <p class="popup__surtitre">Informations pratiques</p>
-                <div class="product__trait"></div>
-                <h4>11.90€</h4>
-                <h5>Acheter</h5>
-            </div>
-
-            <div class="popup__image">
-                <img src="img/digestif.png" alt="Digestif - La tisane">
+                <div class="popup__prix">
+                  <h4>11.90€</h4>
+                  <h5>Acheter</h5>
+                </div>
             </div>
         </div>
 
