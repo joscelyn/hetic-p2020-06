@@ -1,8 +1,43 @@
 .popup {
   //position: fixed;
-  width: 90%;
+  width: 80%;
   height: 90%;
   margin: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-right: 3%;
+  padding-left: 3%;
+
+
+
+  &__bigTitle {
+    display: none;
+    @include medium {
+      @include bigTitle
+    }
+  }
+
+  &__surtitre {
+    @include surtitre;
+
+  }
+
+  h4 {
+    @include title;
+    text-align: left;
+    font-size: 1.6rem;
+    width: 80vw;
+
+    @include medium ;
+  }
+
+  h5 {
+    @include littleTitle;
+  }
+
+  &__content  {
+    font-family: $typoSansSerif;
+    font-size: 0.9rem;
+    color: $blue;
+  }
 
 }
