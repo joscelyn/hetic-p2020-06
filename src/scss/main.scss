@@ -24,15 +24,23 @@ $large: 1024px;
 }
 
 @mixin surtitre {
+  position: relative;
   font-size: 0.8rem;
   text-transform: uppercase;
   font-family: $typoSerif, serif;
+  font-weight: 400;
   color: $grey;
-  padding-top: 15%;
 
-  @include medium { //plus de 800 px
-    margin-top: 8%;
-  }
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -5px;
+        left: calc(50% - 12px);
+        width: 24px;
+        height: 1px;
+        background: $grey;
+    }
 }
 
 /*--------------------------------------------------------------
