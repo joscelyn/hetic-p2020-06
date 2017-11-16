@@ -22,6 +22,7 @@
     &__title {
 
       display: none;
+
       @include large { // plus de 1018px
         /* Délices: */
         display: block;
@@ -33,13 +34,9 @@
         position: relative;
         left: -25%;
         top: 20%;
-
-
         p {
           writing-mode: vertical-lr;
           text-align: center;
-
-
         }
       };
     }
@@ -66,15 +63,8 @@
 
       @include medium{
         /* [de.lis]: */
-      display: block;
-      font-family: $typoSerif;
-      font-size: 6rem;
+      @include bigTitle;
       text-align: right;
-      text-transform: uppercase;
-      color: rgba(#505467, 0.19);
-      opacity: 0.38;
-      position: relative;
-      margin: 0;
       margin-top: -5%;
       margin-right: 10%;
       }
