@@ -25,7 +25,7 @@ $large: 1024px;
 
 @mixin surtitre {
   position: relative;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   font-family: $typoSerif, serif;
   font-weight: 400;
@@ -41,6 +41,50 @@ $large: 1024px;
         height: 1px;
         background: $grey;
     }
+}
+
+@mixin trait {
+    width: 23px;
+    height: 1px;
+    margin: auto;
+    background: $grey;
+}
+
+@mixin title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: $blue;
+  font-family: $typoSansSerif;
+  font-weight: bold;
+  width: 80%;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 0%;
+  text-align: center;
+}
+@mixin littleTitle {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: $blue;
+  font-family: $typoSansSerif;
+  font-weight: bold;
+  margin-top: 3%;
+  margin-bottom: 0%;
+
+  @include medium { //plus de 800 px
+    font-size: 1.2rem;
+
+  };
+}
+@mixin bigTitle {
+  display: block;
+  font-family: $typoSerif;
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: rgba(#505467, 0.19);
+  opacity: 0.38;
+  position: relative;
+  margin: 0;
 }
 
 /*--------------------------------------------------------------
@@ -69,3 +113,7 @@ html, body {
 @import "parallaxProduit";
 
 @import "presentSlider";
+
+@import "gamme";
+
+@import "popupGamme";
