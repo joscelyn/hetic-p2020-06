@@ -21,36 +21,95 @@
         top: auto;
         bottom: -3px;
     }
+}
 
-    .slide__text {
+
+
+.slide {
+    position: relative;
+    display: flex;
+    height: 100%;
+
+    @include medium {
+        position: static;
+    }
+
+    &__img {
+        width: 100%;
+
+        @include medium {
+            position: absolute;
+            top: 0;
+            width: 40%;
+            transform: translateY(-30px);
+            opacity: 0;
+            visibility: hidden;
+            transition: .5s;
+
+            .active & {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &__text {
         @include medium {
             margin-left: 60%;
             width: 40%;
         }
     }
 
-    .slide__subTitle {
+    &__subTitle {
         @include surtitre;
 
         @include medium {
+            max-height: 0;
+            overflow: hidden;
+            transition: .3s;
+
+            .active & {
+                max-height: 100px;
+            }
+
             &:after {
                 left: 0;
             }
         }
     }
 
-    .slide__title {
+    &__title {
         margin-top: 12px;
         font-family: $typoSansSerif;
         text-transform: uppercase;
         font-weight: 700;
 
         @include medium {
+            position: relative;
             margin-bottom: 12px;
+
+            &:after {
+                content: "";
+                position: absolute;
+                display: block;
+                bottom: -5px;
+                left: 0;
+                width: 26px;
+                height: 2px;
+                background: $blue;
+                transform-origin: left center;
+                transform: scale(1);
+                transition: .3s;
+
+                .active & {
+                    transform: scale(0, 1);
+                }
+            }
         }
     }
 
-    .slide__paragraph {
+    &__paragraph {
         width: 80%;
         margin: 0 auto 54px;
         font-family: $typoSansSerif;
@@ -60,31 +119,25 @@
         @include medium {
             margin: 0;
             font-size: 14px;
+            max-height: 0;
+            overflow: hidden;
+            transition: .3s;
+
+            .active & {
+                max-height: 100px;
+            }
         }
     }
-
-    .slide__img {
-        width: 100%;
-
-        @include medium {
-            position: absolute;
-            width: 100px;
-        }
-    }
-
-    .slide {
-        position: relative;
-        display: flex;
-        height: 100%;
-    }
-
 }
+
+
 
 .tns-outer {
     position: relative;
     text-align: center;
     border: solid 3px #1e243c;
 }
+
 
 
 

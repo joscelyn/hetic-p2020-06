@@ -1,8 +1,8 @@
 //import { tns } from "tiny-slider"
-import { windowWidth } from './mediaQueries';
+import { windowWidth } from './mediaQueries'
+console.log(windowWidth)
 
 //let windowWidth = window.innerWidth;
-console.log(windowWidth)
 
 if (windowWidth < 800) {
     let slider = tns({
@@ -13,8 +13,17 @@ if (windowWidth < 800) {
         navContainer: '.slider__nav'
     });
 } else {
-    let slide = document.getElementsByClassName('slide');
-    slide[0].classList.add('active')
+    let slides = document.getElementsByClassName('slide')
+    slides[0].classList.add('active');
+
+    [].forEach.call(slides, function(slide) {
+        slide.addEventListener('click', function (event) {
+            let slideActive = document.getElementsByClassName('slide active')[0]
+            slideActive.classList.remove('active')
+            let slideActual = event.target.closest('.slide')
+            slideActual.classList.add('active')
+        });
+    });
 }
 
 
