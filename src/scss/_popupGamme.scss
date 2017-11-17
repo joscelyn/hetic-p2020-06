@@ -1,8 +1,19 @@
+
+@keyframes getIn {
+    from {top: 200%; opacity: 0}
+    to {top: 0; opacity: 1 }
+}
+
+//
+
+
 .popup {
-  //display: none;
+  display: none;
   z-index: 1;
   position: fixed;
   transform-origin: center;
+  animation-name: getIn;
+  animation-duration: 0.5s;
   top: 1%;
   left: 1%;
   width: 90%;
@@ -68,7 +79,7 @@
         position: absolute;
         transform-origin: center;
         right: 20%;
-        top: 25%;
+        top: 30%;
 
       }
     }

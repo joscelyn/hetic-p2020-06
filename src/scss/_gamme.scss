@@ -5,7 +5,7 @@
     text-align: center;
     @include surtitre;
     padding-top: 0;
-    margin-bottom: 10%;
+    margin-bottom: 2%;
     //margin-top: -5%;
     p {
       margin-bottom: 1%;
@@ -54,10 +54,17 @@
   &__name {
     @include littleTitle;
 
+
     p {
       margin: 2%;
     }
+
+    &:hover {
+      color: rgba(24, 53, 116, 0.74);
+    }
+
   }
+
 
   img {
     width: 85%;
@@ -72,6 +79,9 @@
     @include medium { //plus de 800 px
       font-size: 1rem;
 
-    };
+    }
+    &:hover {
+      opacity: 0.2;
+    }
   }
 }
