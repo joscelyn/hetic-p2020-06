@@ -1,3 +1,3 @@
-var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+var windowWidth = window.innerWidth;
 
-export default w;
+export default windowWidth;

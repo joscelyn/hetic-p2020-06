@@ -1,17 +1,21 @@
 //import { tns } from "tiny-slider"
-//import { w } from './mediaQueries';
-document.addEventListener("DOMContentLoaded", function(event) {
-    console.log("DOM fully loaded and parsed");
-    var w = window.innerWidth;
-    console.log(w)
-});
+import { windowWidth } from './mediaQueries';
 
-if (window.innerWidth < 800) {
-    var slider = tns({
+//let windowWidth = window.innerWidth;
+console.log(windowWidth)
+
+if (windowWidth < 800) {
+    let slider = tns({
         container: '.slider__tns',
         items: 1,
         controls: false,
         mouseDrag: true,
         navContainer: '.slider__nav'
     });
+} else {
+    let slide = document.getElementsByClassName('slide');
+    slide[0].classList.add('active')
 }
+
+
+
