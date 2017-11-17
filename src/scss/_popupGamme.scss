@@ -208,8 +208,60 @@
 
     h5 {
       margin-top: 5px;
+      text-align: center;
+      &:hover {
+        opacity: 0.5;
+        font-size: 1.3rem;
+      }
     }
   }
+
+  &__button {
+    display: none;
+
+    @include medium {
+      z-index: 3;
+      &--first {
+        p {
+          font-size: 1.5rem;
+          margin-top: 2%;
+          color: white;
+          background-color: $blue;
+          border-radius: 0;
+          border: none;
+          z-index: 3;
+          transform: rotate(90deg);
+          text-align: center;
+          vertical-align:middle;
+          height: 30px;
+          width: 30px;
+          position: absolute;
+          top: 45%;
+          left: 55%;
+        }
+      }
+
+      &--second {
+        p {
+          font-size: 1.5rem;
+          margin-top: 2%;
+          color: white;
+          background-color: $blue;
+          border-radius: 0;
+          border: none;
+          z-index: 3;
+          transform: rotate(90deg);
+          text-align: center;
+          vertical-align:middle;
+          height: 30px;
+          width: 30px;
+          position: absolute;
+          top: 50%;
+          left: 55%;
+        }
+      }
+    }
+ }
 
   &__close {
     position: absolute;
