@@ -1,0 +1,8 @@
+{
+	"name": "digestif",
+	"number": "3",
+	"def": "digestif [ diʒɛstif ]",
+	"defContent": "Remontant fort que l’on boit en fin de repas, qui facilite la digestion.",
+	"compContent": ["Romarin", "Sauge", "Thym", "Menthe", "Anis", "Réglisse", "Basilic", "Cannelle"],
+	"image": ["img/digestif-small.png", "img/digestif-medium.png", "img/digestif-large.png"]
+}
