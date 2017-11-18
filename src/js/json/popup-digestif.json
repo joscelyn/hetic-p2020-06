@@ -1,0 +1,9 @@
+{
+	"name": "digestif",
+	"number": "3",
+	"def": "digestif [ diʒɛstif ]",
+	"defContent": "Remontant fort que l’on boit en fin de repas, qui facilite la digestion.",
+	"composition": "Romarin, Sauge, Thym, Menthe, Anis, Réglisse, Basilic, Cannelle, Pétales de Roses et Arôme naturel de Bergamote",
+	"image": "img/digestif-small.png",
+	"imageset": "img/digestif-small.png 300w, img/digestif-medium.png 600w, img/digestif-large.png 900w"
+}

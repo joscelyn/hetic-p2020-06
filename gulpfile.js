@@ -78,6 +78,16 @@ function vendorsJS() {
 };
 
 /**
+ * json
+ */
+
+function json() {
+    return gulp.src('src/js/**/*.json')
+        .pipe(gulp.dest('dist/js'))
+        .pipe(sync.stream());
+};
+
+/**
  * IMAGES
  */
 
@@ -104,9 +114,9 @@ function clean() {
     return del(['dist']);
 }
 
-gulp.task('build', gulp.series(clean, gulp.parallel(html, scss, js, vendorsJS, images, fonts)));
+gulp.task('build', gulp.series(clean, gulp.parallel(html, scss, js, json, vendorsJS, images, fonts)));
 
-gulp.task('default', gulp.parallel(html, scss, js, vendorsJS, images, fonts, function(done) {
+gulp.task('default', gulp.parallel(html, scss, js, vendorsJS, json, images, fonts, function(done) {
     sync.init({
         server: {
             baseDir: './dist'
