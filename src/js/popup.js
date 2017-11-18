@@ -8,14 +8,25 @@ var btn = document.getElementById("gamme__presentation") ;
 var span = document.getElementsByClassName("popup__close")[0];
 
 // When the user clicks on the button, open the modal
+
 btn.onclick = function() {
     modal.style.display = "block";
+    fetch('./popup-digestif.json')
+      .then(response => response.json())
+      .then((data) => {
+        document.querySelector('.popup__bigTitle p').innerHTML = data.name
+        document.querySelector('.popup__definition').innerHTML = data.def
+        document.querySelector('.popup__content .--compo').innerHTML = data.ingredients.join(', ')
+      });
 }
-
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
 }
+
+
+
+
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {

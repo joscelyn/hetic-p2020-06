@@ -50,7 +50,7 @@
 
   &__image {
     position: relative;
-    height: 45vh;
+    height: 60vh;
     margin: auto;
     margin-top: -30%;
 
@@ -274,6 +274,10 @@
       right: 15px;
       top: 15px;
       color: black;
+    }
+
+    &:hover {
+      opacity: 0.5;
     }
   }
 
