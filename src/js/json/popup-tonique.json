@@ -1,0 +1,9 @@
+{
+	"name": "Tonique",
+	"number": "4",
+	"def": "Tonique [tɔ.nik]",
+	"defContent": "Qui donne de l'énergie physique, qui a du tonus, de la vigueur, de l'énergie.",
+	"composition": "Ecorces d’orange, Menthe douce, Ecorces de citron, Gingembre, Ginseng, Maté vert, Cannelle, Clous de girofle",
+	"image": "img/tonique-small.png",
+	"imageset": "img/tonique-small.png 300w, img/tonique-medium.png 600w, img/tonique-large.png 900w"
+}

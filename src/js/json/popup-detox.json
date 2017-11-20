@@ -1,0 +1,9 @@
+{
+	"name": "Dé-tox",
+	"number": "6",
+	"def": "Dé-tox [ˈdiː.tɒks]",
+	"defContent": "Cure purifiante",
+	"composition": "Pomme, Citronnelle, Genévrier, Hibiscus, Ortie, Maté, Arômes naturels de Cassis",
+	"image": "img/detox-small.png",
+	"imageset": "img/detox-small.png 300w, img/detox-medium.png 600w, img/detox-large.png 900w"
+}
