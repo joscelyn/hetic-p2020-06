@@ -1,0 +1,9 @@
+{
+	"name": "ligne",
+	"number": "1",
+	"def": "Ligne liɲ]",
+	"defContent": "Trait continu de faible épaisseur, Silhouette",
+	"composition": "Citronnelle, Chicorée, Rooibos, Ananas, Pissenlit, Réglisse, Arôme naturel de Mandarine",
+	"image": "img/ligne-small.png",
+	"imageset": "img/ligne-small.png 300w, img/ligne-medium.png 600w, img/ligne-large.png 900w"
+}

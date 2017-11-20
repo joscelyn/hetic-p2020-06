@@ -5,5 +5,5 @@
 	"defContent": "Absence d’agitation, cessation du vent. Absence de nervosité, paisible, serein",
 	"composition": "Tilleul, Camomille, Honeybush Pétales et Arôme de Fleur d’Oranger",
 	"image": "img/calme-small.png",
-	"image": "img/calme-small.png 300w, img/calme-medium.png 600w, img/calme-large.png 900w"
+	"imageset": "img/calme-small.png 300w, img/calme-medium.png 600w, img/calme-large.png 900w"
 }
