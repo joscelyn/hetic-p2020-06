@@ -1,7 +1,6 @@
 // Get the modal
 let modal = document.getElementById('popup');
 
-
 // Get the <span> element that closes the modal
 let span = document.getElementsByClassName("popup__close")[0];
 
@@ -11,12 +10,8 @@ let products = document.getElementsByClassName("gamme__presentation");
 let buttons = document.getElementsByClassName("popup__button");
 let buttonUp = document.getElementsByClassName("popup__button--first");
 let buttonDown = document.getElementsByClassName("popup__button--second");
-console.log(buttonUp);
 
-console.log(products);
-// produits.forEach(function(elem ) {
-// 	console.log(elem.addEventListener("click", display(elem.dataset.produit)));
-// });
+
 
 function writeContent(file) {
   fetch(file)
@@ -37,6 +32,7 @@ let i=0;
 let y=0;
 let z=0;
 let key=0;
+
 while(i<products.length){
     let product = products[i];
     product.addEventListener('click', function (event) {
@@ -58,7 +54,7 @@ while(i<products.length){
           let button= buttonDown[y];
 
           //EVENT
-          button.addEventListener('click', function (event) {
+          button.addEventListener('click', () => {
 
             event.preventDefault();
 
@@ -73,7 +69,9 @@ while(i<products.length){
             let file = 'js/json/popup-'+ productName +'.json';
             //Let's show the modal with the right content
             writeContent(file);
-          });
+
+          })
+
           // Increment Y for the buttonUp event
           y++;
         };
@@ -119,4 +117,33 @@ window.onclick = (event) => {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+}
+
+// Lets activate the touch or swipe on mobile to change the content of the modal.
+
+if (window.matchMedia("(max-width: 600px)").matches) {
+  /* La largeur minimum de l'affichage est 600 px inclus */
+  var modalSwipe = new Hammer(modal);
+
+  // listen to events and change the content just like the arrox
+  modalSwipe.on("tap swipe", function(event) {
+      console.log( event.type +" gesture detected.");
+      event.preventDefault();
+
+      if (key>4){
+        key=0;
+      }
+      else {
+        key++;
+      }
+
+      console.log(key);
+      let product= products[key];
+      let productName = product.getAttribute('data-produit');
+      let file = 'js/json/popup-'+ productName +'.json';
+
+      //Let's show the modal with the right content
+      writeContent(file);
+
+  });
 }
