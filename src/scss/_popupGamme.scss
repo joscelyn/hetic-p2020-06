@@ -4,9 +4,6 @@
     to {top: 0; opacity: 1 }
 }
 
-//
-
-
 .popup {
   display: none;
   z-index: 10;
@@ -16,7 +13,7 @@
   animation-duration: 0.5s;
   top: 0%;
   left: 0%;
-  width: 95vw;
+  width: 100vw;
   height: 100vh;
   background-color: rgba(255, 255, 255, 0.98);
   box-shadow: 0 4px 15px 2px rgba(185, 185, 185, 0.3);
@@ -27,15 +24,16 @@
   overflow: hidden;
 
   @include medium {
-    padding-right: 10%;
-    padding-left: 10%;
-    width: 80vw;
-    height: 100vh;
-    transform-origin: center;
+    width: 100vw;
+    //padding-right: 10%;
+    //padding-left: 10%;
+    //width: 80vw;
+    //height: 100vh;
+    //transform-origin: center;
   }
 
   @include large {
-    width: 80vw;
+    width: 100vw;
     height: 100vh;
   }
 
@@ -43,14 +41,14 @@
   &__blocText {
     display: flex;
     flex-direction: column;
-    margin-top: 5vh;
+    margin-top: 8vh;
 
     @include medium {
         width: 50%;
-        margin-top: 6%;
+        margin-top: 5%;
     }
     @include large {
-      margin-top: 10%;
+      margin-top: 5%;
     }
   }
 
@@ -58,10 +56,10 @@
     position: relative;
     height: 35vh;
     margin: auto;
-    margin-top: -30%;
+    margin-top: -20%;
 
     img {
-      width: 55%;
+      width: 65%;
       position: absolute;
       transform-origin: center;
       right: 20%;
@@ -95,8 +93,8 @@
   &__number {
     position: absolute;
     transform-origin: top right;
-    top: -15%;
-    right: 10%;;
+    //top: -15%;
+    right: 20%;;
     z-index: -1;
 
     p {
@@ -112,7 +110,7 @@
       }
 
       @include large {
-        font-size: 50rem;
+        font-size: 45rem;
       }
     }
 
@@ -121,12 +119,13 @@
     }
 
     @include large {
-      top: -30%;
+      top: -25%;
+
     }
   }
 
   &__text {
-    margin-top: 0;
+    margin-top: 2vh;
     padding: 5px;
   }
 
@@ -140,12 +139,13 @@
 
     @include medium {
       @include bigTitle;
-      color: $grey;
+      font-size: 5rem;
       font-weight: bolder;
       margin-top: 8%;
       margin-left: -5%;
     }
     @include large {
+      @include bigTitle;
       margin-top: 0;
     }
   }
@@ -178,7 +178,7 @@
     @include title;
 
     text-align: left;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     width: 98%;
 
     @include medium {
@@ -200,6 +200,7 @@
     color: $blue;
     line-height: 24px;
     font-weight: lighter;
+    width: 90%;
 
     @include medium {
       font-size: 1rem;
@@ -254,7 +255,7 @@
           height: 30px;
           width: 30px;
           position: absolute;
-          top: 45%;
+          top: 35%;
           left: 55%;
         }
       }
@@ -274,7 +275,7 @@
           height: 30px;
           width: 30px;
           position: absolute;
-          top: 50%;
+          top: 40%;
           left: 55%;
         }
       }
@@ -284,13 +285,13 @@
   &__close {
     position: absolute;
     color: black;
-    right:5%;
-    top: 3%;
+    right:10%;
+    top: 5%;
     font-size: 40px;
 
     @include large {
-      right: 5%;
-      top: 3%;
+      right: 8%;
+      top: 5%;
       color: black;
     }
     &:hover {
