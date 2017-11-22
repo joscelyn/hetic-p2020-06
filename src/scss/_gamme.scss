@@ -40,12 +40,13 @@
 
   &__presentation { // chaque produit individuel
     width: 50%;
-    margin: auto;
-    padding-top: 8%;
+    margin-top: 5%;
     padding-bottom: 5%;
     text-align: center;
     @include medium { //plus de 800 px
-      width: 30%
+      width: 30%;
+      padding-bottom: 0%;
+
     }
 
   }
@@ -72,6 +73,9 @@
 
   img {
     width: 85%;
+    @include medium {
+      width: 75%;
+    };
   }
 
   &__knowMore {
