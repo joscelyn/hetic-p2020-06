@@ -17,7 +17,7 @@
         bottom: 0;
         overflow: hidden;
 
-        object {
+        img {
             position: absolute;
             transition: 1s;
 
@@ -118,23 +118,23 @@
 
 
 .leave .splashScreen__flowers {
-    object:nth-child(1) {
+    img:nth-child(1) {
         transform: translate(-200px, -450px);
     }
 
-    object:nth-child(2) {
+    img:nth-child(2) {
         transform: translate(200px, 550px);
     }
 
-    object:nth-child(3) {
+    img:nth-child(3) {
         transform: translate(300px, 450px);
     }
 
-    object:nth-child(4) {
+    img:nth-child(4) {
         transform: translate(700px, -700px);
     }
 
-    object:nth-child(5) {
+    img:nth-child(5) {
         transform: translate(500px, -850px);
     }
 }

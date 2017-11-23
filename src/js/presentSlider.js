@@ -3,6 +3,9 @@ import { windowWidth } from './mediaQueries'
 console.log(windowWidth)
 
 //let windowWidth = window.innerWidth;
+// ajout nav dynamiquement
+// apaisant:
+
 
 if (windowWidth < 800) {
     let slider = tns({

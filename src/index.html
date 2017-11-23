@@ -6,11 +6,6 @@
     <title>5 Délice</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.3.3/tiny-slider.css">
-    <!--[if (lt IE 9)]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.3.3/min/tiny-slider.helper.ie8.js"></script>
-    <![endif]-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.3.3/min/tiny-slider.js"></script>
-
 
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Playfair+Display|Great+Vibes" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
@@ -23,28 +18,17 @@
     </div>
 
     <div class="splashScreen__flowers">
-        <object type="image/svg+xml" data="img/branche.svg" width="350">
-            branche 1
-        </object>
-        <object type="image/svg+xml" data="img/branche.svg" width="350">
-            branche 2
-        </object>
-        <object type="image/svg+xml" data="img/branche.svg" width="350">
-            branche 3
-        </object>
-        <object type="image/svg+xml" data="img/branche.svg" width="350">
-            branche 4
-        </object>
-        <object type="image/svg+xml" data="img/branche.svg" width="350">
-            branche 5
-        </object>
+        <img src="img/branche.svg" alt="">
+        <img src="img/branche.svg" alt="">
+        <img src="img/branche.svg" alt="">
+        <img src="img/branche.svg" alt="">
+        <img src="img/branche.svg" alt="">
     </div>
 
     <div class="splashScreen__scroll">
         <div class="splashScreen__line"></div>
         <div class="splashScreen__line"></div>
         <p class="splashScreen__text">Scroll</p>
-
     </div>
 </header>
 
@@ -80,10 +64,10 @@
             <div class="product__text rellax" data-rellax-speed="3">
                 <p class="product__surtitre"> Le petit nouveau </p>
                 <div class="product__trait"></div>
-                <h4>Qui est il?</h3>
-                    <p class="product__content">L'infuseur 5 Délice fait oublier les préjugés négatifs sur la tisane et
-                        la positionne comme une boisson élégante et urbaine, dans l’air du temps, masculine et féminine,
-                        qui réconcilie plaisir et bienfaits.</p>
+                <h4>Qui est il?</h4>
+                <p class="product__content">L'infuseur 5 Délice fait oublier les préjugés négatifs sur la tisane et
+                    la positionne comme une boisson élégante et urbaine, dans l’air du temps, masculine et féminine,
+                    qui réconcilie plaisir et bienfaits.</p>
             </div>
         </div>
     </section>
@@ -112,35 +96,32 @@
     <div class="slider">
         <div class="slider__tns">
             <div class="slide">
-                <img class="slide__img" src="img/slider.png" alt="">
+                <img class="slide__img" src="img/slider.png" alt="Apaisant">
 
                 <div class="slide__text">
-                    <h3 class="slide__subTitle">Un mélange intelligent</h3>
-                    <h2 class="slide__title">Un vrai plaisir</h2>
-                    <p class="slide__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img class="slide__img" src="img/slider2.jpg" alt="">
-
-                <div class="slide__text">
-                    <h3 class="slide__subTitle">Energie reboostée</h3>
-                    <h2 class="slide__title">Pétale de rose</h2>
-                    <p class="slide__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img class="slide__img" src="img/slider2.jpg" alt="">
-
-                <div class="slide__text">
-                    <h3 class="slide__subTitle">Energie reboostée</h3>
+                    <h3 class="slide__subTitle">Marjolaine, Rose, Bluet</h3>
                     <h2 class="slide__title">Apaisant</h2>
-                    <p class="slide__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p class="slide__paragraph">Grâce à la plante de marjolaine, votre corps et votre esprit s’apaise. Cette plante a aussi des bienfaits ré-équilibrants.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img class="slide__img" src="img/slider2.jpg" alt="Anti-oxydant">
+
+                <div class="slide__text">
+                    <h3 class="slide__subTitle">Grué de cacao, vigne rouge</h3>
+                    <h2 class="slide__title">Anti-oxydant</h2>
+                    <p class="slide__paragraph">Un effet bénéfique sur le système cardiovasculaire ( meilleure circulation sanguine). C’est aussi un anti-stress bienfaisant, grâce à la serotonine et au magnésium qu’il contient.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img class="slide__img" src="img/slider2.jpg" alt="Fruité">
+
+                <div class="slide__text">
+                    <h3 class="slide__subTitle">Extraits d’orange et de framboise</h3>
+                    <h2 class="slide__title">Fruité</h2>
+                    <p class="slide__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
         </div>
@@ -236,24 +217,25 @@
     <!----------------------------
         Popup
      ---------------------------->
-  <div class="popup" id="popup">
-        <div class="popup__bigTitle"><p><p></div>
+    <div class="popup" id="popup">
+        <div class="popup__bigTitle"><p>
+            <p></div>
         <div class="popup__button">
-          <div class="popup__button--first">
-            <p><</p>
-          </div>
-          <div class="popup__button--second">
-            <p>></p>
-          </div>
+            <div class="popup__button--first">
+                <p><</p>
+            </div>
+            <div class="popup__button--second">
+                <p>></p>
+            </div>
         </div>
         <div class="popup__image">
-          <div class="popup__number">
-            <p></p>
-          </div>
-          <img src=""
-              srcset=""
-            sizes=""
-              alt="">
+            <div class="popup__number">
+                <p></p>
+            </div>
+            <img src=""
+                 srcset=""
+                 sizes=""
+                 alt="">
 
         </div>
 
@@ -276,12 +258,12 @@
             <div class="popup__text">
                 <p class="popup__surtitre">Informations pratiques</p>
                 <div class="popup__price">
-                  <h4 class="popup__euros">11.90€</h4>
-                  <h5 class="popup__buy">Acheter</h5>
+                    <h4 class="popup__euros">11.90€</h4>
+                    <h5 class="popup__buy">Acheter</h5>
                 </div>
             </div>
         </div>
-
+    </div>
 </main>
 
 

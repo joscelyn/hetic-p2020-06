@@ -1,169 +1,165 @@
 .product {
-  margin-top: 5%;
-  background-color: rgb(255, 255, 255);
+    margin-top: 5%;
+    background-color: rgb(255, 255, 255);
 
     // back QUI APPARAIT EN DESKTOP
     &__back {
-      display: none;
+        display: none;
 
-      @include large {
-        display: block;
-        position: absolute;
-        opacity: 0.1;
-        background: #616576;
-        height: 83%;
-        width: 30%;
-        margin-top: 5%;
-      }
+        @include large {
+            display: block;
+            position: absolute;
+            opacity: 0.1;
+            background: #616576;
+            height: 83%;
+            width: 30%;
+            margin-top: 5%;
+        }
 
     }
 
-        /*     "Délices" en transversal sur bloc gris     */
+    /*     "Délices" en transversal sur bloc gris     */
     &__title {
 
-      display: none;
+        display: none;
 
-      @include large { // plus de 1018px
-        /* Délices: */
-        display: block;
-        font-family: $typoSerif;
-        font-size: 8rem;
-        text-transform: uppercase;
-        color: #FFFFFF;
-        opacity: 0.5;
-        position: relative;
-        left: -25%;
-        top: 20%;
-        margin-top: 2%;
-        margin-bottom: 0%;
-        p {
-          writing-mode: vertical-lr;
-          text-align: center;
+        @include large { // plus de 1018px
+            /* Délices: */
+            display: block;
+            font-family: $typoSerif;
+            font-size: 8rem;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            opacity: 0.5;
+            position: relative;
+            left: -25%;
+            top: 20%;
+            margin: 2% 0 0;
+
+            p {
+                writing-mode: vertical-lr;
+                text-align: center;
+            }
         }
-      };
+    ;
     }
 
     &__box img {
-    	width: 100%;
-      margin-top: 20%;
+        width: 100%;
+        margin-top: 20%;
 
-      @include medium { //box quand plus de 800 px
-        width: 60%;
-        margin-top: -15%;
-        margin-left: -3%
-      };
+        @include medium { //box quand plus de 800 px
+            width: 60%;
+            margin-top: -15%;
+            margin-left: -3%
+        }
+    ;
 
-      @include large{ // plus de 1018px
-        margin-left: -2%;
-      };
+        @include large { // plus de 1018px
+            margin-left: -2%;
+        }
+    ;
     }
 
-
-  /*           [de.lis]:             */
+    /*           [de.lis]:             */
     &__bigTitle {
-      display: none;
+        display: none;
 
-      @include medium{
-        /* [de.lis]: */
-      @include bigTitle;
-      text-align: right;
-      margin-top: -5%;
-      margin-right: 10%;
-      }
+        @include medium {
+            /* [de.lis]: */
+            @include bigTitle;
+            text-align: right;
+            margin-top: -5%;
+            margin-right: 10%;
+        }
 
     }
 
     &__bloctext {
-      height: 0;
-      padding-top: 15%;
-      display:flex;
-      flex-direction: column;
-      align-content: space-between;
+        height: 0;
+        padding-top: 15%;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
 
-      @include medium {
-        margin-top: 15%;
-      }
-      @include large {
-        margin-top: 5%;
-      }
+        @include medium {
+            margin-top: 15%;
+        }
+        @include large {
+            margin-top: 5%;
+        }
     }
 
     &__text {
-      // VERSION MOBILE
-    	width: 70%;
-    	height: auto;
-    	background-color: #FFFFFF;
-      margin: auto;
-      padding-right: 0;
-      text-align: center;
+        // VERSION MOBILE
+        width: 70%;
+        height: auto;
+        background-color: #FFFFFF;
+        margin: auto;
+        padding-right: 0;
+        text-align: center;
 
         .1 {
-          display: none;
+        display: none;
 
-          @include medium {
+        @include medium {
             display: block;
             margin-left: 40%;
             width: 90%;
-          };
         }
+    ;
+    }
 
         @include medium { // partie texts a plus de 800 px
-          width: 40%;
-          margin-left: 50%;
-          margin-top: -7%;
-          margin-right: 15%;
-          margin-bottom: 0;
-          padding-left: 10%;
-          padding-right: 0%;
-          padding-bottom: 2%;
-          position: relative;
-          top: -300px;
-          text-align: left;
-          background: none;
+            width: 40%;
+            margin: -7% 15% 0 50%;
+            padding: 0 0 2% 10%;
+            position: relative;
+            top: -300px;
+            text-align: left;
+            background: none;
 
         }
 
         @include large {
-          top: -500px;
-
+            top: -500px;
         }
-      }
+    }
 
-      &__surtitre { // mobile
+    &__surtitre { // mobile
 
         @include surtitre;
 
         @include medium {
-          margin-bottom: 5%;
-          font-size: 1.1rem;
+            margin-bottom: 5%;
+            font-size: 1.1rem;
         }
 
         &:after {
-          margin-top: 5%;
-          bottom: 5px;
-          left: -50px;
+            margin-top: 5%;
+            bottom: 5px;
+            left: -50px;
 
         }
 
-      }
+    }
 
-
-      h4 { //mobile
+    h4 { //mobile
         font-size: 2rem;
         text-transform: uppercase;
         color: $blue;
         font-family: $typoSansSerif;
         font-weight: bold;
-        margin-top: -3%;
-        margin-bottom: 0%;
+        margin: -3% 0 0;
 
         @include medium { //plus de 800 px
-          font-size: 1.5rem;
+            font-size: 1.5rem;
 
-        };
-      }
+        }
+    ;
+    }
 
-      &__content { // mobile
+    &__content { // mobile
         font-size: 1rem;
         font-family: $typoSansSerif;
         font-weight: lighter;
@@ -178,49 +174,49 @@
             width: 70%;
 
         }
-      }
+    }
 
 }
 
 .visible .product__bigTitle {
-  animation: moveTitle 2s ease-in-out forwards;
+    animation: moveTitle 2s ease-in-out forwards;
 }
 
 @keyframes moveTitle {
-  0% {
-    transform: translate(50%);
-    opacity: 0;
-  }
-  100% {
-    transform: 0;
-    color:rgba(#505467, 0.35);
-  }
+    0% {
+        transform: translate(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: 0;
+        color: rgba(#505467, 0.35);
+    }
 }
 
 .visible .product__back {
-  animation: moveBloc 2s ease-in-out forwards;
+    animation: moveBloc 2s ease-in-out forwards;
 }
 
 @keyframes moveBloc {
-  0% {
-    transform: translate(-50%);
-    opacity: 0;
-  }
-  100% {
-    transform: 0;
-    color:rgba(#505467, 0.35);
-  }
+    0% {
+        transform: translate(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: 0;
+        color: rgba(#505467, 0.35);
+    }
 }
 
 .visible .product__bloctext {
-animation: moveText 1.5s ease-in-out forwards;
+    animation: moveText 1.5s ease-in-out forwards;
 }
 
 @keyframes moveText {
-  0% {
-    transform: translate(50%);
-  }
-  100% {
-    transform: 0;
-  }
+    0% {
+        transform: translate(50%);
+    }
+    100% {
+        transform: 0;
+    }
 }

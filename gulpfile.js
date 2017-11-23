@@ -70,7 +70,7 @@ function js() {
  */
 
 function vendorsJS() {
-    return gulp.src(['node_modules/rellax/rellax.min.js','node_modules/hammerjs/hammer.min.js'])
+    return gulp.src(['node_modules/rellax/rellax.min.js','node_modules/hammerjs/hammer.min.js', 'node_modules/tiny-slider/dist/min/tiny-slider.js'])
         .pipe(concat('vendors.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))

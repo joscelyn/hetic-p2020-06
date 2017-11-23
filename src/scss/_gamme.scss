@@ -1,99 +1,97 @@
 .gamme {
-  margin-top: 15%;
+    margin-top: 15%;
 
-  &__surtitre {
-    text-align: center;
-    @include surtitre;
-    padding-top: 0;
-    margin-bottom: 2%;
-    //margin-top: -5%;
-    p {
-      margin-bottom: 1%;
+    @include container;
+
+    &__surtitre {
+        text-align: center;
+        @include surtitre;
+        padding-top: 0;
+        margin-bottom: 2%;
+        //margin-top: -5%;
+        p {
+            margin-bottom: 1%;
+        }
+
+    }
+    &__title {
+        @include title;
+        @include medium { //plus de 800 px
+            font-size: 2rem;
+            width: 70%;
+        }
+
+        p {
+            margin: 0;
+        }
     }
 
-  }
-  &__title {
-    @include title;
-    @include medium { //plus de 800 px
-      font-size: 2rem;
-      width: 70%;
-    }
-
-    p {
-      margin: 0;
-    }
-  }
-
-  &__trait {
-    @include trait;
-
-  }
-
-  &__produit { // Toute la gamme
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 5%;
-
-  }
-
-  &__presentation { // chaque produit individuel
-    width: 50%;
-    margin-top: 5%;
-    padding-bottom: 5%;
-    text-align: center;
-    @include medium { //plus de 800 px
-      width: 30%;
-      padding-bottom: 0%;
+    &__trait {
+        @include trait;
 
     }
 
-  }
-
-
-  &__name {
-    @include littleTitle;
-
-
-    p {
-      margin: 2%;
-      margin-top: 7%;
+    &__produit { // Toute la gamme
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
 
-    &:hover {
-      opacity: 0.5;
-    }
-    &:active {
-      color: black;
-    }
+    &__presentation { // chaque produit individuel
+        width: 50%;
+        margin-top: 5%;
+        padding-bottom: 5%;
+        text-align: center;
+        @include medium { //plus de 800 px
+            width: 30%;
+            padding-bottom: 0%;
 
-  }
-
-
-  img {
-    width: 85%;
-    @include medium {
-      width: 75%;
-    };
-  }
-
-  &__knowMore {
-    font-family:$typoSansSerif;
-    font-size: 0.8rem;
-    color: $blue;
-    letter-spacing: 0;
-    line-height: 24px;
-    @include medium { //plus de 800 px
-      font-size: 1rem;
+        }
 
     }
-    &:hover {
-      opacity: 0.2;
+
+    &__name {
+        @include littleTitle;
+
+        p {
+            margin: 2%;
+            margin-top: 7%;
+        }
+
+        &:hover {
+            opacity: 0.5;
+        }
+        &:active {
+            color: black;
+        }
+
     }
 
-    &:active {
-      color: black;
+    img {
+        width: 85%;
+        @include medium {
+            width: 75%;
+        }
+    ;
     }
-  }
+
+    &__knowMore {
+        font-family: $typoSansSerif;
+        font-size: 0.8rem;
+        color: $blue;
+        letter-spacing: 0;
+        line-height: 24px;
+        @include medium { //plus de 800 px
+            font-size: 1rem;
+
+        }
+        &:hover {
+            opacity: 0.2;
+        }
+
+        &:active {
+            color: black;
+        }
+    }
 }
