@@ -45,8 +45,6 @@ while(i<products.length){
         //Let's show the modal with the right content
         modal.style.display = "block";
         writeContent(file);
-        console.log('key:'+key);
-
 
         // In the modal, when you click on the arrow down
         while (y<buttonDown.length) {
@@ -127,7 +125,6 @@ if (window.matchMedia("(max-width: 600px)").matches) {
 
   // listen to events and change the content just like the arrox
   modalSwipe.on("tap swipe", function(event) {
-      console.log( event.type +" gesture detected.");
       event.preventDefault();
 
       if (key>4){
@@ -137,11 +134,9 @@ if (window.matchMedia("(max-width: 600px)").matches) {
         key++;
       }
 
-      console.log(key);
       let product= products[key];
       let productName = product.getAttribute('data-produit');
       let file = 'js/json/popup-'+ productName +'.json';
-
       //Let's show the modal with the right content
       writeContent(file);
 
