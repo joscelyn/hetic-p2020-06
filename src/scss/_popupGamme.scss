@@ -25,6 +25,14 @@
 
   @include medium {
     width: 100vw;
+<<<<<<< HEAD
+=======
+    //padding-right: 10%;
+    //padding-left: 10%;
+    //width: 80vw;
+    //height: 100vh;
+    //transform-origin: center;
+>>>>>>> ed1e3e8b19c8af84cec32d1bf50d7ddf2fef32c3
   }
 
   @include large {
@@ -256,7 +264,11 @@
           top: 35%;
           left: 55%;
           cursor: pointer;
+<<<<<<< HEAD
           &:hover {
+=======
+          :hover {
+>>>>>>> ed1e3e8b19c8af84cec32d1bf50d7ddf2fef32c3
             opacity: 0.5;
           }
         }
@@ -281,7 +293,12 @@
           top: 40%;
           left: 55%;
           cursor: pointer;
+<<<<<<< HEAD
           &:hover {
+=======
+
+          :hover {
+>>>>>>> ed1e3e8b19c8af84cec32d1bf50d7ddf2fef32c3
             opacity: 0.5;
           }
         }
