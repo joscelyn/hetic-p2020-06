@@ -18,72 +18,72 @@
         overflow: hidden;
 
         object {
-            position: absolute;
-            transition: 1s;
+        position: absolute;
+        transition: 1s;
 
-            &:nth-child(1) { // grande haut gauche
-              transform: rotate(160deg);
-              top: -5%;
-              //left: 2%;
-              width:30%;
-              @include medium {
-                width: 20%;
-              }
-            }
+        &:nth-child(1) { // grande haut gauche
+          transform: rotate(160deg);
+          top: -5%;
+          //left: 2%;
+          width:30%;
+          @include medium {
+            width: 20%;
+          }
+        }
 
-            &:nth-child(4) { // petite haut droite
-              transform: rotate(220deg);
-              transform-origin: top right;
-              top:10%;
-              right: 50%;
-              width: 30%;
-              @include medium {
-                width: 20%;
-                top: 20%;
-                right: 25%;
-              }
-            }
+        &:nth-child(4) { // petite haut droite
+          transform: rotate(220deg);
+          transform-origin: top right;
+          top:10%;
+          right: 50%;
+          width: 30%;
+          @include medium {
+            width: 20%;
+            top: 20%;
+            right: 25%;
+          }
+        }
 
-            &:nth-child(2) { // petite bas gauche
-              transform: rotate(50deg);
-              bottom: -0%;
-              left: -100px;
-              transform-origin: bottom;
-              width: 35%;
-              @include medium { // plus de 1018px
-                width: 20%;
-                bottom: -5%;
-                left: -100px;
-              }
-            }
+        &:nth-child(2) { // petite bas gauche
+          transform: rotate(50deg);
+          bottom: -0%;
+          left: -100px;
+          transform-origin: bottom;
+          width: 35%;
+          @include medium { // plus de 1018px
+            width: 20%;
+            bottom: -5%;
+            left: -100px;
+          }
+        }
 
-            &:nth-child(3) { // grande bas droite
-              transform: rotate(-45deg);
-              transform-origin: bottom right;
-              bottom: 50px;
-              right: -50px;
-              width: 30%;
-              @include medium { // plus de 1018px
-                width: 20%;
-                bottom: 100px;
-                right: -100px;
-              }
-            }
+        &:nth-child(3) { // grande bas droite
+          transform: rotate(-45deg);
+          transform-origin: bottom right;
+          bottom: 50px;
+          right: -50px;
+          width: 30%;
+          @include medium { // plus de 1018px
+            width: 20%;
+            bottom: 100px;
+            right: -100px;
+          }
+        }
 
-            &:nth-child(5) { // milieu
-              transform: rotate(200deg);
-              transform-origin: top;
-              top: 10%;
-              right: 45%;
-              width: 20%;
-              @include medium { // plus de 1018px
-                width: 15%;
-                transform: rotate(170deg);
-                transform-origin: top;
-                top: 25%;
-                right: 55%;
-              }
-            }
+        &:nth-child(5) { // milieu
+          transform: rotate(200deg);
+          transform-origin: top;
+          top: 10%;
+          right: 45%;
+          width: 20%;
+          @include medium { // plus de 1018px
+            width: 15%;
+            transform: rotate(170deg);
+            transform-origin: top;
+            top: 25%;
+            right: 55%;
+          }
+        }
       }
     }
 
@@ -103,9 +103,6 @@
       background: $grey;
     }
 
-    :nth-child(2) {
-      order: 3;
-    }
 
   &__text {
     order: 2;
@@ -113,6 +110,17 @@
     font-size: 12px;
     font-weight: lighter;
     color: #F5F6F9;
+    }
+    &:after {
+      width: 20px;
+      height: 1px;
+      background: $grey;
+    }
+
+    &:before {
+      width: 20px;
+      height: 1px;
+      background: $grey;
     }
   }
 

@@ -70,7 +70,7 @@ $large: 1024px;
   @include medium { //plus de 800 px
     font-size: 1.2rem;
 
-  };
+  }
 }
 @mixin bigTitle {
   display: block;

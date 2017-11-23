@@ -149,12 +149,14 @@
     }
 
       h2 { //mobile
+
         font-size: 2rem;
         text-transform: uppercase;
         color: $blue;
         font-family: $typoSansSerif;
         font-weight: bold;
         margin: -3% 0 0;
+
 
         @include medium { //plus de 800 px
             font-size: 1.5rem;
@@ -211,12 +213,10 @@
     }
 }
 
+
 .visible .product__bloctext {
     animation: moveText 1.5s ease-in-out forwards;
-
-.visible .product__text {
-animation: moveText 1.5s ease-in-out forwards;
-
+}
 
 @keyframes moveText {
     0% {
