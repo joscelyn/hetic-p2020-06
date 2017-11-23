@@ -12,11 +12,7 @@
     }
 
     &__packaging {
-<<<<<<< HEAD
       @include medium {
-=======
-      @include medium{
->>>>>>> ed1e3e8b19c8af84cec32d1bf50d7ddf2fef32c3
         flex-grow: 1;
         flex-basis: 40%;
         position: relative;
@@ -69,7 +65,6 @@
       @include large {
         margin-top: 15%;
       }
-<<<<<<< HEAD
 
       img {
         width: 60%;;
@@ -106,44 +101,6 @@
       @include bigTitle;
       margin-bottom: 5rem;
 
-=======
-
-      img {
-        width: 60%;;
-        height: auto;
-        @include medium {
-          width: 70%;
-        }
-      }
-    }
-// INFOS SUR LE gamme__produit
-
-    &__details {
-
-      @include medium {
-        box-sizing: border-box;
-        flex-grow: 1;
-        flex-basis: 50%;
-        padding-top: 3rem;
-        padding-left: 2rem;
-      }
-      @include large {
-        padding-left: 10rem;
-        box-sizing: border-box;
-      }
-    }
-
-  /*           [de.lis]:             */
-    &__bigTitle {
-      display: none;
-
-      @include medium{
-
-      @include bigTitle;
-      margin-bottom: 5rem;
-
-
->>>>>>> ed1e3e8b19c8af84cec32d1bf50d7ddf2fef32c3
       }
 
     }
@@ -155,7 +112,6 @@
           @include medium {
             display: block;
           }
-<<<<<<< HEAD
 
         @include medium { // partie texts a plus de 800 px
             width: 40%;
@@ -171,10 +127,6 @@
         @include large {
             top: -500px;
         }
-=======
-        }
-
->>>>>>> ed1e3e8b19c8af84cec32d1bf50d7ddf2fef32c3
       }
     }
 
@@ -183,12 +135,8 @@
         @include surtitre;
 
         @include medium {
-<<<<<<< HEAD
             margin-bottom: 5%;
             font-size: 1.1rem;
-=======
-          font-size: 1.1rem;
->>>>>>> ed1e3e8b19c8af84cec32d1bf50d7ddf2fef32c3
         }
 
         &:after {
@@ -202,22 +150,13 @@
 
       h2 { //mobile
 
-<<<<<<< HEAD
-=======
-      h2 { //mobile
->>>>>>> ed1e3e8b19c8af84cec32d1bf50d7ddf2fef32c3
         font-size: 2rem;
         text-transform: uppercase;
         color: $blue;
         font-family: $typoSansSerif;
         font-weight: bold;
-<<<<<<< HEAD
         margin: -3% 0 0;
 
-=======
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
->>>>>>> ed1e3e8b19c8af84cec32d1bf50d7ddf2fef32c3
 
         @include medium { //plus de 800 px
             font-size: 1.5rem;
@@ -259,13 +198,8 @@
     }
 }
 
-<<<<<<< HEAD
 .visible .product__back {
     animation: moveBloc 2s ease-in-out forwards;
-=======
-.visible .product__packagingBg {
-  animation: moveBloc 2s ease-in-out forwards;
->>>>>>> ed1e3e8b19c8af84cec32d1bf50d7ddf2fef32c3
 }
 
 @keyframes moveBloc {
@@ -279,14 +213,9 @@
     }
 }
 
-<<<<<<< HEAD
 
 .visible .product__bloctext {
     animation: moveText 1.5s ease-in-out forwards;
-=======
-.visible .product__text {
-animation: moveText 1.5s ease-in-out forwards;
->>>>>>> ed1e3e8b19c8af84cec32d1bf50d7ddf2fef32c3
 }
 
 @keyframes moveText {

@@ -1,7 +1,6 @@
 .gamme {
     margin-top: 15%;
 
-<<<<<<< HEAD
     @include container;
 
     &__surtitre {
@@ -25,44 +24,6 @@
         p {
             margin: 0;
         }
-=======
-  }
-  &__title {
-    @include title;
-    @include medium { //plus de 800 px
-      font-size: 2rem;
-      width: 70%;
-    }
-    p {
-      margin: 0;
-    }
-  }
-
-  &__trait {
-    @include trait;
-
-  }
-
-  &__produit { // Toute la gamme
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 5%;
-
-  }
-
-  &__presentation { // chaque produit individuel
-    width: 50%;
-    margin-top: 5%;
-    padding-bottom: 5%;
-    text-align: center;
-    cursor: pointer;
-
-    @include medium { //plus de 800 px
-      width: 30%;
-      padding-bottom: 0%;
->>>>>>> ed1e3e8b19c8af84cec32d1bf50d7ddf2fef32c3
     }
 
     &__trait {
@@ -98,30 +59,12 @@
             margin-top: 7%;
         }
 
-<<<<<<< HEAD
         &:hover {
             opacity: 0.5;
         }
         &:active {
             color: black;
         }
-=======
-  img {
-    width: 85%;
-    @include medium {
-      width: 75%;
-    };
-  }
-
-  &__knowMore {
-    font-family:$typoSansSerif;
-    font-size: 0.8rem;
-    color: $blue;
-    letter-spacing: 0;
-    line-height: 24px;
-    @include medium { //plus de 800 px
-      font-size: 1rem;
->>>>>>> ed1e3e8b19c8af84cec32d1bf50d7ddf2fef32c3
 
     }
 
