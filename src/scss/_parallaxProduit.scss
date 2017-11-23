@@ -1,114 +1,117 @@
 .product {
-    margin-top: 5%;
-    background-color: rgb(255, 255, 255);
-
-    // back QUI APPARAIT EN DESKTOP
-    &__back {
-        display: none;
-
-        @include large {
-            display: block;
-            position: absolute;
-            opacity: 0.1;
-            background: #616576;
-            height: 83%;
-            width: 30%;
-            margin-top: 5%;
-        }
+  display: flex;
+	flex-direction : column;
+	text-align: center;
+  margin-bottom: 10rem;
+    @include medium {
+      flex-direction: row;
+      text-align: left;
+    }
+    @include large {
 
     }
 
-    /*     "Délices" en transversal sur bloc gris     */
-    &__title {
-
-        display: none;
-
-        @include large { // plus de 1018px
-            /* Délices: */
-            display: block;
-            font-family: $typoSerif;
-            font-size: 8rem;
-            text-transform: uppercase;
-            color: #FFFFFF;
-            opacity: 0.5;
-            position: relative;
-            left: -25%;
-            top: 20%;
-            margin: 2% 0 0;
-
-            p {
-                writing-mode: vertical-lr;
-                text-align: center;
-            }
-        }
-    ;
+    &__packaging {
+      @include medium {
+        flex-grow: 1;
+        flex-basis: 40%;
+        position: relative;
+      }
     }
 
-    &__box img {
-        width: 100%;
-        margin-top: 20%;
+        /*     "Délices" en transversal sur bloc gris     */
+    &__packagingBg {
 
-        @include medium { //box quand plus de 800 px
-            width: 60%;
-            margin-top: -15%;
-            margin-left: -3%
-        }
-    ;
+      display: none;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
 
-        @include large { // plus de 1018px
-            margin-left: -2%;
+      @include medium { // plus de 1018px
+        /* Délices: */
+        display: block;
+        position: absolute;
+        right: 5rem;
+    		width: 95%;
+    		height: 100%;
+    		background-color: #EFEFF1;
+    		z-index: -3;
+    		overflow: hidden;
+
+        p {
+          font-family: $typoSerif;
+          font-size: 8rem;
+          text-transform: uppercase;
+          text-align: center;
+          text-orientation: sideways;
+      		writing-mode: vertical-rl;
+      		color: #FFF;
+      		padding-left: 3rem;
+          margin: 0;
+          margin-top: 10%;
         }
-    ;
+      }
     }
 
-    /*           [de.lis]:             */
+    &__image {
+      padding-top: 2rem;
+    	padding-bottom: 1rem;
+    	z-index: 2;
+    	position: relative;
+
+      @include medium { //box quand plus de 800 px
+        margin-top: 25%;
+        text-align: right;
+      }
+      @include large {
+        margin-top: 15%;
+      }
+
+      img {
+        width: 60%;;
+        height: auto;
+        @include medium {
+          width: 70%;
+        }
+      }
+
+    }
+// INFOS SUR LE gamme__produit
+
+    &__details {
+
+      @include medium {
+        box-sizing: border-box;
+        flex-grow: 1;
+        flex-basis: 50%;
+        padding-top: 3rem;
+        padding-left: 2rem;
+      }
+      @include large {
+        padding-left: 10rem;
+        box-sizing: border-box;
+      }
+    }
+
+  /*           [de.lis]:             */
+
     &__bigTitle {
         display: none;
 
-        @include medium {
-            /* [de.lis]: */
-            @include bigTitle;
-            text-align: right;
-            margin-top: -5%;
-            margin-right: 10%;
-        }
+      @include medium {
+      @include bigTitle;
+      margin-bottom: 5rem;
 
-    }
+      }
 
-    &__bloctext {
-        height: 0;
-        padding-top: 15%;
-        display: flex;
-        flex-direction: column;
-        align-content: space-between;
-
-        @include medium {
-            margin-top: 15%;
-        }
-        @include large {
-            margin-top: 5%;
-        }
     }
 
     &__text {
-        // VERSION MOBILE
-        width: 70%;
-        height: auto;
-        background-color: #FFFFFF;
-        margin: auto;
-        padding-right: 0;
-        text-align: center;
-
+      // VERSION MOBILE
         .1 {
-        display: none;
-
-        @include medium {
+          display: none;
+          @include medium {
             display: block;
-            margin-left: 40%;
-            width: 90%;
-        }
-    ;
-    }
+          }
 
         @include medium { // partie texts a plus de 800 px
             width: 40%;
@@ -124,6 +127,7 @@
         @include large {
             top: -500px;
         }
+      }
     }
 
     &__surtitre { // mobile
@@ -144,7 +148,8 @@
 
     }
 
-    h4 { //mobile
+      h2 { //mobile
+
         font-size: 2rem;
         text-transform: uppercase;
         color: $blue;
@@ -152,11 +157,12 @@
         font-weight: bold;
         margin: -3% 0 0;
 
+
         @include medium { //plus de 800 px
             font-size: 1.5rem;
 
         }
-    ;
+
     }
 
     &__content { // mobile
@@ -166,12 +172,11 @@
         color: $blue;
         letter-spacing: 0;
         line-height: 28px;
-        margin-right: O;
-        margin-bottom: 20%;
+
 
         @include medium { //plus de 800px
             font-size: 1.2rem;
-            width: 70%;
+            //width: 70%;
 
         }
     }
@@ -207,6 +212,7 @@
         color: rgba(#505467, 0.35);
     }
 }
+
 
 .visible .product__bloctext {
     animation: moveText 1.5s ease-in-out forwards;

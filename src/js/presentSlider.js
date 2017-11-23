@@ -1,10 +1,6 @@
 //import { tns } from "tiny-slider"
-import { windowWidth } from './mediaQueries'
-console.log(windowWidth)
 
-//let windowWidth = window.innerWidth;
-// ajout nav dynamiquement
-// apaisant:
+import { windowWidth } from './mediaQueries';
 
 
 if (windowWidth < 800) {
@@ -28,6 +24,3 @@ if (windowWidth < 800) {
         });
     });
 }
-
-
-

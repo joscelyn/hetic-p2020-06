@@ -38,55 +38,50 @@
         Produit
      ---------------------------->
     <section class="product" id="product">
-        <div class="product__back rellax" data-rellax-speed="0.8">
-            <div class="product__title">
-                <p class="rellax" data-rellax-speed="2">Délices</p>
-            </div>
-        </div>
 
-        <div class="product__bigTitle" data-rellax-speed="2">
-            <h3>[de.lis]</h3>
-        </div>
+      <div class="product__packaging">
+				<div class="product__packagingBg">
+					<p> délice </p>
+				</div>
+				<div class="product__image">
+					<img src="img/boite_thé.png" alt="La boite de thé">
+				</div>
+			</div>
 
-        <div class="product__box rellax" data-rellax-speed="1">
-            <img src="img/boite_thé.png" alt="Packaging L'infuseur 5 Délice">
-        </div>
+			<!-- definition only from ipad to desktop -->
+			<div class="product__details">
+				<p class="product__bigTitle">[DE.LIS]</p>
+				<div class="product__text 1">
+					<h3 class="product__surtitre">Définition</h3>
+					<h2>Délice [ de.lis ]</h2>
+					<p class="product__content">Très vif plaisir, ce qui produit ce plaisir; délectation, enchantement.</p>
+				</div>
+				<!-- all the time visible -->
+				<div class="product__text">
+					<h3 class="product__surtitre">Le petit nouveau</h3>
+					<div class="line"></div>
+					<h2>5 délice</h2>
+					<p class="product__content">L’infuseur 5 Délice fait oublier les préjugés négatifs sur la tisane et la positionne comme une boisson élégante et urbaine, dans l’air du temps, masculine et féminine, qui réconcilie plaisir et bienfaits.</p>
+				</div>
 
-        <div class="product__bloctext">
-
-            <div class="product__text 1 rellax" data-rellax-speed="3">
-                <p class="product__surtitre">Définition </p>
-                <h4>Délice [DE.LIS]</h4>
-                <p class="product__content">Trés vif plaisir, ce qui produit ce plaisir; </br> délectation,
-                    enchantement.</p>
-            </div>
-
-            <div class="product__text rellax" data-rellax-speed="3">
-                <p class="product__surtitre"> Le petit nouveau </p>
-                <div class="product__trait"></div>
-                <h4>Qui est il?</h4>
-                <p class="product__content">L'infuseur 5 Délice fait oublier les préjugés négatifs sur la tisane et
-                    la positionne comme une boisson élégante et urbaine, dans l’air du temps, masculine et féminine,
-                    qui réconcilie plaisir et bienfaits.</p>
-            </div>
-        </div>
     </section>
 
 
     <!----------------------------
         Citation
      ---------------------------->
-    <section class="quote">
-        <div class="quotation__surtitre"> Les créatrices ont dit</div>
-        <div class="quotation">
-            <div class="quotation__quote" id="quotation__quote__first">
-                <p>“</p>
-            </div>
-            <p class="quotation__text">Parce que nous ne voulons plus de tisanes de mamies. </p>
-            <div class="quotation__quote" id="quotation__quote__second">
-                <p>”</p>
-            </div>
+    <section class="quotation">
+      <p class="quotation__surtitre">Les créatrices ont dit</p>
+      <div class="quotation__block">
+        <div class="quotation__quote --open" id="quotation__quote__first">
+            <p>“</p>
         </div>
+        <p class="quotation__text">Parce que nous ne voulons plus de tisanes de mamies. </p>
+        <div class="quotation__quote --close" id="quotation__quote__second">
+            <p>”</p>
+        </div>
+      </div>
+
     </section>
 
 
@@ -140,7 +135,7 @@
             <p>La gamme</p>
         </div>
         <div class="gamme__title">
-            <p>Découvrez toute la gamme</p>
+            <h2>Découvrez toute la gamme</h2>
         </div>
 
         <div class="gamme__produit">
@@ -151,9 +146,9 @@
                     <p>[LJN]</p>
                 </div>
                 <div class="gamme__name">
-                    <p> 1 ligne </p>
+                    <h3>1 ligne</h3>
                 </div>
-                <div class="gamme__knowMore"> En savoir plus</div>
+                <p class="gamme__knowMore">En savoir plus</p>
             </div>
 
             <div class="gamme__presentation calme" data-produit="calme" data-key="1">
@@ -162,9 +157,9 @@
                     <p>[KALM]</p>
                 </div>
                 <div class="gamme__name">
-                    <p> 2 calme </p>
+                    <h3>2 calme</h3>
                 </div>
-                <div class="gamme__knowMore"> En savoir plus</div>
+                <p class="gamme__knowMore">En savoir plus</p>
             </div>
 
             <div class="gamme__presentation digestif" data-produit="digestif" data-key="2">
@@ -173,9 +168,9 @@
                     <p>[diʒɛstif]</p>
                 </div>
                 <div class="gamme__name" id="gamme__name">
-                    <p> 3 digestif </p>
+                    <h3>3 digestif</h3>
                 </div>
-                <div class="gamme__knowMore"> En savoir plus</div>
+                <p class="gamme__knowMore">En savoir plus</p>
             </div>
 
             <div class="gamme__presentation tonique" data-produit="tonique" data-key="3">
@@ -184,9 +179,9 @@
                     <p>[tɔ.nik]</p>
                 </div>
                 <div class="gamme__name">
-                    <p> 4 tonique </p>
+                    <h3>4 tonique</h3>
                 </div>
-                <div class="gamme__knowMore"> En savoir plus</div>
+                <p class="gamme__knowMore">En savoir plus</p>
             </div>
 
             <div class="gamme__presentation delice" data-produit="delice" data-key="4">
@@ -195,9 +190,9 @@
                     <p>[DELIS]</p>
                 </div>
                 <div class="gamme__name">
-                    <p> 5 délice </p>
+                    <h3>5 délice</h3>
                 </div>
-                <div class="gamme__knowMore"> En savoir plus</div>
+                <p class="gamme__knowMore">En savoir plus</p>
             </div>
 
             <div class="gamme__presentation detox" data-produit="detox" data-key="5">
@@ -206,9 +201,9 @@
                     <p>[diː.tɒks]</p>
                 </div>
                 <div class="gamme__name">
-                    <p> 6 dé-tox </p>
+                    <h3>6 dé-tox</h3>
                 </div>
-                <div class="gamme__knowMore"> En savoir plus</div>
+                <p class="gamme__knowMore">En savoir plus</p>
             </div>
         </div>
     </div>
@@ -221,12 +216,13 @@
         <div class="popup__bigTitle"><p>
             <p></div>
         <div class="popup__button">
-            <div class="popup__button--first">
-                <p><</p>
-            </div>
-            <div class="popup__button--second">
-                <p>></p>
-            </div>
+          <div class="popup__button--first">
+            <a href="#"><</a>
+          </div>
+          <div class="popup__button--second">
+            <a href="#">></a>
+          </div>
+
         </div>
         <div class="popup__image">
             <div class="popup__number">
