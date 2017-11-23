@@ -54,7 +54,34 @@
         Produit
      ---------------------------->
     <section class="product" id="product">
-        <div class="product__back rellax" data-rellax-speed="0.8">
+
+      <div class="product__packaging">
+				<div class="product__packagingBg">
+					<p> délice </p>
+				</div>
+				<div class="product__image">
+					<img src="img/boite_thé.png" alt="#">
+				</div>
+			</div>
+
+			<!-- definition only from ipad to desktop -->
+			<div class="product__details">
+				<p class="product__bigTitle">[DE.LIS]</p>
+				<div class="product__text 1">
+					<h3 class="product__surtitre"> Définition</h3>
+					<div class="line"></div>
+					<h2> Délice [ de.lis ]</h2>
+					<p class="product__content">Très vif plaisir, ce qui produit ce plaisir; délectation, enchantement.</p>
+				</div>
+				<!-- all the time visible -->
+				<div class="product__text">
+					<h3 class="product__surtitre"> Le petit nouveau</h3>
+					<div class="line"></div>
+					<h2> 5 délice</h2>
+					<p class="product__content">L’infuseur 5 Délice fait oublier les préjugés négatifs sur la tisane et la positionne comme une boisson élégante et urbaine, dans l’air du temps, masculine et féminine, qui réconcilie plaisir et bienfaits.</p>
+				</div>
+
+        <!-- <div class="product__back rellax" data-rellax-speed="0.8">
             <div class="product__title">
                 <p class="rellax" data-rellax-speed="2">Délices</p>
             </div>
@@ -85,24 +112,25 @@
                         la positionne comme une boisson élégante et urbaine, dans l’air du temps, masculine et féminine,
                         qui réconcilie plaisir et bienfaits.</p>
             </div>
-        </div>
+        </div> -->
     </section>
 
 
     <!----------------------------
         Citation
      ---------------------------->
-    <section class="quote">
-        <div class="quotation__surtitre"> Les créatrices ont dit</div>
-        <div class="quotation">
-            <div class="quotation__quote" id="quotation__quote__first">
-                <p>“</p>
-            </div>
-            <p class="quotation__text">Parce que nous ne voulons plus de tisanes de mamies. </p>
-            <div class="quotation__quote" id="quotation__quote__second">
-                <p>”</p>
-            </div>
+    <section class="quotation">
+      <div class="quotation__surtitre"> Les créatrices ont dit</div>
+      <div class="quotation__block">
+        <div class="quotation__quote --open" id="quotation__quote__first">
+            <p>“</p>
         </div>
+        <p class="quotation__text">Parce que nous ne voulons plus de tisanes de mamies. </p>
+        <div class="quotation__quote --close" id="quotation__quote__second">
+            <p>”</p>
+        </div>
+      </div>
+
     </section>
 
 
@@ -240,10 +268,10 @@
         <div class="popup__bigTitle"><p><p></div>
         <div class="popup__button">
           <div class="popup__button--first">
-            <p><</p>
+            <a href="#"><</a>
           </div>
           <div class="popup__button--second">
-            <p>></p>
+            <a href="#">></a>
           </div>
         </div>
         <div class="popup__image">

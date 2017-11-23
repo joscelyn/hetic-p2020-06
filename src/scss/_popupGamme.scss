@@ -240,12 +240,14 @@
     @include medium {
       z-index: 3;
       display: block;
+
       &--first {
-        p {
+        a {
           font-size: 1.5rem;
           margin-top: 2%;
           color: white;
           background-color: $blue;
+          text-decoration: none;
           border-radius: 0;
           border: none;
           z-index: 3;
@@ -257,15 +259,20 @@
           position: absolute;
           top: 35%;
           left: 55%;
+          cursor: pointer;
+          :hover {
+            opacity: 0.5;
+          }
         }
       }
 
       &--second {
-        p {
+        a {
           font-size: 1.5rem;
           margin-top: 2%;
           color: white;
           background-color: $blue;
+          text-decoration: none;
           border-radius: 0;
           border: none;
           z-index: 3;
@@ -277,6 +284,11 @@
           position: absolute;
           top: 40%;
           left: 55%;
+          cursor: pointer;
+
+          :hover {
+            opacity: 0.5;
+          }
         }
       }
     }
@@ -288,6 +300,7 @@
     right:10%;
     top: 5%;
     font-size: 40px;
+    cursor: pointer;
 
     @include large {
       right: 8%;
