@@ -1,10 +1,10 @@
 .slider {
     position: relative;
     padding-bottom: 300px;
-
     @include container;
 
-    &:after, &:before {
+    &:after,
+    &:before {
         content: '';
         display: block;
         position: absolute;
@@ -25,14 +25,12 @@
     position: relative;
     display: flex;
     height: 100%;
-
     @include medium {
         position: static;
     }
 
     &__img {
         width: 100%;
-
         @include medium {
             position: absolute;
             top: 0;
@@ -40,7 +38,7 @@
             transform: translateY(-30px);
             opacity: 0;
             visibility: hidden;
-            transition: .5s;
+            transition: 0.5s;
 
             .active & {
                 transform: translateY(0);
@@ -59,11 +57,10 @@
 
     &__subTitle {
         @include surtitre;
-
         @include medium {
             max-height: 0;
             overflow: hidden;
-            transition: .3s;
+            transition: 0.3s;
 
             .active & {
                 max-height: 100px;
@@ -80,7 +77,6 @@
         font-family: $typoSansSerif;
         text-transform: uppercase;
         font-weight: 700;
-
         @include medium {
             position: relative;
             display: inline-block;
@@ -98,7 +94,7 @@
                 background: $blue;
                 transform-origin: left center;
                 transform: scale(1);
-                transition: .3s;
+                transition: 0.3s;
 
                 .active & {
                     transform: scale(0, 1);
@@ -117,13 +113,12 @@
         font-family: $typoSansSerif;
         font-size: 17px;
         line-height: 1.4;
-
         @include medium {
             margin: 0;
             font-size: 14px;
             max-height: 0;
             overflow: hidden;
-            transition: .3s;
+            transition: 0.3s;
 
             .active & {
                 max-height: 100px;
@@ -144,9 +139,8 @@
     position: absolute;
     top: 0;
     width: 100%;
-    padding: 94% 0 0 0;
+    padding: 94% 0 0;
     z-index: 2;
-
     @include medium {
         display: none;
     }
@@ -159,9 +153,10 @@
         background: rgba($blue, .35);
         border-radius: 50%;
         border: none;
-        transition: .2s;
+        transition: 0.2s;
 
-        &.tns-nav-active, &:hover {
+        &.tns-nav-active,
+        &:hover {
             background: rgba($blue, 8);
         }
     }

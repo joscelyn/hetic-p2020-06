@@ -4,8 +4,7 @@ import './parallaxProduit';
 import './presentSlider';
 import './popup';
 
-var rellax = new Rellax('.rellax');
-
+let rellax = new Rellax('.rellax');
 
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
