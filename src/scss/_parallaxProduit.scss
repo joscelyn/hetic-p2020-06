@@ -7,7 +7,8 @@
         flex-direction: row;
         text-align: left;
     }
-    @include large {}
+    @include large {
+    }
 
     &__packaging {
         @include medium {
@@ -94,24 +95,24 @@
     &__text {
         // VERSION MOBILE
         .1 {
-            display: none;
-            @include medium {
-                display: block;
-            }
-            @include medium {
-                // partie texts a plus de 800 px
-                width: 40%;
-                text-align: left;
-                margin: -7% 15% 0 50%;
-                padding: 0 0 2% 10%;
-                position: relative;
-                top: -300px;
-                background: none;
-            }
-            @include large {
-                top: -500px;
-            }
+        display: none;
+        @include medium {
+            display: block;
         }
+        @include medium {
+            // partie texts a plus de 800 px
+            width: 40%;
+            text-align: left;
+            margin: -7% 15% 0 50%;
+            padding: 0 0 2% 10%;
+            position: relative;
+            top: -300px;
+            background: none;
+        }
+        @include large {
+            top: -500px;
+        }
+    }
     }
 
     &__surtitre {
@@ -162,6 +163,7 @@
 .visible .product__bigTitle {
     animation: moveTitle 2s -0.5s ease-in-out forwards;
 }
+
 @keyframes moveTitle {
     0% {
         transform: translate(50%);
@@ -177,6 +179,7 @@
 .visible .product__packagingBg {
     animation: moveBloc 1.5s -0.5s ease-in-out forwards;
 }
+
 @keyframes moveBloc {
     0% {
         transform: translate(-50%);
@@ -191,6 +194,7 @@
 .visible .product__text {
     animation: moveText 1.5s -0.5s ease-in-out forwards;
 }
+
 @keyframes moveText {
     0% {
         transform: translate(50%);

@@ -24,8 +24,9 @@ $large: 1024px;
 
 @mixin container {
     @include medium {
+        width: 90%;
+        max-width: 1260px;
         margin: 0 auto;
-        width: 1024px;
     }
 }
 

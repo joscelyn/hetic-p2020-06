@@ -83,6 +83,10 @@
             margin: 0 0 12px;
             cursor: pointer;
 
+            .active & {
+                cursor: auto;
+            }
+
             &:after {
                 content: "";
                 position: absolute;
