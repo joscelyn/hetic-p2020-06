@@ -1,82 +1,18 @@
-@mixin quotationQuote() {
+
+// ANIMATIONS //
+@mixin quotationMove() {
       animation-name: opacity, mouvement;
-      animation-duration: 8s, 10s;
+      animation-duration: 3s, 10s;
       animation-iteration-count: 1, infinite;
       animation-direction: normal, alternate;
       animation-fill-mode: forwards;
       animation-timing-function: linear, linear;
 }
 
-.quotation {
-    text-align: center;
-  	padding: 100px 60px 100px 60px;
-  	position : relative;
-
-    @include medium {
-      margin-top: 5%;
-    }
-    //text-align: center;
-
-    &__surtitre {
-      @include surtitre;
-      @include medium {
-        margin-top: -10%;
-      }
-    }
-
-    &__block {
-
-    }
-
-    &__quote {
-      //position: relative;
-      font-size: 20rem;
-      position : absolute;
-      top: 100px;
-      left: 0;
-      width : 120px;
-
-      p {
-        color: $grey;
-      }
-
-      @include medium{
-        font-size: 40rem;
-        height: 30%;
-      }
-
-      &--open {
-
-      }
-
-      &--close {
-        position : absolute;
-      	bottom: 80px;
-      	right: 0;
-      }
-
-      &:first-child.active {
-          @include quotationQuote();
-      }
-
-      &:last-child.active {
-          @include quotationQuote();
-          animation-delay: 0s, 2s;
-      }
-    }
-
-    &__text {
-        font-size: 4rem;
-        width: 70%;
-        color:  #0E215D;
-        font-size : 4rem;
-      	margin-top : 20px;
-    }
-}
 
 @keyframes opacity {
     0%   {opacity: 0;}
-    100% {opacity: 1;}
+    100% {opacity: 0.1;}
 }
 
 @keyframes mouvement {
@@ -85,4 +21,56 @@
     50% {transform:rotate(0deg) translateY(2px) translateX(3px);}
     75% {transform:rotate(-3deg);}
     100% {transform:rotate(0deg) translateY(-2px) translateX(-3px);}
+}
+
+// CSS   //
+.quotation {
+  text-align: center;
+  position : relative;
+  padding: 30px 20px 20px 0px;
+  margin-top: 30%;
+  margin-bottom: 20%;
+
+  &__surtitre {
+    @include surtitre;
+  }
+
+  &__text {
+    font-size: 4.7rem;
+    color:  #0E215D;
+    margin-top : 20px;
+      @include medium {
+        font-size: 3.7rem;
+      }
+
+      &:before{
+      content: "“";
+      position: absolute;
+      top: 0px;
+      line-height: 0.8;
+      left: 0;
+      z-index: -2;
+      opacity: 0.1;
+      font-size: 38rem;
+      }
+
+      &:after{
+      content: "”";
+      position: absolute;
+      bottom: -60px;
+      right:0;
+      line-height: 0;
+      opacity: 0.1;
+      z-index: -2;
+      font-size: 38rem;
+    }
+  }
+}
+.quotation__text.active {
+  &:before {
+      @include quotationMove;
+  }
+  &:after {
+    @include quotationMove;
+  }
 }
