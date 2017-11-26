@@ -17,10 +17,10 @@
 
 @keyframes mouvement {
     0% {transform:rotate(0deg);}
-    25% {transform:rotate(3deg);}
-    50% {transform:rotate(0deg) translateY(2px) translateX(3px);}
-    75% {transform:rotate(-3deg);}
-    100% {transform:rotate(0deg) translateY(-2px) translateX(-3px);}
+    25% {transform:rotate(5deg);}
+    50% {transform:rotate(0deg) translateY(3px) translateX(4px);}
+    75% {transform:rotate(-5deg);}
+    100% {transform:rotate(0deg) translateY(-3px) translateX(-4px);}
 }
 
 // CSS   //
@@ -28,8 +28,7 @@
   text-align: center;
   position : relative;
   padding: 30px 20px 20px 0px;
-  margin-top: 30%;
-  margin-bottom: 20%;
+  margin-top: 30% 0 20% 0;
 
   &__surtitre {
     @include surtitre;
@@ -72,5 +71,6 @@
   }
   &:after {
     @include quotationMove;
+    animation-delay: 0s,  2s;
   }
 }
