@@ -23,6 +23,13 @@ $large: 1024px;
   }
 }
 
+@mixin container {
+    @include medium {
+        margin: 0 auto;
+        width: 1024px;
+    }
+}
+
 @mixin surtitre {
   position: relative;
   font-size: 0.9rem;
@@ -87,6 +94,8 @@ $large: 1024px;
 # Imports
 --------------------------------------------------------------*/
 @import "normalize";
+
+@import "../../node_modules/tiny-slider/dist/tiny-slider.css";
 
 /*--------------------------------------------------------------
 # Base

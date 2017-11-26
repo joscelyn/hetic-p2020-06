@@ -99,7 +99,6 @@
 
       @include medium {
       @include bigTitle;
-      margin-bottom: 5rem;
 
       }
 
@@ -184,7 +183,7 @@
 }
 
 .visible .product__bigTitle {
-    animation: moveTitle 2s ease-in-out forwards;
+    animation: moveTitle 2s -0.5s ease-in-out forwards;
 }
 
 @keyframes moveTitle {
@@ -198,8 +197,8 @@
     }
 }
 
-.visible .product__back {
-    animation: moveBloc 2s ease-in-out forwards;
+.visible .product__packagingBg {
+    animation: moveBloc 1.5s -0.5s ease-in-out forwards;
 }
 
 @keyframes moveBloc {
@@ -209,13 +208,12 @@
     }
     100% {
         transform: 0;
-        color: rgba(#505467, 0.35);
     }
 }
 
 
-.visible .product__bloctext {
-    animation: moveText 1.5s ease-in-out forwards;
+.visible .product__text {
+    animation: moveText 1.5s -0.5s ease-in-out forwards;
 }
 
 @keyframes moveText {

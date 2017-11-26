@@ -1,5 +1,7 @@
 //import { tns } from "tiny-slider"
+
 import { windowWidth } from './mediaQueries';
+
 
 if (windowWidth < 800) {
     let slider = tns({

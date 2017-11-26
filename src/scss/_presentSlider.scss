@@ -1,10 +1,8 @@
 .slider {
     position: relative;
+    padding-bottom: 300px;
 
-    @include medium {
-        margin: 0 auto;
-        width: 1100px;
-    }
+    @include container;
 
     &:after, &:before {
         content: '';
@@ -22,8 +20,6 @@
         bottom: -3px;
     }
 }
-
-
 
 .slide {
     position: relative;
@@ -87,7 +83,9 @@
 
         @include medium {
             position: relative;
-            margin-bottom: 12px;
+            display: inline-block;
+            margin: 0 0 12px;
+            cursor: pointer;
 
             &:after {
                 content: "";
@@ -105,6 +103,10 @@
                 .active & {
                     transform: scale(0, 1);
                 }
+            }
+
+            &:hover:after {
+                width: 100%;
             }
         }
     }
@@ -130,17 +132,11 @@
     }
 }
 
-
-
 .tns-outer {
     position: relative;
     text-align: center;
     border: solid 3px #1e243c;
 }
-
-
-
-
 
 .slider__nav {
     display: flex;

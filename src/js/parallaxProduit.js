@@ -13,7 +13,6 @@ function isInViewport(element) {
 let isvisible= false;
 let scrollPosActual = window.scrollY;
 let ElementTitle = document.getElementById("product");
-console.log(ElementTitle);
 window.addEventListener("scroll", (e)=>{
     e.preventDefault();
     if (isInViewport(ElementTitle)  && (isvisible==false)) {

@@ -25,11 +25,6 @@
 
   @include medium {
     width: 100vw;
-    //padding-right: 10%;
-    //padding-left: 10%;
-    //width: 80vw;
-    //height: 100vh;
-    //transform-origin: center;
   }
 
   @include large {
@@ -141,12 +136,13 @@
       @include bigTitle;
       font-size: 5rem;
       font-weight: bolder;
-      margin-top: 8%;
-      margin-left: -5%;
+      margin-top: 5%;
+      margin-left: 5%;
     }
     @include large {
       @include bigTitle;
       margin-top: 0;
+      margin-left: 5%;
     }
   }
 
@@ -260,7 +256,7 @@
           top: 35%;
           left: 55%;
           cursor: pointer;
-          :hover {
+          &:hover {
             opacity: 0.5;
           }
         }
@@ -285,8 +281,7 @@
           top: 40%;
           left: 55%;
           cursor: pointer;
-
-          :hover {
+          &:hover {
             opacity: 0.5;
           }
         }

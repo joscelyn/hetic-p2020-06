@@ -25,7 +25,11 @@ function writeContent(file) {
       document.querySelector('.popup__image img').src= data.image
       document.querySelector('.popup__image img').srcset= data.imageset
       document.querySelector('.popup__image img').alt= data.name
+      document.querySelector('.popup__image img').sizes= data.sizes
+
     })
+
+  //document.querySelector('.popup__text').style.transform='tr'
 }
 
 let i=0;
