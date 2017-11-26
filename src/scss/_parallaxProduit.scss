@@ -1,137 +1,122 @@
 .product {
-  display: flex;
-	flex-direction : column;
-	text-align: center;
-  margin-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 10rem;
     @include medium {
-      flex-direction: row;
-      text-align: left;
+        flex-direction: row;
+        text-align: left;
     }
-    @include large {
-
-    }
+    @include large {}
 
     &__packaging {
-      @include medium {
-        flex-grow: 1;
-        flex-basis: 40%;
-        position: relative;
-      }
-    }
-
-        /*     "Délices" en transversal sur bloc gris     */
-    &__packagingBg {
-
-      display: none;
-      margin-top: 3rem 0 3rem 0;
-
-      @include medium { // plus de 1018px
-        /* Délices: */
-        display: block;
-        position: absolute;
-        right: 5rem;
-    		width: 95%;
-    		height: 100%;
-    		background-color: #EFEFF1;
-    		z-index: -3;
-    		overflow: hidden;
-
-        p {
-          font-family: $typoSerif;
-          font-size: 8rem;
-          text-transform: uppercase;
-          text-align: center;
-          text-orientation: sideways;
-      		writing-mode: vertical-rl;
-      		color: #FFF;
-      		padding-left: 3rem;
-          margin: 0;
-          margin-top: 10%;
+        @include medium {
+            flex-grow: 1;
+            flex-basis: 40%;
+            position: relative;
         }
-      }
+    }
+    /*     "Délices" en transversal sur bloc gris     */
+    &__packagingBg {
+        display: none;
+        margin-top: 3rem 0 3rem 0;
+        @include medium {
+            // plus de 1018px
+            /* Délices: */
+            display: block;
+            position: absolute;
+            right: 5rem;
+            width: 95%;
+            height: 100%;
+            background-color: #EFEFF1;
+            z-index: -3;
+            overflow: hidden;
+
+            p {
+                font-family: $typoSerif;
+                font-size: 8rem;
+                text-transform: uppercase;
+                text-align: center;
+                text-orientation: sideways;
+                writing-mode: vertical-rl;
+                color: #FFF;
+                padding-left: 3rem;
+                margin: 10% 0 0;
+            }
+        }
     }
 
     &__image {
-      padding-top: 2rem;
-    	padding-bottom: 1rem;
-    	z-index: 2;
-    	position: relative;
-
-      @include medium { //box quand plus de 800 px
-        margin-top: 25%;
-        text-align: right;
-      }
-      @include large {
-        margin-top: 15%;
-      }
-
-      img {
-        width: 60%;;
-        height: auto;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        z-index: 2;
+        position: relative;
         @include medium {
-          width: 70%;
+            //box quand plus de 800 px
+            margin-top: 25%;
+            text-align: right;
         }
-      }
+        @include large {
+            margin-top: 15%;
+        }
 
+        img {
+            width: 60%;
+            height: auto;
+            @include medium {
+                width: 70%;
+            }
+        }
     }
-// INFOS SUR LE gamme__produit
+    // INFOS SUR LE gamme__produit
 
     &__details {
-
-      @include medium {
-        box-sizing: border-box;
-        flex-grow: 1;
-        flex-basis: 50%;
-        padding-top: 3rem;
-        padding-left: 2rem;
-      }
-      @include large {
-        padding-left: 10rem;
-        box-sizing: border-box;
-      }
+        @include medium {
+            box-sizing: border-box;
+            flex-grow: 1;
+            flex-basis: 50%;
+            padding-top: 3rem;
+            padding-left: 2rem;
+        }
+        @include large {
+            padding-left: 10rem;
+            box-sizing: border-box;
+        }
     }
-
-  /*           [de.lis]:             */
-
+    /*           [de.lis]:             */
     &__bigTitle {
         display: none;
-
-      @include medium {
-      @include bigTitle;
-
-      }
-
+        @include medium {
+            @include bigTitle;
+        }
     }
 
     &__text {
-      // VERSION MOBILE
+        // VERSION MOBILE
         .1 {
-          display: none;
-          @include medium {
-            display: block;
-          }
-
-        @include medium { // partie texts a plus de 800 px
-            width: 40%;
-            text-align: left;
-            margin: -7% 15% 0 50%;
-            padding: 0 0 2% 10%;
-            position: relative;
-            top: -300px;
-            background: none;
-
+            display: none;
+            @include medium {
+                display: block;
+            }
+            @include medium {
+                // partie texts a plus de 800 px
+                width: 40%;
+                text-align: left;
+                margin: -7% 15% 0 50%;
+                padding: 0 0 2% 10%;
+                position: relative;
+                top: -300px;
+                background: none;
+            }
+            @include large {
+                top: -500px;
+            }
         }
-
-        @include large {
-            top: -500px;
-        }
-      }
     }
 
-    &__surtitre { // mobile
-
+    &__surtitre {
+        // mobile
         @include surtitre;
-
         @include medium {
             margin-bottom: 5%;
             font-size: 1.1rem;
@@ -141,55 +126,48 @@
             margin-top: 5%;
             bottom: 5px;
             left: -50px;
-
         }
-
     }
 
-      h2 { //mobile
-
+    h2 {
+        //mobile
         font-size: 2rem;
         text-transform: uppercase;
         color: $blue;
         font-family: $typoSansSerif;
         font-weight: bold;
         margin: -3% 0 0;
-
-
-        @include medium { //plus de 800 px
+        @include medium {
+            //plus de 800 px
             font-size: 1.5rem;
-
         }
-
     }
 
-    &__content { // mobile
+    &__content {
+        // mobile
         font-size: 1rem;
         font-family: $typoSansSerif;
         font-weight: lighter;
         color: $blue;
         letter-spacing: 0;
         line-height: 28px;
-
-
-        @include medium { //plus de 800px
+        @include medium {
+            //plus de 800px
             font-size: 1.2rem;
             //width: 70%;
-
         }
     }
-
 }
 
 .visible .product__bigTitle {
     animation: moveTitle 2s -0.5s ease-in-out forwards;
 }
-
 @keyframes moveTitle {
     0% {
         transform: translate(50%);
         opacity: 0;
     }
+
     100% {
         transform: 0;
         color: rgba(#505467, 0.35);
@@ -199,26 +177,25 @@
 .visible .product__packagingBg {
     animation: moveBloc 1.5s -0.5s ease-in-out forwards;
 }
-
 @keyframes moveBloc {
     0% {
         transform: translate(-50%);
         opacity: 0;
     }
+
     100% {
         transform: 0;
     }
 }
 
-
 .visible .product__text {
     animation: moveText 1.5s -0.5s ease-in-out forwards;
 }
-
 @keyframes moveText {
     0% {
         transform: translate(50%);
     }
+
     100% {
         transform: 0;
     }

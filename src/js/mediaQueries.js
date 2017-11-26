@@ -1,3 +1,3 @@
-var windowWidth = window.innerWidth;
+let windowWidth = window.innerWidth;
 
 export { windowWidth };
