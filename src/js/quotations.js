@@ -1,4 +1,4 @@
-// ANIMATION APPARITION GUILLEMETS AU SCROLL
+// Quote are visible when you scroll down
 
 
 // Determine if an element is in the visible viewport
@@ -15,13 +15,12 @@ function isInViewport(element) {
 
 let isvisible= false;
 let scrollPosActual = window.scrollY;
-let scrollPosGuillemetsFirst = document.getElementById('quotation__quote__first');
-let scrollPosGuillemetsSecond = document.getElementById('quotation__quote__second');
+let scrollQuote = document.getElementById('quotation__text');
+
 window.addEventListener("scroll", ()=>{
 
-    if (isInViewport(scrollPosGuillemetsFirst)  && (isvisible==false)) {
-        scrollPosGuillemetsFirst.classList.add('active');
-        scrollPosGuillemetsSecond.classList.add('active');
+    if (isInViewport(scrollQuote)  && (isvisible==false)) {
+        scrollQuote.classList.add('active');
         isvisible=true;
     }
 })

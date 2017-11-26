@@ -1,8 +1,7 @@
 //import { tns } from "tiny-slider"
-import { windowWidth } from './mediaQueries'
-console.log(windowWidth)
 
-//let windowWidth = window.innerWidth;
+import { windowWidth } from './mediaQueries';
+
 
 if (windowWidth < 800) {
     let slider = tns({
@@ -25,6 +24,3 @@ if (windowWidth < 800) {
         });
     });
 }
-
-
-

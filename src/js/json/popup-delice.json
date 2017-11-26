@@ -1,0 +1,10 @@
+{
+	"name": "Délice",
+	"number": "5",
+	"def": "Délice [de.lis]",
+	"defContent": "Très vif plaisir. Délectation, enchantement",
+	"composition": "Verveine, Marjolaine, Pétales de rose, Grué de cacao, Pétales de coquelicot, Vigne rouge, Pétales de souci et de bleuet, Arômes naturels d’orange et framboise",
+	"image": "img/delice-small.png",
+	"imageset": "img/delice-small.png 300w, img/delice-medium.png 600w, img/delice-large.png 900w",
+	"sizes": "300px, (min-width:700px) 350px, (min-width:1000px) 500px"
+}
