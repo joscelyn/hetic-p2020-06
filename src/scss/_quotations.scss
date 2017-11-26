@@ -28,8 +28,7 @@
   text-align: center;
   position : relative;
   padding: 30px 20px 20px 0px;
-  margin-top: 30%;
-  margin-bottom: 20%;
+  margin-top: 30% 0 20% 0;
 
   &__surtitre {
     @include surtitre;
