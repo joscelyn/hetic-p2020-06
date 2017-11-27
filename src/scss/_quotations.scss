@@ -45,14 +45,14 @@
     text-align: center;
     position: relative;
     padding: 30px 20px 20px 0;
-    margin-top: 30% 0 20% 0;
+    margin: 30% 0 30% 0;
 
     &__surtitre {
         @include surtitre;
     }
 
     &__text {
-        font-size: 4.7rem;
+        font-size: 3.7rem;
         color: #0E215D;
         margin-top: 20px;
         @include medium {
