@@ -1,7 +1,3 @@
-var babelify = require('babelify');
-var browserify = require('browserify');
-var buffer = require('vinyl-buffer');
-var source = require('vinyl-source-stream');
 var del = require('del');
 var gulp = require('gulp');
 var imagemin = require('gulp-imagemin');
@@ -13,7 +9,7 @@ var sync = require('browser-sync').create();
 var uglify = require('gulp-uglify');
 var clone = require('gulp-clone');
 var concat = require('gulp-concat');
-
+var tildeImporter = require('node-sass-tilde-importer');
 var babelify = require('babelify');
 var browserify = require('browserify')
 var source = require('vinyl-source-stream');
@@ -40,7 +36,9 @@ function html() {
 function scss() {
     return gulp.src(['src/scss/main.scss'])
         .pipe(gulpif(!isProd, sourcemaps.init()))
-        .pipe(sass())
+        .pipe(sass({
+            importer: tildeImporter
+        }))
         .pipe(gulpif(isProd, minifyCSS()))
         .pipe(gulpif(!isProd, sourcemaps.write('.')))
         .pipe(gulp.dest('dist/css'))
@@ -71,7 +69,7 @@ function js() {
 
 function vendorsJS() {
 
-    return gulp.src(['node_modules/rellax/rellax.min.js','node_modules/hammerjs/hammer.min.js', 'node_modules/tiny-slider/dist/min/tiny-slider.js'])
+    return gulp.src(['node_modules/rellax/rellax.min.js','node_modules/tiny-slider/dist/min/tiny-slider.js'])
         .pipe(concat('vendors.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
