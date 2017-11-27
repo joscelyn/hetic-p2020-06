@@ -7,6 +7,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
     "browser-sync": "^2.18.13",
+    "browserify": "^14.4.0",
     "browserslist": "latest",
     "del": "^3.0.0",
     "gulp": "gulpjs/gulp.git#4.0",
@@ -28,9 +29,10 @@
     "gulp-webserver": "latest",
     "imagemin-pngquant": "latest",
     "node-sass-tilde-importer": "^1.0.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
-    "hammerjs": "^2.0.8",
     "rellax": "^1.3.0",
     "tiny-slider": "^2.3.3"
   }

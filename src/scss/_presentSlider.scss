@@ -4,6 +4,7 @@
 
     &__container {
         position: relative;
+        z-index: 2;
         @include container;
     }
 
@@ -34,18 +35,17 @@
     }
 
     &__img {
-        width: 100%;
+        width: 80%;
+        margin-top: 40px;
         @include medium {
             position: absolute;
             top: 0;
             width: 40%;
-            transform: translateY(-30px);
             opacity: 0;
             visibility: hidden;
             transition: 0.5s;
 
             .active & {
-                transform: translateY(0);
                 opacity: 1;
                 visibility: visible;
             }
@@ -148,7 +148,7 @@
     position: absolute;
     top: 0;
     width: 100%;
-    padding: 94% 0 0;
+    padding: 79% 0 0;
     z-index: 2;
     @include medium {
         display: none;
@@ -167,6 +167,77 @@
         &.tns-nav-active,
         &:hover {
             background: rgba($blue, 8);
+        }
+    }
+}
+
+@include medium {
+    .slider__petals {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        div {
+            position: absolute;
+            height: 500px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            animation: float ease-in-out infinite;
+        }
+
+        .petal-1 {
+            top: 81%;
+            left: 87%;
+            width: 3.2%;
+        }
+
+        .petal-2 {
+            top: 12%;
+            left: 35%;
+            width: 4.6%;
+        }
+
+        .petal-3 {
+            top: 72%;
+            left: 51%;
+            width: 5.3%;
+        }
+
+        .petal-4 {
+            top: 78%;
+            left: 11%;
+            width: 6.8%;
+        }
+
+        .petal-5 {
+            top: 37%;
+            left: 75%;
+            width: 7%;
+        }
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+$slideList: apaisant anti-oxydant fruite;
+
+@each $slide in $slideList {
+    @for $i from 1 to 6 {
+        .slider__petals.#{$slide} .petal-#{$i} {
+            animation-duration: ($i + 6) + s;
+            background-image: url("../img/petals/#{$slide}-#{$i}.png");
         }
     }
 }

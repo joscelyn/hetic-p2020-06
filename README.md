@@ -37,7 +37,7 @@ To maintain this project, we've decided to use [BEM](http://getbem.com/)
 
 ## Authors
 
-* **Garcia Clarisse** - *Chef de projet* - [klarine](https://github.com/klarine)
+* **Garcia Clarisse** - *Project leader* - [klarine](https://github.com/klarine)
 * **Calmejane Lola** - *Designer* - [LolaCalmejane](https://github.com/LolaCalmejane)
 * **Hénault Thomas** - *Designer* - [ThomasHlt](https://github.com/ThomasHlt)
 * **Frichement Maud** - *Dev Front-End* - [MaudFricht](https://github.com/MaudFricht)
