@@ -118,6 +118,7 @@
     &__surtitre {
         // mobile
         @include surtitre;
+        margin-bottom: 5%;
         @include medium {
             margin-bottom: 5%;
             font-size: 1.1rem;
@@ -153,9 +154,8 @@
         letter-spacing: 0;
         line-height: 28px;
         @include medium {
-            //plus de 800px
             font-size: 1.2rem;
-            //width: 70%;
+            width: 90%;
         }
     }
 }
