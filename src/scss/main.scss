@@ -6,7 +6,7 @@ $lightColor: #c8c8c8;
 $grey: #c3c3c3;
 $typoSerif: "Playfair Display", serif;
 $typoSansSerif: "Lato", sans-serif;
-$typoQuote: 'Great Vibes','Rozha One', serif;
+$typoQuote: 'Great Vibes', 'Rozha One', serif;
 $medium: 600px;
 $large: 1024px;
 
@@ -24,8 +24,9 @@ $large: 1024px;
 
 @mixin container {
     @include medium {
+        width: 90%;
+        max-width: $large;
         margin: 0 auto;
-        width: 1024px;
     }
 }
 
@@ -93,7 +94,8 @@ $large: 1024px;
 # Imports
 --------------------------------------------------------------*/
 @import "normalize";
-@import "../../node_modules/tiny-slider/dist/tiny-slider.css";
+@import "~tiny-slider/dist/tiny-slider";
+
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
@@ -101,6 +103,7 @@ body,
 html {
     height: 100%;
 }
+
 /*--------------------------------------------------------------
 # Imports
 --------------------------------------------------------------*/
