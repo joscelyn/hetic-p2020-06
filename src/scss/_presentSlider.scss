@@ -1,7 +1,11 @@
 .slider {
     position: relative;
     padding-bottom: 300px;
-    @include container;
+
+    &__container {
+        position: relative;
+        @include container;
+    }
 
     &:after,
     &:before {
@@ -50,8 +54,8 @@
 
     &__text {
         @include medium {
-            margin-left: 60%;
-            width: 40%;
+            margin-left: 54%;
+            width: 46%;
         }
     }
 
@@ -118,11 +122,12 @@
         font-size: 17px;
         line-height: 1.4;
         @include medium {
-            margin: 0;
-            font-size: 14px;
             max-height: 0;
+            width: 100%;
+            margin: 0;
+            font-size: 15px;
             overflow: hidden;
-            transition: 0.3s;
+            transition: .4s;
 
             .active & {
                 max-height: 100px;

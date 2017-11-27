@@ -1,4 +1,4 @@
-const body = document.getElementsByTagName('body')[0];
+const body = document.body;
 
 
 // ANIMATION HEADER DIPARITION DES BRANCHES AU SCROLL

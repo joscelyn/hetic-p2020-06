@@ -8,7 +8,7 @@ This project is carried out in our school setting, [Hetic](https://www.hetic.net
 ### Prerequisites
 You need to install some software to use our app
 * **Node.js** - [nodejs.org](https://nodejs.org)
-* **Yarn or npm** - [yarnpkg.com](https://yarnpkg.com) or [npmjs.com](https://yarnpkg.com/)
+* **Yarn** - [yarnpkg.com](https://yarnpkg.com)
 
 ### Installation
 To install the app, just clone the repo from github to your computer
@@ -16,13 +16,9 @@ To install the app, just clone the repo from github to your computer
 $ git clone https://github.com/joscelyn/hetic-p2020-06.git
 $ cd hetic-p2020-06
 ```
-You can use [yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/) to install the dependencies :
+You can use [yarn](https://yarnpkg.com/) to install the dependencies :
 ```sh
 $ yarn install
-```
-or
-```sh
-$ npm install
 ```
 
 ### Running
