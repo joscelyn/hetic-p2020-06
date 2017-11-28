@@ -61,7 +61,7 @@ function js() {
         .pipe(source('main.js'))
         .pipe(buffer())
         .pipe(gulpif(!isProd, sourcemaps.init({loadMaps: true})))
-       // .pipe(uglify())
+        .pipe(uglify())
         .pipe(gulpif(!isProd, sourcemaps.write('.')))
         .pipe(gulp.dest('dist/js'))
         .pipe(sync.stream());
@@ -73,7 +73,7 @@ function js() {
 
 function vendorsJS() {
 
-    return gulp.src(['node_modules/rellax/rellax.min.js','node_modules/tiny-slider/dist/min/tiny-slider.js'])
+    return gulp.src(['node_modules/rellax/rellax.min.js', 'node_modules/tiny-slider/dist/min/tiny-slider.js', 'node_modules/whatwg-fetch/fetch.js'])
         .pipe(concat('vendors.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
@@ -119,7 +119,7 @@ function clean() {
 
 gulp.task('build', gulp.series(clean, gulp.parallel(html, scss, js, json, vendorsJS, images, fonts)));
 
-gulp.task('default', gulp.parallel(html, scss, js, vendorsJS, json, images, fonts, function(done) {
+gulp.task('default', gulp.parallel(html, scss, js, vendorsJS, json, images, fonts, function (done) {
     sync.init({
         server: {
             baseDir: './dist'

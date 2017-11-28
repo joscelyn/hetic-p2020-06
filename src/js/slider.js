@@ -1,6 +1,6 @@
 let windowWidth = window.innerWidth;
-let slides = document.getElementsByClassName('slide')
-let petals = document.getElementsByClassName('slider__petals')[0]
+let slides = document.getElementsByClassName('slide');
+let petals = document.getElementsByClassName('slider__petals')[0];
 
 if (windowWidth < 600) {
     let sliderContainer = document.getElementsByClassName('slider__container')[0];
@@ -39,16 +39,18 @@ if (windowWidth < 600) {
     });
 }
 
-// closest polyfill
+// closest polyfill -- ref: https://developer.mozilla.org/fr/docs/Web/API/Element/closest
 if (window.Element && !Element.prototype.closest) {
     Element.prototype.closest =
-        function(s) {
+        function (s) {
             var matches = (this.document || this.ownerDocument).querySelectorAll(s),
                 i,
                 el = this;
             do {
                 i = matches.length;
-                while (--i >= 0 && matches.item(i) !== el) {};
+                while (--i >= 0 && matches.item(i) !== el) {
+                }
+                ;
             } while ((i < 0) && (el = el.parentElement));
             return el;
         };

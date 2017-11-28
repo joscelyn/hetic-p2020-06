@@ -1,14 +1,12 @@
 .gamme {
-    margin-top: 15%;
-    @include large {
-        @include container;
-    }
+    @include container;
 
     &__surtitre {
         text-align: center;
-        @include surtitre;
         padding-top: 0;
         margin-bottom: 2%;
+
+        @include surtitre;
 
         p {
             margin-bottom: 1%;
@@ -17,8 +15,8 @@
 
     &__title {
         @include title;
+
         @include medium {
-            //plus de 800 px
             width: 90%;
         }
 
@@ -32,7 +30,6 @@
     }
 
     &__produit {
-        // Toute la gamme
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -40,7 +37,6 @@
     }
 
     &__presentation {
-        // chaque produit individuel
         width: 50%;
         margin-top: 5%;
         padding-bottom: 5%;
@@ -48,8 +44,8 @@
         transition-timing-function: cubic-bezier(0.01, 0.28, 0.99, 0.48);
         transition-property: opacity;
         cursor: pointer;
+
         @include medium {
-            //plus de 800 px
             width: 30%;
             padding-bottom: 0;
         }
@@ -70,8 +66,8 @@
                 letter-spacing: 0;
                 line-height: 24px;
                 margin-top: -10%;
+
                 @include medium {
-                    //plus de 800 px
                     font-size: 0.8rem;
                 }
             }
@@ -96,6 +92,7 @@
 
     img {
         width: 85%;
+
         @include medium {
             width: 75%;
         }
@@ -107,8 +104,8 @@
         color: $blue;
         letter-spacing: 0;
         line-height: 24px;
+
         @include medium {
-            //plus de 800 px
             font-size: 1rem;
         }
 

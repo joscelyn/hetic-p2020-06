@@ -2,12 +2,12 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-bottom: 10rem;
+
+    @include container;
+
     @include medium {
         flex-direction: row;
         text-align: left;
-    }
-    @include large {
     }
 
     &__packaging {
@@ -17,13 +17,11 @@
             position: relative;
         }
     }
-    /*     "Délices" en transversal sur bloc gris     */
     &__packagingBg {
         display: none;
         margin-top: 3rem 0 3rem 0;
+
         @include medium {
-            // plus de 1018px
-            /* Délices: */
             display: block;
             position: absolute;
             right: 5rem;
@@ -53,11 +51,12 @@
         padding-bottom: 1rem;
         z-index: 2;
         position: relative;
+
         @include medium {
-            //box quand plus de 800 px
             margin-top: 25%;
             text-align: right;
         }
+
         @include large {
             margin-top: 15%;
         }
@@ -65,12 +64,12 @@
         img {
             width: 60%;
             height: auto;
+
             @include medium {
                 width: 70%;
             }
         }
     }
-    // INFOS SUR LE gamme__produit
 
     &__details {
         @include medium {
@@ -85,7 +84,7 @@
             box-sizing: border-box;
         }
     }
-    /*           [de.lis]:             */
+
     &__bigTitle {
         display: none;
         @include medium {
@@ -97,31 +96,33 @@
         margin-bottom: 10%;
 
         &:first-child {
-        display: none;
+            display: none;
 
-        @include medium {
-            display: block;
+            @include medium {
+                display: block;
+            }
+
+            @include medium {
+                width: 40%;
+                text-align: left;
+                margin: -7% 15% 5% 50%;
+                padding: 0 0 2% 10%;
+                position: relative;
+                top: -300px;
+                background: none;
+            }
+
+            @include large {
+                top: -500px;
+            }
         }
-        @include medium {
-            // partie texts a plus de 800 px
-            width: 40%;
-            text-align: left;
-            margin: -7% 15% 5% 50%;
-            padding: 0 0 2% 10%;
-            position: relative;
-            top: -300px;
-            background: none;
-        }
-        @include large {
-            top: -500px;
-        }
-    }
     }
 
     &__surtitre {
-        // mobile
-        @include surtitre;
         margin-bottom: 5%;
+
+        @include surtitre;
+
         @include medium {
             margin-bottom: 5%;
             font-size: 1.1rem;
@@ -135,27 +136,26 @@
     }
 
     h2 {
-        //mobile
         font-size: 2rem;
         text-transform: uppercase;
         color: $blue;
         font-family: $typoSansSerif;
         font-weight: bold;
         margin: -3% 0 0;
+
         @include medium {
-            //plus de 800 px
             font-size: 1.5rem;
         }
     }
 
     &__content {
-        // mobile
         font-size: 1rem;
         font-family: $typoSansSerif;
         font-weight: lighter;
         color: $blue;
         letter-spacing: 0;
         line-height: 28px;
+
         @include medium {
             font-size: 1.2rem;
             width: 90%;
