@@ -1,116 +1,95 @@
-@mixin quotationQuote() {
-      animation-name: opacity, mouvement;
-      animation-duration: 8s, 10s;
-      animation-iteration-count: 1, infinite;
-      animation-direction: normal, alternate;
-      animation-fill-mode: forwards;
-      animation-timing-function: linear, linear;
-}
-
-.quotation__surtitre {
-  @include surtitre;
-  margin-top: 75%;
-  text-align: center;
-}
-
-.quotation {
-    height: 90vh;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 15%;
-    margin-bottom: 30%;
-    @include medium {
-      margin-top: 5%;
-    }
-    //text-align: center;
-
-    &__surtitre {
-      @include surtitre;
-      @include medium {
-        margin-top: -10%;
-      }
-    }
-
-    &__quote {
-      //position: relative;
-      font-size: 40rem;
-      color: $lightColor;
-      font-family: $typoQuote;
-      height: 70%;
-      width: 40%;
-      text-align: center;
-      position: absolute;
-
-      @include medium{
-        font-size: 40rem;
-        height: 30%;
-      }
-
-      p {
-        margin: 0;
-        height: 30%;
-      }
-
-      &:first-child {
-        opacity: 1;
-        left: 0%;
-        z-index: -1;
-        top:230%;
-        @include medium{
-          right: -10%;
-          overflow: hidden;
-        }
-      }
-
-      &:last-child {
-        opacity: 1;
-        z-index: -1;
-        right: 25%;
-        top: 280%;
-
-        @include medium{
-          top: 230%;
-          right: -5%;
-          overflow: hidden;
-        }
-      }
-
-      &:first-child.active {
-          @include quotationQuote();
-      }
-
-      &:last-child.active {
-          @include quotationQuote();
-          animation-delay: 0s, 2s;
-      }
-    }
-
-    &__text {
-        font-size: 4rem;
-        width: 70%;
-        color:  #0E215D;
-        margin: auto;
-        margin-top: 0%;
-        text-align: center;
-        align-self: center;
-        @include medium{
-          font-size: 2.5rem;
-          width: 60%
-        }
-
-    }
+// ANIMATIONS //
+@mixin quotationMove() {
+    animation-name: opacity, mouvement;
+    animation-duration: 3s, 10s;
+    animation-iteration-count: 1, infinite;
+    animation-direction: normal, alternate;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear, linear;
 }
 
 @keyframes opacity {
-    0%   {opacity: 0;}
-    100% {opacity: 1;}
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.1;
+    }
 }
 
 @keyframes mouvement {
-    0% {transform:rotate(0deg);}
-    25% {transform:rotate(3deg);}
-    50% {transform:rotate(0deg) translateY(2px) translateX(3px);}
-    75% {transform:rotate(-3deg);}
-    100% {transform:rotate(0deg) translateY(-2px) translateX(-3px);}
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(0deg) translateY(3px) translateX(4px);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg) translateY(-3px) translateX(-4px);
+    }
+}
+
+// CSS   //
+.quotation {
+    text-align: center;
+    position: relative;
+    padding: 30px 20px 20px 0;
+    margin: 30% 0 30% 0;
+
+    &__surtitre {
+        @include surtitre;
+    }
+
+    &__text {
+        font-size: 3.7rem;
+        color: #0E215D;
+        margin-top: 20px;
+        @include medium {
+            font-size: 3.7rem;
+        }
+
+        &:before {
+            content: "“";
+            position: absolute;
+            top: 0;
+            line-height: 0.8;
+            left: 0;
+            z-index: -2;
+            opacity: 0.1;
+            font-size: 38rem;
+        }
+
+        &:after {
+            content: "”";
+            position: absolute;
+            bottom: -60px;
+            right: 0;
+            line-height: 0;
+            opacity: 0.1;
+            z-index: -2;
+            font-size: 38rem;
+        }
+    }
+}
+
+.quotation__text.active {
+    &:before {
+        @include quotationMove;
+    }
+
+    &:after {
+        @include quotationMove;
+        animation-delay: 0s, 2s;
+    }
 }

@@ -1,6 +1,28 @@
-/node_modules
-/dist
-.idea
+# GLOBAL
 .DS_Store
-yarn.lock
-yarn-error.log
+ehthumbs.db
+Thumbs.db
+.todo
+
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Node modules
+node_modules
+
+
+# IDE
+*.sublime-workspace
+*.sublime-project
+.idea
+.idea/workspace.xml
+nbproject/private/private.properties
+nbproject/private/private.xml
+nbproject/project.properties
+nbproject/project.xml
+
+# Build
+dist

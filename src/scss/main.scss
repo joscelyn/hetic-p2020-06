@@ -2,34 +2,41 @@
 # Variables
 --------------------------------------------------------------*/
 $blue: #1e243c;
-$lightColor:#c8c8c8;
+$lightColor: #c8c8c8;
 $grey: #c3c3c3;
 $typoSerif: "Playfair Display", serif;
 $typoSansSerif: "Lato", sans-serif;
-$typoQuote:'Great Vibes','Rozha One', serif;
-
+$typoQuote: 'Great Vibes', 'Rozha One', serif;
 $medium: 600px;
 $large: 1024px;
 
 @mixin medium {
-  @media (min-width: #{$medium}) {
-    @content;
-  }
+    @media (min-width: #{$medium}) {
+        @content;
+    }
 }
 
 @mixin large {
-  @media (min-width: #{$large}) {
-    @content;
-  }
+    @media (min-width: #{$large}) {
+        @content;
+    }
+}
+
+@mixin container {
+    @include medium {
+        width: 90%;
+        max-width: $large;
+        margin: 0 auto;
+    }
 }
 
 @mixin surtitre {
-  position: relative;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  font-family: $typoSerif, serif;
-  font-weight: 400;
-  color: $grey;
+    position: relative;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-family: $typoSerif, serif;
+    font-weight: 400;
+    color: $grey;
 
     &:after {
         content: '';
@@ -51,65 +58,60 @@ $large: 1024px;
 }
 
 @mixin title {
-  font-size: 2rem;
-  text-transform: uppercase;
-  color: $blue;
-  font-family: $typoSansSerif;
-  width: 80%;
-  margin: auto;
-  text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: $blue;
+    font-family: $typoSansSerif;
+    width: 80%;
+    margin: auto;
+    text-align: center;
 }
+
 @mixin littleTitle {
-  font-size: 1rem;
-  text-transform: uppercase;
-  color: $blue;
-  font-family: $typoSansSerif;
-  font-weight: bold;
-
-
-  @include medium { //plus de 800 px
-    font-size: 1.2rem;
-
-  };
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: $blue;
+    font-family: $typoSansSerif;
+    font-weight: bold;
+    @include medium {
+        //plus de 800 px
+        font-size: 1.2rem;
+    }
 }
+
 @mixin bigTitle {
-  display: block;
-  font-family: $typoSerif;
-  font-size: 6rem;
-  text-transform: uppercase;
-  color: rgba(#505467, 0.19);
-  opacity: 0.38;
-  position: relative;
-  margin: 0;
+    display: block;
+    font-family: $typoSerif;
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: rgba(#505467, 0.19);
+    opacity: 0.38;
+    position: relative;
+    margin: 0;
 }
 
 /*--------------------------------------------------------------
 # Imports
 --------------------------------------------------------------*/
 @import "normalize";
+@import "~tiny-slider/dist/tiny-slider";
 
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
-
-html, body {
+body,
+html {
     height: 100%;
 }
-
-
-
 
 /*--------------------------------------------------------------
 # Imports
 --------------------------------------------------------------*/
 @import "splashScreen";
-
 @import "quotations";
-
 @import "parallaxProduit";
-
 @import "presentSlider";
-
 @import "gamme";
-
 @import "popupGamme";
+@import "creators";
+@import "footer";

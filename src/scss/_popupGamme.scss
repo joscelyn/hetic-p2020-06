@@ -1,301 +1,290 @@
-
 @keyframes getIn {
-    from {top: 200%; opacity: 0}
-    to {top: 0; opacity: 1 }
+    from {
+        top: 200%;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
 }
 
-//
-
-
 .popup {
-  display: none;
-  z-index: 10;
-  position: fixed;
-  transform-origin: center;
-  animation-name: getIn;
-  animation-duration: 0.5s;
-  top: 0%;
-  left: 0%;
-  width: 95vw;
-  height: 100vh;
-  background-color: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 4px 15px 2px rgba(185, 185, 185, 0.3);
-  padding: 3%;
-  margin: auto;
-  //margin-top: -75%;
-  //margin-left: -75%;
-  overflow: hidden;
-
-  @include medium {
-    padding-right: 10%;
-    padding-left: 10%;
-    width: 80vw;
-    height: 100vh;
-    transform-origin: center;
-  }
-
-  @include large {
-    width: 80vw;
-    height: 100vh;
-  }
-
-
-  &__blocText {
-    display: flex;
-    flex-direction: column;
-    margin-top: 5vh;
-
-    @include medium {
-        width: 50%;
-        margin-top: 6%;
-    }
-    @include large {
-      margin-top: 10%;
-    }
-  }
-
-  &__image {
-    position: relative;
-    height: 35vh;
-    margin: auto;
-    margin-top: -30%;
-
-    img {
-      width: 55%;
-      position: absolute;
-      transform-origin: center;
-      right: 20%;
-      top: 40%;
-
-    }
-
-    @include medium {
-      background-color: #EFEFF1;
-      opacity: 0.9;
-      height: 100%;
-      width: 45%;
-      position: absolute;
-      transform-origin: top right;
-      right: 0;
-      top: 0;
-      margin: 0;
-
-      img {
-        width: 65%;
-        position: absolute;
-        transform-origin: center;
-        right: 20%;
-        top: 30%;
-
-      }
-    }
-
-  }
-
-  &__number {
-    position: absolute;
-    transform-origin: top right;
-    top: -15%;
-    right: 10%;;
-    z-index: -1;
-
-    p {
-      font-family: $typoSerif;
-      font-size: 15rem;
-      color: $blue;
-      opacity: 0.2;
-      margin: 0;
-
-      @include medium {
-        font-size: 40rem;
-        overflow: hidden;
-      }
-
-      @include large {
-        font-size: 50rem;
-      }
-    }
-
-    @include medium {
-      top: -20%;
-    }
-
-    @include large {
-      top: -30%;
-    }
-  }
-
-  &__text {
-    margin-top: 0;
-    padding: 5px;
-  }
-
-
-  &__bigTitle {
     display: none;
-
-    p {
-      margin: 0;
-    }
-
+    z-index: 10;
+    position: fixed;
+    transform-origin: center;
+    animation-name: getIn;
+    animation-duration: 0.5s;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 15px 2px rgba(185, 185, 185, 0.3);
+    padding: 3%;
+    margin: auto;
+    overflow: hidden;
     @include medium {
-      @include bigTitle;
-      color: $grey;
-      font-weight: bolder;
-      margin-top: 8%;
-      margin-left: -5%;
+        width: 100vw;
     }
     @include large {
-      margin-top: 0;
-    }
-  }
-
-  &__surtitre {
-    @include surtitre;
-    margin-left: 00px;
-    width: 100%;
-    margin-top: 0;
-    &:after {
-      margin-top: 5%;
-      bottom: 5px;
-      left: -25px;
-
-      @include medium {
-        left: -50px;
-      }
+        width: 100vw;
+        height: 100vh;
     }
 
-    @include medium {
-      font-size: 1.2rem;
-    }
-    @include large {
-      font-size: 1rem;
-    }
-
-  }
-
-  h4 {
-    @include title;
-
-    text-align: left;
-    font-size: 1.6rem;
-    width: 98%;
-
-    @include medium {
-      font-size: 1.6rem;
+    &__blocText {
+        display: flex;
+        flex-direction: column;
+        margin-top: 8vh;
+        @include medium {
+            width: 50%;
+            margin-top: 5%;
+        }
     }
 
-    @include large {
-      font-size: 1.6rem;
+    &__image {
+        position: relative;
+        height: 35vh;
+        margin: -20% auto auto;
+
+        img {
+            width: 65%;
+            position: absolute;
+            transform-origin: center;
+            right: 20%;
+            top: 40%;
+        }
+        @include medium {
+            background-color: #EFEFF1;
+            opacity: 0.9;
+            height: 100%;
+            width: 45%;
+            position: absolute;
+            transform-origin: top right;
+            right: 0;
+            top: 0;
+            margin: 0;
+
+            img {
+                width: 65%;
+                position: absolute;
+                transform-origin: center;
+                right: 20%;
+                top: 30%;
+            }
+        }
     }
-  }
 
-  h5 {
-    @include littleTitle;
-  }
+    &__number {
+        position: absolute;
+        transform-origin: top right;
+        //top: -15%;
+        right: 20%;
+        z-index: -1;
 
-  &__content  {
-    font-family: $typoSansSerif;
-    font-size: 0.9rem;
-    color: $blue;
-    line-height: 24px;
-    font-weight: lighter;
-
-    @include medium {
-      font-size: 1rem;
+        p {
+            font-family: $typoSerif;
+            font-size: 15rem;
+            color: $blue;
+            opacity: 0.2;
+            margin: 0;
+            @include medium {
+                font-size: 40rem;
+                overflow: hidden;
+            }
+            @include large {
+                font-size: 45rem;
+            }
+        }
+        @include medium {
+            top: -20%;
+        }
+        @include large {
+            top: -25%;
+        }
     }
 
-    @include large {
-      font-size: 1.2rem;
+    &__text {
+        margin-top: 2vh;
+        padding: 5px;
     }
 
-  }
+    &__bigTitle {
+        display: none;
 
-  &__price {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    width: 70%;
+        p {
+            margin: 0;
+        }
+        @include medium {
+            @include bigTitle;
+            font-size: 5rem;
+            font-weight: bolder;
+            margin: 5% 0 0 5%;
+        }
+        @include large {
+            @include bigTitle;
+            margin-top: 0;
+        }
+    }
+
+    &__surtitre {
+        @include surtitre;
+        width: 100%;
+        margin: 0;
+
+        &:after {
+            margin-top: 5%;
+            bottom: 5px;
+            left: -25px;
+            @include medium {
+                left: -50px;
+            }
+        }
+        @include medium {
+            font-size: 1.2rem;
+        }
+        @include large {
+            font-size: 1rem;
+        }
+    }
 
     h4 {
-      width: 40%;
-      margin: 0;
+        @include title;
+        text-align: left;
+        font-size: 1.4rem;
+        width: 98%;
+        margin-top: 2vh;
+        @include medium {
+            font-size: 1.6rem;
+        }
     }
 
     h5 {
-      margin-top: 5px;
-      text-align: center;
-      margin-left: 5%;
-      &:hover {
-        opacity: 0.5;
-        font-size: 1.3rem;
-      }
+        @include littleTitle;
     }
-  }
 
-  &__button {
-    display: none;
-
-    @include medium {
-      z-index: 3;
-      display: block;
-      &--first {
-        p {
-          font-size: 1.5rem;
-          margin-top: 2%;
-          color: white;
-          background-color: $blue;
-          border-radius: 0;
-          border: none;
-          z-index: 3;
-          transform: rotate(90deg);
-          text-align: center;
-          vertical-align:middle;
-          height: 30px;
-          width: 30px;
-          position: absolute;
-          top: 45%;
-          left: 55%;
+    &__content {
+        font-family: $typoSansSerif;
+        font-size: 0.9rem;
+        color: $blue;
+        line-height: 24px;
+        font-weight: lighter;
+        width: 90%;
+        @include medium {
+            font-size: 1rem;
         }
-      }
-
-      &--second {
-        p {
-          font-size: 1.5rem;
-          margin-top: 2%;
-          color: white;
-          background-color: $blue;
-          border-radius: 0;
-          border: none;
-          z-index: 3;
-          transform: rotate(90deg);
-          text-align: center;
-          vertical-align:middle;
-          height: 30px;
-          width: 30px;
-          position: absolute;
-          top: 50%;
-          left: 55%;
+        @include large {
+            font-size: 1.2rem;
         }
-      }
     }
- }
 
-  &__close {
-    position: absolute;
-    color: black;
-    right:5%;
-    top: 3%;
-    font-size: 40px;
+    &__price {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        width: 50%;
+        transform-origin: center;
 
-    @include large {
-      right: 5%;
-      top: 3%;
-      color: black;
+        h4 {
+            width: 40%;
+            margin-left: 0;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            font-family: $typoSansSerif;
+            font-weight: bold;
+            color: $blue;
+            margin-top: 2vh;
+            margin-top: 5px 0 0 5%;
+            text-align: center;
+
+            &:hover {
+                opacity: 0.5;
+                font-size: 1.3rem;
+            }
+        }
     }
-    &:hover {
-      opacity: 0.5;
-    }
-  }
 
+    &__button {
+        display: none;
+        @include medium {
+            z-index: 3;
+            display: block;
+
+            &--first {
+                a {
+                    font-size: 1.5rem;
+                    margin-top: 2%;
+                    color: white;
+                    background-color: $blue;
+                    text-decoration: none;
+                    border-radius: 0;
+                    border: none;
+                    z-index: 3;
+                    transform: rotate(90deg);
+                    text-align: center;
+                    vertical-align: middle;
+                    height: 30px;
+                    width: 30px;
+                    position: absolute;
+                    top: 35%;
+                    left: 55%;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
+            }
+
+            &--second {
+                a {
+                    font-size: 1.5rem;
+                    margin-top: 2%;
+                    color: white;
+                    background-color: $blue;
+                    text-decoration: none;
+                    border-radius: 0;
+                    border: none;
+                    z-index: 3;
+                    transform: rotate(90deg);
+                    text-align: center;
+                    vertical-align: middle;
+                    height: 30px;
+                    width: 30px;
+                    position: absolute;
+                    top: 40%;
+                    left: 55%;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+
+    &__close {
+        position: absolute;
+        color: black;
+        right: 10%;
+        top: 5%;
+        font-size: 40px;
+        cursor: pointer;
+        @include large {
+            right: 8%;
+            top: 5%;
+            color: black;
+        }
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
 }
