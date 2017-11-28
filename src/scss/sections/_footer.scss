@@ -5,11 +5,14 @@
     margin-top: 10vh;
 
     p {
+        margin: auto;
+        width: 60%;
         color: white;
         font-weight: light;
         font-family: $typoSansSerif;
+        font-size: 0.8rem;
         text-align: center;
-        padding-top: 25vh;
+        padding-top: 22vh;
     }
 
 }
