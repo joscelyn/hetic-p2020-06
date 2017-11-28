@@ -17,8 +17,9 @@
         bottom: 0;
         overflow: hidden;
 
-        img {
+        .splashScreen__flower {
             position: absolute;
+            height: auto;
             transition: 1s;
 
             &:nth-child(1) {
@@ -177,28 +178,28 @@
     }
 }
 
-.leave .splashScreen__flowers {
-    img:nth-child(1) {
+.leave .splashScreen__flowers .splashScreen__flower {
+    &:nth-child(1) {
         transform: translate(-500px, -650px);
     }
 
-    img:nth-child(2) {
+    &:nth-child(2) {
         transform: translate(200px, 550px);
     }
 
-    img:nth-child(3) {
+    &:nth-child(3) {
         transform: translate(300px, 450px);
     }
 
-    img:nth-child(4) {
+    &:nth-child(4) {
         transform: translate(1000px, -700px);
     }
 
-    img:nth-child(5) {
+    &:nth-child(5) {
         transform: translate(00px, -1050px);
     }
 
-    img:nth-child(6) {
+    &:nth-child(6) {
         transform: translate(100px, 300px);
     }
 }

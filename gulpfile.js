@@ -14,6 +14,7 @@ var babelify = require('babelify');
 var browserify = require('browserify')
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
+var injectSvg = require('gulp-inject-svg');
 
 
 var isProd = process.env.NODE_ENV === 'production';
@@ -24,6 +25,9 @@ var isProd = process.env.NODE_ENV === 'production';
 
 function html() {
     return gulp.src('src/**/*.html')
+        .pipe(injectSvg({
+            base: '/src/'
+        }))
         .pipe(clone())
         .pipe(gulp.dest('dist/'))
         .pipe(sync.stream());
