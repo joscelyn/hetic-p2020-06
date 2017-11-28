@@ -22,6 +22,7 @@
     "gulp-file-include": "^1.2.0",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.4.0",
+    "gulp-inject-svg": "^0.1.16",
     "gulp-plumber": "latest",
     "gulp-pug": "^3.3.0",
     "gulp-rename": "latest",
@@ -32,8 +33,7 @@
     "imagemin-pngquant": "latest",
     "node-sass-tilde-importer": "^1.0.0",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "gulp-inject-svg": "^0.1.16"
+    "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
     "rellax": "^1.3.0",

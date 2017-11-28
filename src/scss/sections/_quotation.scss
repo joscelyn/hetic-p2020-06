@@ -39,8 +39,8 @@
     position: relative;
     padding: 30vh 0;
 
-    &__surtitre {
-        @include surtitre;
+    &__surtitle {
+        @include surtitle;
     }
 
     &__text {

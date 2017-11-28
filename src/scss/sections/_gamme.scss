@@ -1,12 +1,17 @@
 .gamme {
-    @include container;
 
-    &__surtitre {
+    background-color: #FAFAFA;
+
+    &__container {
+        @include container;
+    }
+
+    &__surtitle {
         text-align: center;
         padding-top: 0;
         margin-bottom: 2%;
 
-        @include surtitre;
+        @include surtitle;
 
         p {
             margin-bottom: 1%;
