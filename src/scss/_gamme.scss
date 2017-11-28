@@ -46,6 +46,7 @@
         padding-bottom: 5%;
         text-align: center;
         transition-timing-function: cubic-bezier(0.01, 0.28, 0.99, 0.48);
+        transition-property: opacity;
         cursor: pointer;
         @include medium {
             //plus de 800 px

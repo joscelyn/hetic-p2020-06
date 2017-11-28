@@ -155,6 +155,7 @@
         text-align: left;
         font-size: 1.4rem;
         width: 98%;
+        margin-top: 2vh;
         @include medium {
             font-size: 1.6rem;
         }
@@ -183,14 +184,22 @@
         display: flex;
         flex-direction: row;
         align-items: flex-start;
-        width: 70%;
+        width: 50%;
+        transform-origin: center;
 
         h4 {
             width: 40%;
-            margin: 0;
+            margin-left: 0;
         }
 
-        h5 {
+        a {
+            text-decoration: none;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            font-family: $typoSansSerif;
+            font-weight: bold;
+            color: $blue;
+            margin-top: 2vh;
             margin-top: 5px 0 0 5%;
             text-align: center;
 
