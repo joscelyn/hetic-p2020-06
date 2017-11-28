@@ -1,14 +1,12 @@
-//Determine if an element is in the visible viewport
-import { isInViewport } from './helpers';
+import {isInViewport} from './helpers';
 
 let isvisible = false;
-let scrollPosActual = window.scrollY;
-let ElementTitle = document.getElementById('product');
+let elementTitle = document.getElementById('product');
 
 window.addEventListener('scroll', (e) => {
     e.preventDefault();
-    if (isInViewport(ElementTitle) && (isvisible == false)) {
-        ElementTitle.classList.add('visible');
+    if (isInViewport(elementTitle) && (isvisible == false)) {
+        elementTitle.classList.add('visible');
         isvisible = true;
     }
 });

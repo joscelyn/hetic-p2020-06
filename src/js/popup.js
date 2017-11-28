@@ -7,7 +7,6 @@ let span = document.getElementsByClassName('popup__close')[0];
 // Get the button that opens the modal
 let products = document.getElementsByClassName('gamme__presentation');
 
-let buttons = document.getElementsByClassName('popup__button');
 let buttonUp = document.getElementsByClassName('popup__button--first');
 let buttonDown = document.getElementsByClassName('popup__button--second');
 
@@ -24,18 +23,18 @@ function writeContent(file) {
             document.querySelector('.popup__image img').srcset = data.imageset;
             document.querySelector('.popup__image img').alt = data.name;
             document.querySelector('.popup__image img').sizes = data.sizes;
-
         });
 }
 
-let i = 0;
-let y = 0;
-let z = 0;
-let key = 0;
+let i = 0,
+    y = 0,
+    z = 0,
+    key = 0;
 
 while (i < products.length) {
     let product = products[i];
-    product.addEventListener('click', (event) => {
+
+    product.addEventListener('click', event => {
         event.preventDefault();
 
         let productName = product.getAttribute('data-produit');
@@ -48,12 +47,10 @@ while (i < products.length) {
 
         // In the modal, when you click on the arrow down
         while (y < buttonDown.length) {
-
             let button = buttonDown[y];
 
             //EVENT
-            button.addEventListener('click', (event) => {
-
+            button.addEventListener('click', event => {
                 event.preventDefault();
 
                 if (key < 1) {
@@ -66,7 +63,6 @@ while (i < products.length) {
                 let productName = product.getAttribute('data-produit');
                 let file = 'js/json/popup-' + productName + '.json';
                 writeContent(file);
-
             });
 
             // Increment Y for the buttonUp event
