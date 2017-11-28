@@ -178,7 +178,7 @@
     }
 }
 
-.leave .product__flowers .product__flower {
+.leave .header__flowers .header__flower {
     &:nth-child(1) {
         transform: translate(-500px, -650px);
         transition-duration: 2s;
@@ -210,6 +210,6 @@
     }
 }
 
-.leave .product__scroll {
+.leave .header__scroll {
     opacity: 0;
 }

@@ -49,8 +49,8 @@
         }
     }
 
-    &__subTitle {
-        @include surtitre;
+    &__surtitle {
+        @include surtitle;
 
         @include medium {
             max-height: 0;
@@ -211,6 +211,19 @@
     }
 }
 
+$slideList: apaisant anti-oxydant fruite;
+
+@each $slide in $slideList {
+    @for $i from 1 to 6 {
+        .slider__petals.#{$slide} .petal-#{$i} {
+            animation-duration: ($i + 6) + s;
+            background-image: url("../img/petals/#{$slide}-#{$i}.png");
+        }
+    }
+}
+
+
+
 @keyframes float {
     0% {
         transform: translatey(0px);
@@ -220,16 +233,5 @@
     }
     100% {
         transform: translatey(0px);
-    }
-}
-
-$slideList: apaisant anti-oxydant fruite;
-
-@each $slide in $slideList {
-    @for $i from 1 to 6 {
-        .slider__petals.#{$slide} .petal-#{$i} {
-            animation-duration: ($i + 6) + s;
-            background-image: url("../img/petals/#{$slide}-#{$i}.png");
-        }
     }
 }
