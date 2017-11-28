@@ -39,33 +39,41 @@
     &__presentation {
         width: 50%;
         margin-top: 5%;
-        padding-bottom: 5%;
+        padding-bottom: 10px;
         text-align: center;
         transition-timing-function: cubic-bezier(0.01, 0.28, 0.99, 0.48);
         transition-property: opacity;
         cursor: pointer;
+        transition: .2s;
 
         @include medium {
             width: 30%;
-            padding-bottom: 0;
+        }
+
+        &:after {
+            content: "En savoir plus";
+            font-family: $typoSansSerif;
+            font-size: 0.8rem;
+            color: $blue;
+            letter-spacing: 0;
+            line-height: 24px;
+            margin-top: -10%;
+            opacity: 0;
+            transition: .3s;
+            transition-delay: .1s;
+
+            @include medium {
+                font-size: 0.8rem;
+            }
         }
 
         &:hover {
-            transform: scale(1.2);
+            transform: scale(1.15);
             background-color: rgba(32, 29, 96, 0.05);
 
-            h3 {
-                margin-bottom: 0;
-            }
-
             &:after {
-                content: "En savoir plus";
-                font-family: $typoSansSerif;
-                font-size: 0.8rem;
-                color: $blue;
-                letter-spacing: 0;
-                line-height: 24px;
-                margin-top: -10%;
+                opacity: 1;
+                transition-delay: 0;
 
                 @include medium {
                     font-size: 0.8rem;
@@ -77,12 +85,12 @@
     &__name {
         @include littleTitle;
 
-        p {
-            margin: 7% 2% 2%;
+        h3 {
+            margin-bottom: 4px;
         }
 
-        &:hover {
-            opacity: 0.5;
+        p {
+            margin: 7% 2% 2%;
         }
 
         &:active {

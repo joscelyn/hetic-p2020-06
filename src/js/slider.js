@@ -1,9 +1,10 @@
 let windowWidth = window.innerWidth;
 let slides = document.getElementsByClassName('slide');
 let petals = document.getElementsByClassName('slider__petals')[0];
+let sliderContainer = document.getElementsByClassName('slider__container')[0];
 
 if (windowWidth < 600) {
-    let sliderContainer = document.getElementsByClassName('slider__container')[0];
+
     let sliderNav = document.createElement('div');
     sliderNav.className = "slider__nav";
     sliderContainer.appendChild(sliderNav);
@@ -21,6 +22,12 @@ if (windowWidth < 600) {
         navContainer: '.slider__nav'
     });
 } else {
+    let sliderTitle = document.createElement('h2');
+    sliderTitle.className = "slider__title";
+    var sliderText = document.createTextNode("Fruité");
+    sliderTitle.appendChild(sliderText);
+    sliderContainer.appendChild(sliderTitle);
+
     slides[0].classList.add('active');
 
     [].forEach.call(slides, function (slide) {
@@ -34,6 +41,7 @@ if (windowWidth < 600) {
             if (eventSlide) {
                 eventSlide.classList.add('active')
                 petals.className = 'slider__petals ' + eventSlide.dataset.name;
+                sliderTitle.innerHTML = eventSlide.dataset.title;
             }
         });
     });

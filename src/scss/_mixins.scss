@@ -28,6 +28,10 @@
     font-weight: 400;
     color: $grey;
 
+    @include medium {
+        font-size: 1.1rem;
+    }
+
     &:after {
         content: '';
         display: block;

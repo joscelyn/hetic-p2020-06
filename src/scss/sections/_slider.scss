@@ -1,9 +1,29 @@
 .slider {
     position: relative;
+    overflow: hidden;
     background: #fafafa;
 
     @include medium {
         padding: calc(100px + #{$sectionPadding}) 0 calc(180px + #{$sectionPadding});
+
+        &__title {
+            position: absolute;
+            top: -160px;
+            left: -10%;
+            text-transform: uppercase;
+            font-family: $typoSerif, serif;
+            font-weight: 400;
+            color: rgba($grey, .25);
+            font-size: 150px;
+            margin: 0;
+            z-index: -1;
+        }
+    }
+
+    @include large {
+        &__title {
+            left: -100px;
+        }
     }
 
     &__container {
@@ -211,6 +231,19 @@
     }
 }
 
+$slideList: apaisant anti-oxydant fruite;
+
+@each $slide in $slideList {
+    @for $i from 1 to 6 {
+        .slider__petals.#{$slide} .petal-#{$i} {
+            animation-duration: ($i + 6) + s;
+            background-image: url("../img/petals/#{$slide}-#{$i}.svg");
+        }
+    }
+}
+
+
+
 @keyframes float {
     0% {
         transform: translatey(0px);
@@ -220,16 +253,5 @@
     }
     100% {
         transform: translatey(0px);
-    }
-}
-
-$slideList: apaisant anti-oxydant fruite;
-
-@each $slide in $slideList {
-    @for $i from 1 to 6 {
-        .slider__petals.#{$slide} .petal-#{$i} {
-            animation-duration: ($i + 6) + s;
-            background-image: url("../img/petals/#{$slide}-#{$i}.png");
-        }
     }
 }

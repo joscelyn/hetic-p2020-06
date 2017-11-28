@@ -1,15 +1,3 @@
-@keyframes getIn {
-    from {
-        top: 200%;
-        opacity: 0;
-    }
-
-    to {
-        top: 0;
-        opacity: 1;
-    }
-}
-
 .popup {
     display: none;
     z-index: 10;
@@ -26,9 +14,11 @@
     padding: 3%;
     margin: auto;
     overflow: hidden;
+
     @include medium {
         width: 100vw;
     }
+
     @include large {
         width: 100vw;
         height: 100vh;
@@ -38,6 +28,7 @@
         display: flex;
         flex-direction: column;
         margin-top: 8vh;
+
         @include medium {
             width: 50%;
             margin-top: 5%;
@@ -56,6 +47,7 @@
             right: 20%;
             top: 40%;
         }
+
         @include medium {
             background-color: #EFEFF1;
             opacity: 0.9;
@@ -80,7 +72,6 @@
     &__number {
         position: absolute;
         transform-origin: top right;
-        //top: -15%;
         right: 20%;
         z-index: -1;
 
@@ -90,17 +81,21 @@
             color: $blue;
             opacity: 0.2;
             margin: 0;
+
             @include medium {
                 font-size: 40rem;
                 overflow: hidden;
             }
+
             @include large {
                 font-size: 45rem;
             }
         }
+
         @include medium {
             top: -20%;
         }
+
         @include large {
             top: -25%;
         }
@@ -117,45 +112,54 @@
         p {
             margin: 0;
         }
+
         @include medium {
-            @include bigTitle;
             font-size: 5rem;
             font-weight: bolder;
             margin: 5% 0 0 5%;
-        }
-        @include large {
+
             @include bigTitle;
+        }
+
+        @include large {
             margin-top: 0;
+
+            @include bigTitle;
         }
     }
 
     &__surtitre {
-        @include surtitre;
         width: 100%;
         margin: 0;
+
+        @include surtitre;
 
         &:after {
             margin-top: 5%;
             bottom: 5px;
             left: -25px;
+
             @include medium {
                 left: -50px;
             }
         }
+
         @include medium {
             font-size: 1.2rem;
         }
+
         @include large {
             font-size: 1rem;
         }
     }
 
     h4 {
-        @include title;
         text-align: left;
         font-size: 1.4rem;
         width: 98%;
         margin-top: 2vh;
+        @include title;
+
         @include medium {
             font-size: 1.6rem;
         }
@@ -172,9 +176,11 @@
         line-height: 24px;
         font-weight: lighter;
         width: 90%;
+
         @include medium {
             font-size: 1rem;
         }
+
         @include large {
             font-size: 1.2rem;
         }
@@ -212,59 +218,57 @@
 
     &__button {
         display: none;
+
         @include medium {
             z-index: 3;
             display: block;
 
-            &--first {
-                a {
-                    font-size: 1.5rem;
-                    margin-top: 2%;
-                    color: white;
-                    background-color: $blue;
-                    text-decoration: none;
-                    border-radius: 0;
-                    border: none;
-                    z-index: 3;
-                    transform: rotate(90deg);
-                    text-align: center;
-                    vertical-align: middle;
-                    height: 30px;
-                    width: 30px;
-                    position: absolute;
-                    top: 35%;
-                    left: 55%;
-                    cursor: pointer;
+            &--first a {
+                font-size: 1.5rem;
+                margin-top: 2%;
+                color: white;
+                background-color: $blue;
+                text-decoration: none;
+                border-radius: 0;
+                border: none;
+                z-index: 3;
+                transform: rotate(90deg);
+                text-align: center;
+                vertical-align: middle;
+                height: 30px;
+                width: 30px;
+                position: absolute;
+                top: 35%;
+                left: 55%;
+                cursor: pointer;
 
-                    &:hover {
-                        opacity: 0.5;
-                    }
+                &:hover {
+                    opacity: 0.5;
                 }
+
             }
 
-            &--second {
-                a {
-                    font-size: 1.5rem;
-                    margin-top: 2%;
-                    color: white;
-                    background-color: $blue;
-                    text-decoration: none;
-                    border-radius: 0;
-                    border: none;
-                    z-index: 3;
-                    transform: rotate(90deg);
-                    text-align: center;
-                    vertical-align: middle;
-                    height: 30px;
-                    width: 30px;
-                    position: absolute;
-                    top: 40%;
-                    left: 55%;
-                    cursor: pointer;
+            &--second  a {
+                font-size: 1.5rem;
+                margin-top: 2%;
+                color: white;
+                background-color: $blue;
+                text-decoration: none;
+                border-radius: 0;
+                border: none;
+                z-index: 3;
+                transform: rotate(90deg);
+                text-align: center;
+                vertical-align: middle;
+                height: 30px;
+                width: 30px;
+                position: absolute;
+                top: 40%;
+                left: 55%;
+                cursor: pointer;
 
-                    &:hover {
-                        opacity: 0.5;
-                    }
+                &:hover {
+                    opacity: 0.5;
                 }
             }
         }
@@ -277,6 +281,7 @@
         top: 5%;
         font-size: 40px;
         cursor: pointer;
+
         @include large {
             right: 8%;
             top: 5%;
@@ -286,5 +291,17 @@
         &:hover {
             opacity: 0.5;
         }
+    }
+}
+
+@keyframes getIn {
+    from {
+        top: 200%;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
     }
 }

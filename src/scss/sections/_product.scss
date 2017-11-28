@@ -8,6 +8,7 @@
     @include medium {
         flex-direction: row;
         text-align: left;
+        padding: $sectionPadding 0 calc(#{$sectionPadding} + 70px);
     }
 
     &__packaging {
@@ -167,6 +168,14 @@
     animation: moveTitle 2s -0.5s ease-in-out forwards;
 }
 
+.visible .product__packagingBg {
+    animation: moveBloc 1.5s -0.5s ease-in-out forwards;
+}
+
+.visible .product__text {
+    animation: moveText 1.5s -0.5s ease-in-out forwards;
+}
+
 @keyframes moveTitle {
     0% {
         transform: translate(50%);
@@ -179,10 +188,6 @@
     }
 }
 
-.visible .product__packagingBg {
-    animation: moveBloc 1.5s -0.5s ease-in-out forwards;
-}
-
 @keyframes moveBloc {
     0% {
         transform: translate(-50%);
@@ -192,10 +197,6 @@
     100% {
         transform: 0;
     }
-}
-
-.visible .product__text {
-    animation: moveText 1.5s -0.5s ease-in-out forwards;
 }
 
 @keyframes moveText {
