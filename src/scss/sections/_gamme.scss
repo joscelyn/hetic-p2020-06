@@ -1,5 +1,10 @@
 .gamme {
-    @include container;
+
+    background-color: #FAFAFA;
+
+    &__container {
+        @include container;
+    }
 
     &__surtitle {
         text-align: center;
