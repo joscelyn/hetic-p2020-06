@@ -14,25 +14,41 @@
         margin-top: 5%;
 
     }
+    &__icon {
+            position: absolute;
+            margin: 0;
+            margin-top: 20%;
+            margin-left: 10%;
+
+            &:nth-child(2n) {
+                margin-left:70%;
+            }
+
+            &:last-child {
+                margin-left: 20%;
+            }
+    }
 
     &__instruction {
         font-family: $typoSansSerif;
         color: white;
-        width: 70%;
+        width:40%;
         margin: auto;
         font-weight: lighter;
         text-align: left;
-        margin-top: -5%;
+        margin-top: -7%;
 
-        &:nth-child(4) {
+        &:nth-child(2n) {
             text-align: right;
 
             &:before {
                 display: none;
             }
         }
-        &:nth-child(9) {
-            text-align: right;
+        &:last-child {
+            text-align: center;
+            margin-top: 5%;
+
 
             &:before {
                 display: none;
@@ -47,6 +63,7 @@
         font-family: $typoSansSerif;
         font-weight: bold;
         text-align: center;
+        margin-top: -2%;
     }
 
 
