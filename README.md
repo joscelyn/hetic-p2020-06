@@ -1,7 +1,7 @@
 # L'infuseur
 
 This project is carried out in our school setting, [Hetic](https://www.hetic.net/). The resquest was to make a site dedicated to a product. We chose L’Infuseur, it’s an infusion brand. It’s seemed like a good subject, cause our product is uncluttered and we could play a with different animations. We tried to show this product in particular, to promote the beauty of the product by using only front development. We work on a UI design according to the existing visual identity of the brand.
-
+You can see our website online on : [http://heuristic-engelbart-2f71cc.netlify.com/](http://heuristic-engelbart-2f71cc.netlify.com/).
 
 ## Getting started
 
