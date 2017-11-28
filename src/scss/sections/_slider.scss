@@ -1,9 +1,29 @@
 .slider {
     position: relative;
+    overflow: hidden;
     background: #fafafa;
 
     @include medium {
         padding: calc(100px + #{$sectionPadding}) 0 calc(180px + #{$sectionPadding});
+
+        &__title {
+            position: absolute;
+            top: -160px;
+            left: -10%;
+            text-transform: uppercase;
+            font-family: $typoSerif, serif;
+            font-weight: 400;
+            color: rgba($grey, .25);
+            font-size: 150px;
+            margin: 0;
+            z-index: -1;
+        }
+    }
+
+    @include large {
+        &__title {
+            left: -100px;
+        }
     }
 
     &__container {
@@ -49,7 +69,7 @@
         }
     }
 
-    &__surtitle {
+    &__subTitle {
         @include surtitle;
 
         @include medium {
@@ -217,7 +237,7 @@ $slideList: apaisant anti-oxydant fruite;
     @for $i from 1 to 6 {
         .slider__petals.#{$slide} .petal-#{$i} {
             animation-duration: ($i + 6) + s;
-            background-image: url("../img/petals/#{$slide}-#{$i}.png");
+            background-image: url("../img/petals/#{$slide}-#{$i}.svg");
         }
     }
 }
