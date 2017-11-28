@@ -1,0 +1,71 @@
+.use {
+    background-color: $blue;
+    height: 100vh;
+    padding: 3%;
+    padding-top: 10%;
+
+    &__number {
+        font-family: $typoSerif;
+        font-size: 5rem;
+        color: rgba(255,255,255,0.12);
+        text-align: center;
+        width: 30%;
+        margin: auto;
+        margin-top: 5%;
+
+    }
+    &__icon {
+            position: absolute;
+            margin: 0;
+            margin-top: 20%;
+            margin-left: 10%;
+
+            &:nth-child(2n) {
+                margin-left:70%;
+            }
+
+            &:last-child {
+                margin-left: 20%;
+            }
+    }
+
+    &__instruction {
+        font-family: $typoSansSerif;
+        color: white;
+        width:40%;
+        margin: auto;
+        font-weight: lighter;
+        text-align: left;
+        margin-top: -7%;
+
+        &:nth-child(2n) {
+            text-align: right;
+
+            &:before {
+                display: none;
+            }
+        }
+        &:last-child {
+            text-align: center;
+            margin-top: 5%;
+
+
+            &:before {
+                display: none;
+            }
+
+        }
+
+    }
+
+    &__ready {
+        color: white;
+        font-family: $typoSansSerif;
+        font-weight: bold;
+        text-align: center;
+        margin-top: -2%;
+    }
+
+
+
+}

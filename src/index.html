@@ -16,12 +16,12 @@
     </div>
 
     <div class="splashScreen__flowers">
-        <img src="img/branche.svg" alt="branche">
-        <img src="img/branche.svg" alt="branche">
-        <img src="img/branche.svg" alt="branche">
-        <img src="img/branche.svg" alt="branche">
-        <img src="img/branche.svg" alt="branche">
-        <img src="img/branche.svg" alt="branche">
+        <img class="splashScreen__flower" data-skip-inject-svg="1" src="img/branche.svg" alt="">
+        <img class="splashScreen__flower" data-skip-inject-svg="1" src="img/branche.svg" alt="">
+        <img class="splashScreen__flower" data-skip-inject-svg="1" src="img/branche.svg" alt="">
+        <img class="splashScreen__flower" data-skip-inject-svg="1" src="img/branche.svg" alt="">
+        <img class="splashScreen__flower" data-skip-inject-svg="1" src="img/branche.svg" alt="">
+        <img class="splashScreen__flower" data-skip-inject-svg="1" src="img/branche.svg" alt="">
     </div>
 
     <div class="splashScreen__scroll">
@@ -49,13 +49,13 @@
         <div class="product__details">
             <p class="product__bigTitle rellax" data-rellax-speed="0">[DE.LIS]</p>
             <div class="product__text 1 rellax" data-rellax-speed="-1">
-                <h3 class="product__surtitre">Définition</h3>
+                <h3 class="product__surtitle">Définition</h3>
                 <h2>Délice [ de.lis ]</h2>
                 <p class="product__content">Très vif plaisir, ce qui produit ce plaisir; délectation, enchantement.</p>
             </div>
             <!-- all the time visible -->
             <div class="product__text rellax" data-rellax-speed="-1">
-                <h3 class="product__surtitre">Le petit nouveau</h3>
+                <h3 class="product__surtitle">Le petit nouveau</h3>
                 <div class="line"></div>
                 <h2>5 délice</h2>
                 <p class="product__content">L’infuseur 5 Délice fait oublier les préjugés négatifs sur la tisane et la positionne comme une boisson élégante et urbaine, dans l’air du temps, masculine et féminine, qui réconcilie plaisir et bienfaits.</p>
@@ -68,7 +68,7 @@
         Citation
      ---------------------------->
     <section class="quotation">
-        <p class="quotation__surtitre"> Les créatrices ont dit</p>
+        <p class="quotation__surtitle"> Les créatrices ont dit</p>
         <p class="quotation__text" id="quotation__text">Parce que nous ne voulons plus de tisanes de mamies. </p>
     </section>
 
@@ -125,7 +125,7 @@
     ---------------------------->
     <div class="creators">
         <div class="creators__imagesBloc">
-            <img class="creators__image" src="img/creatrices.jpg" alt="creators" title="Les créatrices">
+            <img class="creators__image" src="img/creatrices.jpg" alt="Les créatrices">
         </div>
         <div class="creators__container">
             <h3 class="creators__subtitle">une histoire mère-fille</h3>
@@ -135,10 +135,35 @@
     </div>
 
     <!----------------------------
+    Hot Cold Part
+    ---------------------------->
+    <div class="use">
+            <img class="use__icon" src="img/thermometer.svg" alt="thermomètre">
+            <h3 class="use__number">1</h3>
+            <p class="use__instruction">Faire bouillir de l'eau à 95°C</p>
+
+            <img class="use__icon" src="img/tea-bag.svg" alt="Sachet de Thé">
+            <h3 class="use__number">2</h3>
+            <p class="use__instruction">Mettez le sachet dans un tasse</p>
+
+            <img class="use__icon" src="img/stopwatch.svg" alt="Chronomètre">
+            <h3 class="use__number">3</h3>
+            <p class="use__instruction">Laissez infuser jusqu’à 5 minutes</p>
+
+            <img class="use__icon --tea" src="img/tea.svg" alt="Thé">
+            <h3 class="use__number">4</h3>
+            <p class="use__ready">C'est prêt !</p>
+            <p class="use__instruction">Il ne reste plus qu’à déguster.</p>
+
+    </div>
+
+
+
+    <!----------------------------
         Gamme
      ---------------------------->
         <div class="gamme">
-            <div class="gamme__surtitre">
+            <div class="gamme__surtitle">
                 <p>La gamme</p>
             </div>
             <div class="gamme__title">
@@ -149,7 +174,7 @@
 
             <div class="gamme__presentation ligne" data-produit="ligne" data-key="0">
                 <img src="img/ligne-small.png" alt="1 Ligne">
-                <div class="gamme__surtitre">
+                <div class="gamme__surtitle">
                     <p>[LJN]</p>
                 </div>
                 <div class="gamme__name">
@@ -160,7 +185,7 @@
 
             <div class="gamme__presentation calme" data-produit="calme" data-key="1">
                 <img src="img/calme-small.png" alt="2 calme">
-                <div class="gamme__surtitre">
+                <div class="gamme__surtitle">
                     <p>[KALM]</p>
                 </div>
                 <div class="gamme__name">
@@ -170,7 +195,7 @@
 
             <div class="gamme__presentation digestif" data-produit="digestif" data-key="2">
                 <img src="img/digestif-small.png" alt="3 digestif">
-                <div class="gamme__surtitre">
+                <div class="gamme__surtitle">
                     <p>[diʒɛstif]</p>
                 </div>
                 <div class="gamme__name" id="gamme__name">
@@ -181,7 +206,7 @@
 
             <div class="gamme__presentation tonique" data-produit="tonique" data-key="3">
                 <img src="img/tonique-small.png" alt="4 tonique">
-                <div class="gamme__surtitre">
+                <div class="gamme__surtitle">
                     <p>[tɔ.nik]</p>
                 </div>
                 <div class="gamme__name">
@@ -191,7 +216,7 @@
 
             <div class="gamme__presentation delice" data-produit="delice" data-key="4">
                 <img src="img/delice-small.png" alt="5 delice">
-                <div class="gamme__surtitre">
+                <div class="gamme__surtitle">
                     <p>[DELIS]</p>
                 </div>
                 <div class="gamme__name">
@@ -201,7 +226,7 @@
 
             <div class="gamme__presentation detox" data-produit="detox" data-key="5">
                 <img src="img/detox-small.png" alt="6 detox">
-                <div class="gamme__surtitre">
+                <div class="gamme__surtitle">
                     <p>[diː.tɒks]</p>
                 </div>
                 <div class="gamme__name">
@@ -243,19 +268,19 @@
         <div class="popup__blocText">
 
             <div class="popup__text">
-                <p class="popup__surtitre">Définition</p>
+                <p class="popup__surtitle">Définition</p>
                 <h4 class="popup__definition"></h4>
                 <p class="popup__content --def"></p>
             </div>
 
             <div class="popup__text">
-                <p class="popup__surtitre">Ingrédients</p>
+                <p class="popup__surtitle">Ingrédients</p>
                 <h4>Composition</h4>
                 <p class="popup__content --compo"></p>
             </div>
 
             <div class="popup__text">
-                <p class="popup__surtitre">Informations pratiques</p>
+                <p class="popup__surtitle">Informations pratiques</p>
                 <div class="popup__price">
                     <h4 class="popup__euros">11.90€</h4>
                     <a class="popup__buy"href="https://linfuseur.com/shop/">Acheter</a>
@@ -267,8 +292,6 @@
     <div class="footer">
         <p>Mention Légales: Clarisse Garcia (Gestion de projet), Lola Calmejane (UI Design), Joscelyn Gainié et Maud Frichement (Developpement Front-End), Thomas Henault (Responsable Contenu)</p>
     </div>
-
-
 </main>
 
 

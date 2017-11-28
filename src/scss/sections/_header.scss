@@ -1,4 +1,4 @@
-.splashScreen {
+.header {
     height: 100vh;
     background: $blue;
 
@@ -17,8 +17,9 @@
         bottom: 0;
         overflow: hidden;
 
-        img {
+        .header__flower {
             position: absolute;
+            height: auto;
             transition: 1s;
 
             &:nth-child(1) {
@@ -26,7 +27,7 @@
                 transform: rotate(160deg);
                 top: -5%;
                 width: 30%;
-                filter: drop-shadow(50px 10px 0px rgb(0, 0, 0));
+                filter: drop-shadow(50px 10px 0px #515661);
                 @include medium {
                     width: 28%;
                     top: 0;
@@ -46,12 +47,12 @@
                 top: 15%;
                 right: 40%;
                 width: 30%;
-                filter: drop-shadow(50px 30px 0px rgb(0, 0, 0));
+                filter: drop-shadow(50px 30px 0px #515661);
                 @include medium {
                     width: 28%;
                     top: 20%;
                     right: 45%;
-                    filter: drop-shadow(50px 30px 0px rgb(0, 0, 0));
+                    filter: drop-shadow(50px 30px 0px #515661);
                 }
                 @include large {
                     width: 20%;
@@ -66,12 +67,12 @@
                 left: -100px;
                 transform-origin: bottom;
                 width: 35%;
-                filter: drop-shadow(-60px 30px 0px rgb(0, 0, 0));
+                filter: drop-shadow(-60px 30px 0px #515661);
                 @include medium {
                     width: 25%;
                     bottom: -5%;
                     left: -100px;
-                    filter: drop-shadow(30px -10px 0px rgb(0, 0, 0));
+                    filter: drop-shadow(30px -10px 0px #515661);
                 }
                 @include large {
                     width: 20%;
@@ -85,7 +86,7 @@
                 bottom: -10%;
                 left: 50%;
                 width: 20%;
-                filter: drop-shadow(40px 10px 0px rgb(0, 0, 0));
+                filter: drop-shadow(40px 10px 0px #515661);
                 @include medium {
                     width: 20%;
                 }
@@ -102,7 +103,7 @@
                 bottom: 50px;
                 right: -50px;
                 width: 30%;
-                filter: drop-shadow(60px 10px 0px rgb(0, 0, 0));
+                filter: drop-shadow(60px 10px 0px #515661);
                 @include medium {
                     width: 25%;
                     bottom: 10%;
@@ -120,7 +121,7 @@
                 top: 10%;
                 right: 45%;
                 width: 20%;
-                filter: drop-shadow(-30px 30px 0px rgb(0, 0, 0));
+                filter: drop-shadow(-30px 30px 0px #515661);
                 @include medium {
                     width: 25%;
                     transform: rotate(170deg);
@@ -177,32 +178,38 @@
     }
 }
 
-.leave .splashScreen__flowers {
-    img:nth-child(1) {
+.leave .product__flowers .product__flower {
+    &:nth-child(1) {
         transform: translate(-500px, -650px);
+        transition-duration: 2s;
     }
 
-    img:nth-child(2) {
+    &:nth-child(2) {
         transform: translate(200px, 550px);
+        transition-duration: 2s;
     }
 
-    img:nth-child(3) {
+    &:nth-child(3) {
         transform: translate(300px, 450px);
+        transition-duration: 2s;
     }
 
-    img:nth-child(4) {
+    &:nth-child(4) {
         transform: translate(1000px, -700px);
+        transition-duration: 2s;
     }
 
-    img:nth-child(5) {
+    &:nth-child(5) {
         transform: translate(00px, -1050px);
+        transition-duration: 2s;
     }
 
-    img:nth-child(6) {
+    &:nth-child(6) {
         transform: translate(100px, 300px);
+        transition-duration: 2s;
     }
 }
 
-.leave .splashScreen__scroll {
+.leave .product__scroll {
     opacity: 0;
 }

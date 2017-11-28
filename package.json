@@ -4,8 +4,10 @@
   "description": "Projet de front-end G6 P2020",
   "author": "Joscelyn Gainié - Loic Aaron Tuil - Clarisse Garcia - Lola Calmejane - Maud Frichement - Thomas Hénault",
   "devDependencies": {
+    "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
+    "babelify": "^8.0.0",
     "browser-sync": "^2.18.13",
     "browserify": "^14.4.0",
     "browserslist": "latest",
@@ -20,6 +22,7 @@
     "gulp-file-include": "^1.2.0",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.4.0",
+    "gulp-inject-svg": "^0.1.16",
     "gulp-plumber": "latest",
     "gulp-pug": "^3.3.0",
     "gulp-rename": "latest",
@@ -30,12 +33,11 @@
     "imagemin-pngquant": "latest",
     "node-sass-tilde-importer": "^1.0.0",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "babel-core": "^6.26.0",
-    "babelify": "^8.0.0",
-    "rellax": "^1.3.0",
-    "tiny-slider": "^2.3.7"
+    "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "rellax": "^1.3.0",
+    "tiny-slider": "^2.3.7",
+    "whatwg-fetch": "^2.0.3"
   }
 }
