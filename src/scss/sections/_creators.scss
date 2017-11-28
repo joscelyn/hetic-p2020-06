@@ -49,13 +49,13 @@
         }
     }
 
-    &__subtitle {
+    &__surtitle {
         text-align: center;
         padding: 0;
         margin-top: 5%;
         margin-bottom: 5%;
 
-        @include surtitre;
+        @include surtitle;
 
         @include large {
             text-align: left;
