@@ -1,0 +1,81 @@
+/*--------------------------------------------------------------
+# Mixins
+--------------------------------------------------------------*/
+
+@mixin medium {
+    @media (min-width: #{$medium}) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (min-width: #{$large}) {
+        @content;
+    }
+}
+
+@mixin container {
+    width: 90%;
+    max-width: $large;
+    margin: 0 auto;
+}
+
+@mixin surtitre {
+    position: relative;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-family: $typoSerif, serif;
+    font-weight: 400;
+    color: $grey;
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -5px;
+        left: calc(50% - 12px);
+        width: 22px;
+        height: 1px;
+        background: $grey;
+    }
+}
+
+@mixin trait {
+    width: 23px;
+    height: 1px;
+    margin: auto;
+    background: $grey;
+}
+
+@mixin title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: $blue;
+    font-family: $typoSansSerif;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+@mixin littleTitle {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: $blue;
+    font-family: $typoSansSerif;
+    font-weight: bold;
+
+    @include medium {
+        font-size: 1.2rem;
+    }
+}
+
+@mixin bigTitle {
+    display: block;
+    font-family: $typoSerif;
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: rgba(#505467, 0.19);
+    opacity: 0.38;
+    position: relative;
+    margin: 0;
+}

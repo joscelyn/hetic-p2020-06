@@ -1,4 +1,4 @@
-.splashScreen {
+.header {
     height: 100vh;
     background: $blue;
 
@@ -17,7 +17,7 @@
         bottom: 0;
         overflow: hidden;
 
-        .splashScreen__flower {
+        .header__flower {
             position: absolute;
             height: auto;
             transition: 1s;
@@ -178,7 +178,7 @@
     }
 }
 
-.leave .splashScreen__flowers .splashScreen__flower {
+.leave .product__flowers .product__flower {
     &:nth-child(1) {
         transform: translate(-500px, -650px);
     }
@@ -204,6 +204,6 @@
     }
 }
 
-.leave .splashScreen__scroll {
+.leave .product__scroll {
     opacity: 0;
 }
