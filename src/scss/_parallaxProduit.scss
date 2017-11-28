@@ -118,9 +118,9 @@
     }
     }
 
-    &__surtitre {
+    &__surtitle {
         // mobile
-        @include surtitre;
+        @include surtitle;
         margin-bottom: 5%;
         @include medium {
             margin-bottom: 5%;

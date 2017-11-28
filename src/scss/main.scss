@@ -30,7 +30,7 @@ $large: 1024px;
     }
 }
 
-@mixin surtitre {
+@mixin surtitle {
     position: relative;
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -114,3 +114,4 @@ body {
 @import "popupGamme";
 @import "creators";
 @import "footer";
+@import "use";

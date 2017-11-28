@@ -4,9 +4,9 @@
         @include container;
     }
 
-    &__surtitre {
+    &__surtitle {
         text-align: center;
-        @include surtitre;
+        @include surtitle;
         padding-top: 0;
         margin-bottom: 2%;
 

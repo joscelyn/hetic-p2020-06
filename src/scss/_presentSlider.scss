@@ -60,7 +60,7 @@
     }
 
     &__subTitle {
-        @include surtitre;
+        @include surtitle;
         @include medium {
             max-height: 0;
             overflow: hidden;
