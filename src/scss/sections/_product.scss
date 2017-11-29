@@ -67,8 +67,12 @@
             height: auto;
 
             @include medium {
-                width: 70%;
+                width: 100%;
             }
+
+            @include large {
+                width: 80%;
+            };
         }
     }
 
