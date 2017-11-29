@@ -73,7 +73,7 @@ function js() {
 
 function vendorsJS() {
 
-    return gulp.src(['node_modules/rellax/rellax.min.js', 'node_modules/tiny-slider/dist/min/tiny-slider.js', 'node_modules/parallax-js/dist/parallax.min.js', 'node_modules/whatwg-fetch/fetch.js'])
+    return gulp.src(['node_modules/rellax/rellax.min.js', 'node_modules/tiny-slider/dist/min/tiny-slider.js', 'node_modules/whatwg-fetch/fetch.js'])
         .pipe(concat('vendors.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
