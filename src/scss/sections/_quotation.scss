@@ -1,11 +1,90 @@
-@mixin quotationMove() {
-    animation-name: opacity, mouvement;
-    animation-duration: 3s, 10s;
-    animation-iteration-count: 1, infinite;
-    animation-direction: normal, alternate;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear, linear;
+.quotation {
+    padding: ($sectionPadding * 3) 0;
+    overflow: hidden;
+
+    &__container {
+        text-align: center;
+        @include container;
+    }
+
+
+    &__surtitle {
+        @include surtitle;
+    }
+
+    &__text {
+        position: relative;
+        display: inline-block;
+        margin-top: 20px;
+        font-size: 2rem;
+        color: #0E215D;
+        font-weight: normal;
+
+        @include medium {
+            font-size: 3.7rem;
+        }
+
+        @include large {
+            font-size: 4rem;
+        }
+
+        &:before, &:after {
+            content: "“";
+            position: absolute;
+            top: 80px;
+            left: -40px;
+            line-height: 0;
+            font-size: 22rem;
+            opacity: 0.1;
+            z-index: -2;
+
+            @include medium {
+                font-size: 38rem;
+                top: 100px;
+                left: -90px;
+            }
+
+            @include large {
+                top: 50px;
+                left: -200px;
+            }
+        }
+
+        &:after {
+            content: "”";
+            top: auto;
+            left: auto;
+            bottom: -90px;
+            right: -60px;
+
+            @include medium {
+                bottom: -150px;
+                right: -80px;
+            }
+
+            @include large {
+                bottom: -150px;
+                right: -270px;
+            }
+        }
+    }
 }
+
+.quotation__text.active {
+    &:before, &:after {
+        animation-name: opacity, mouvement;
+        animation-duration: 3s, 10s;
+        animation-iteration-count: 1, infinite;
+        animation-direction: normal, alternate;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear, linear;
+    }
+
+    &:after {
+        animation-delay: 0s, 2s;
+    }
+}
+
 
 @keyframes opacity {
     0% {
@@ -31,59 +110,5 @@
     }
     100% {
         transform: rotate(0deg) translateY(-3px) translateX(-4px);
-    }
-}
-
-.quotation {
-    text-align: center;
-    position: relative;
-    padding: 30vh 0;
-
-    &__surtitle {
-        @include surtitle;
-    }
-
-    &__text {
-        font-size: 3.7rem;
-        color: #0E215D;
-        margin-top: 20px;
-
-        @include medium {
-            font-size: 3.7rem;
-        }
-
-        &:before {
-            content: "“";
-            position: absolute;
-            top: 0;
-            line-height: 0.8;
-            left: 0;
-            z-index: -2;
-            opacity: 0.1;
-            font-size: 38rem;
-        }
-
-        &:after {
-            content: "”";
-            position: absolute;
-            bottom: -60px;
-            right: 0;
-            line-height: 0;
-            opacity: 0.1;
-            z-index: -2;
-            font-size: 38rem;
-        }
-    }
-}
-
-.quotation__text.active {
-    &:before {
-        @include quotationMove;
-    }
-
-    &:after {
-        @include quotationMove;
-
-        animation-delay: 0s, 2s;
     }
 }

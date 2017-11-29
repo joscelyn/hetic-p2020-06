@@ -8,6 +8,7 @@
     @include medium {
         flex-direction: row;
         text-align: left;
+        padding: $sectionPadding 0 calc(#{$sectionPadding} + 70px);
     }
 
     &__packaging {

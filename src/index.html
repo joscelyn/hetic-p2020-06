@@ -68,8 +68,10 @@
         Citation
      ---------------------------->
     <section class="quotation">
-        <p class="quotation__surtitle"> Les créatrices ont dit</p>
-        <p class="quotation__text" id="quotation__text">Parce que nous ne voulons plus de tisanes de mamies. </p>
+        <div class="quotation__container">
+            <p class="quotation__surtitle"> Les créatrices ont dit</p>
+            <h2 class="quotation__text" id="quotation__text">Parce que nous ne voulons plus de tisanes de mamies. </h2>
+        </div>
     </section>
 
 
@@ -79,7 +81,7 @@
     <section class="slider">
         <div class="slider__container">
             <div class="slider__tns">
-                <div class="slide" data-name="apaisant">
+                <div class="slide" data-name="apaisant" data-title="Apaisant">
                     <img class="slide__img" src="img/slider-apaisant.png" alt="Apaisant">
 
                     <div class="slide__text">
@@ -89,7 +91,7 @@
                     </div>
                 </div>
 
-                <div class="slide" data-name="anti-oxydant">
+                <div class="slide" data-name="anti-oxydant" data-title="Anti-Oxydant">
                     <img class="slide__img" src="img/slider-anti_oxydant.png" alt="Anti-oxydant">
 
                     <div class="slide__text">
@@ -99,7 +101,7 @@
                     </div>
                 </div>
 
-                <div class="slide" data-name="fruite">
+                <div class="slide" data-name="fruite" data-title="Fruité">
                     <img class="slide__img" src="img/slider-fruite.png" alt="Fruité">
 
                     <div class="slide__text">
@@ -125,7 +127,7 @@
     ---------------------------->
     <section class="creators">
         <div class="creators__imagesBloc">
-            <img class="creators__image" src="img/creatrices.jpg" alt="Les créatrices">
+            <img class="creators__image" src="img/creatrices-medium.jpg" srcset="img/creatrices-small 300w, img/creatrices-medium.jpg 600w, img/creatrices-large.jpg 900w" alt="Les créatrices">
         </div>
         <div class="creators__container">
             <h3 class="creators__surtitle">une histoire mère-fille</h3>
@@ -148,7 +150,7 @@
 
                 <div class="gamme__produit">
 
-                <div class="gamme__presentation ligne" data-produit="ligne" data-key="0">
+                <div class="gamme__presentation ligne" data-produit="ligne">
                     <img src="img/ligne-small.png" alt="1 Ligne">
                     <div class="gamme__surtitle">
                         <p>[LJN]</p>
@@ -156,10 +158,9 @@
                     <div class="gamme__name">
                         <h3>1 ligne</h3>
                     </div>
-
                 </div>
 
-                <div class="gamme__presentation calme" data-produit="calme" data-key="1">
+                <div class="gamme__presentation calme" data-produit="calme">
                     <img src="img/calme-small.png" alt="2 calme">
                     <div class="gamme__surtitle">
                         <p>[KALM]</p>
@@ -169,7 +170,7 @@
                     </div>
                 </div>
 
-                <div class="gamme__presentation digestif" data-produit="digestif" data-key="2">
+                <div class="gamme__presentation digestif" data-produit="digestif">
                     <img src="img/digestif-small.png" alt="3 digestif">
                     <div class="gamme__surtitle">
                         <p>[diʒɛstif]</p>
@@ -177,10 +178,9 @@
                     <div class="gamme__name" id="gamme__name">
                         <h3>3 digestif</h3>
                     </div>
-
                 </div>
 
-                <div class="gamme__presentation tonique" data-produit="tonique" data-key="3">
+                <div class="gamme__presentation tonique" data-produit="tonique">
                     <img src="img/tonique-small.png" alt="4 tonique">
                     <div class="gamme__surtitle">
                         <p>[tɔ.nik]</p>
@@ -190,7 +190,7 @@
                     </div>
                 </div>
 
-                <div class="gamme__presentation delice" data-produit="delice" data-key="4">
+                <div class="gamme__presentation delice" data-produit="delice">
                     <img src="img/delice-small.png" alt="5 delice">
                     <div class="gamme__surtitle">
                         <p>[DELIS]</p>
@@ -200,7 +200,7 @@
                     </div>
                 </div>
 
-                <div class="gamme__presentation detox" data-produit="detox" data-key="5">
+                <div class="gamme__presentation detox" data-produit="detox">
                     <img src="img/detox-small.png" alt="6 detox">
                     <div class="gamme__surtitle">
                         <p>[diː.tɒks]</p>
@@ -221,13 +221,8 @@
         <div class="popup__bigTitle"><p>
             <p></div>
         <div class="popup__button">
-            <div class="popup__button--first">
-                <a href="#"><</a>
-            </div>
-            <div class="popup__button--second">
-                <a href="#">></a>
-            </div>
-
+            <a class="popup__prev" href="#">&#8249;</a>
+            <a class="popup__next" href="#">&#8250;</a>
         </div>
         <div class="popup__image">
             <div class="popup__number">
@@ -267,7 +262,11 @@
     </div>
 
     <div class="footer">
-        <p>Crédits: Team 6</p>
+        <div class="footer__content">
+        <a class="footer__logo" href=""><img src="img/instagram-logo.svg" data-skip-inject-svg="1" alt="Notre pinterest">
+        <img src="img/pinterest-logo.svg" data-skip-inject-svg="1" alt="Notre pinterest"></a>
+        <p class="footer__text">@Copyright L'infuseur</p>
+        </div>
     </div>
 </main>
 

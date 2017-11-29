@@ -67,12 +67,11 @@
     }
 
     &__title {
+        @include title;
         color: $blue;
         text-align: center;
-        margin: 2vh 0;
         width: 100%;
-
-        @include title;
+        margin: 2vh 0;
 
         @include large {
             flex-direction: row;
