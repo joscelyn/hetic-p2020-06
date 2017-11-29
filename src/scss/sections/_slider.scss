@@ -297,7 +297,6 @@ $slideList: apaisant anti-oxydant fruite;
         .slider__petals.#{$slide} .petal-#{$i} {
             animation-duration: ($i + 6) + s;
             background-image: url("../img/fruits/#{$slide}-#{$i}.svg");
-
         }
     }
 }
@@ -306,12 +305,12 @@ $slideList: apaisant anti-oxydant fruite;
 
 @keyframes float {
     0% {
-        transform: translatey(0px);
+        transform: translateY(0px);
     }
     50% {
-        transform: translatey(-50px);
+        transform: translateY(-50px);
     }
     100% {
-        transform: translatey(0px);
+        transform: translateY(0px);
     }
 }

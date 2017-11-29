@@ -1,0 +1,97 @@
+
+
+
+.animFromBottom, .animOpacity, .animFromLeft {
+    opacity: 0;
+}
+
+
+
+.triggerAnimation .animOpacity {
+    opacity: 1;
+    animation: animOpacity ease-in-out 1.4s both;
+}
+
+@keyframes animOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+.triggerAnimation .animFromBottom {
+    opacity: 1;
+    animation: animFromLeft ease-in-out .8s both;
+}
+
+@keyframes animFromLeft {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+
+
+
+
+
+////////
+// Product
+////////
+.product {
+    .product__text {
+        animation-delay: .3s;
+
+        &--last {
+            animation-delay: .6s;
+        }
+    }
+}
+
+
+////////
+// Slider
+////////
+.slider {
+    .slider__petals {
+        animation-delay: .3s;
+    }
+}
+
+
+////////
+// Creators
+////////
+.creators {
+    .creators__imagesBloc {
+        animation-delay: .3s;
+    }
+}
+
+
+////////
+// Gamme
+////////
+.triggerAnimation .gamme__produit .gamme__presentation {
+    animation: animOpacity ease-in-out 1.4s both;
+}
+
+
+@for $i from 1 to 7 {
+    .gamme__produit .gamme__presentation:nth-child(#{$i}) {
+        animation-delay: ($i * 1s) / 3;
+    }
+}

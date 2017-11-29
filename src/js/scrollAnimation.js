@@ -3,9 +3,10 @@
 /////////////////////
 
 // Define all globals variables
+let windowWidth = window.innerWidth;
 let lastScrollPos = window.pageYOffset || document.documentElement.scrollTop;
 
-let scrollOffset = 100;
+let scrollOffset = 400;
 let isEverythingActive = false;
 
 let sectionsData = {};
@@ -19,7 +20,7 @@ let sections = document.getElementsByTagName('section');
 window.addEventListener('scroll', () => {
     checkHeader();
 
-    if (!isEverythingActive) {
+    if (!isEverythingActive && windowWidth > 600) {
         checkSections();
     }
 });

@@ -90,7 +90,6 @@ function chooseProduct(direction) {
     changeModal(productTriggeredDOM);
 }
 
-
 // Function to change the content of the modal. Content is define by the .json you call.
 function changeModal(product) {
     let productName = product.dataset.produit;
@@ -106,20 +105,20 @@ function changeModal(product) {
         .then(response => {
             return response.json();
         }).then(data => {
-        document.querySelector('.popup__bigTitle p').innerHTML = data.name;
-        document.querySelector('.popup__definition').innerHTML = data.def;
-        document.querySelector('.--def').innerHTML = data.defContent;
-        document.querySelector('.--compo').innerHTML = data.composition;
-        document.querySelector('.popup__number p').innerHTML = data.number;
-        document.querySelector('.popup__image img').src = data.image;
-        document.querySelector('.popup__image img').srcset = data.imageset;
-        document.querySelector('.popup__image img').sizes = data.sizes;
+            document.querySelector('.popup__bigTitle p').innerHTML = data.name;
+            document.querySelector('.popup__definition').innerHTML = data.def;
+            document.querySelector('.--def').innerHTML = data.defContent;
+            document.querySelector('.--compo').innerHTML = data.composition;
+            document.querySelector('.popup__number p').innerHTML = data.number;
+            document.querySelector('.popup__image img').src = data.image;
+            document.querySelector('.popup__image img').srcset = data.imageset;
+            document.querySelector('.popup__image img').sizes = data.sizes;
 
-        openModal();
-    }).catch(() => {
-        closeModal();
-        alert('Impossible de charger le produit, veuillez réesayer plus tard.');
-    });
+            openModal();
+        }).catch(() => {
+            closeModal();
+            alert('Impossible de charger le produit, veuillez réesayer plus tard ou avec un autre navigateur.');
+        });
 }
 
 // Add a "active" class you let the popup becoming visible
@@ -142,6 +141,7 @@ function closeModal() {
         modal.classList.remove('active');
         isModalOpen = false;
 
-        window.onscroll = () => { };
+        window.onscroll = () => {
+        };
     }
 }

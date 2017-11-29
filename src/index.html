@@ -6,9 +6,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <title>5 Délice</title>
-    <meta name="description" content="">
+    <meta name="description" content="Site de présentation du produit l’infuseur 5 délice, infusion francaise fleurie fruitée et savoureurse pour un moment de pur plaisir.">
 
     <link rel="icon" type="image/png" href="img/favicon.ico">
+
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CPlayfair+Display%7CGreat+Vibes" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 </head>
@@ -46,25 +47,25 @@
      ---------------------------->
     <section class="product">
 
-        <div class="product__packaging">
-            <div class="product__packagingBg">
+        <div class="product__packaging ">
+            <div class="product__packagingBg ">
                 <p>délice</p>
             </div>
             <div class="product__image rellax" data-rellax-speed="-1">
-                <img src="img/boite_thé.png" alt="La boite de thé">
+                <img class="animOpacity" src="img/boite_thé.png" alt="La boite de thé">
             </div>
         </div>
 
         <!-- definition only from ipad to desktop -->
         <div class="product__details">
-            <p class="product__bigTitle rellax" data-rellax-speed="0">[DE.LIS]</p>
-            <div class="product__text 1 rellax" data-rellax-speed="-1">
+            <p class="product__bigTitle animOpacity rellax" data-rellax-speed="0">[DE.LIS]</p>
+            <div class="product__text animOpacity 1 rellax" data-rellax-speed="-1">
                 <h3 class="product__surtitle">Définition</h3>
                 <h2>Délice [ de.lis ]</h2>
                 <p class="product__content">Très vif plaisir, ce qui produit ce plaisir; délectation, enchantement.</p>
             </div>
             <!-- all the time visible -->
-            <div class="product__text rellax" data-rellax-speed="-1">
+            <div class="product__text product__text--last animOpacity rellax" data-rellax-speed="-1">
                 <h3 class="product__surtitle">Le petit nouveau</h3>
                 <div class="line"></div>
                 <h2>5 délice</h2>
@@ -81,8 +82,8 @@
      ---------------------------->
     <section class="quotation">
         <div class="quotation__container">
-            <p class="quotation__surtitle"> Les créatrices ont dit</p>
-            <h2 class="quotation__text" id="quotation__text">Parce que nous ne voulons plus de tisanes de mamies. </h2>
+            <p class="quotation__surtitle animFromBottom"> Les créatrices ont dit</p>
+            <h2 class="quotation__text animOpacity" id="quotation__text">Parce que nous ne voulons plus de tisanes de mamies. </h2>
         </div>
     </section>
 
@@ -92,7 +93,7 @@
      ---------------------------->
     <section class="slider">
         <div class="slider__container">
-            <div class="slider__tns">
+            <div class="slider__tns animOpacity">
                 <div class="slide" data-name="apaisant" data-title="Apaisant">
                     <img class="slide__img" src="img/slider-apaisant.png" alt="Apaisant">
 
@@ -100,7 +101,7 @@
                         <h3 class="slide__surtitle">Marjolaine, Rose, Bluet</h3>
                         <h2 class="slide__title">Apaisant</h2>
                         <p class="slide__paragraph">Grâce à la plante de marjolaine, votre corps et votre esprit
-                            s’apaise. Cette plante a aussi des bienfaits ré-équilibrants.</p>
+                            s’apaisent. Cette plante a aussi des bienfaits ré-équilibrants.</p>
                     </div>
                 </div>
 
@@ -129,7 +130,7 @@
             </div>
         </div>
 
-        <div class="slider__petals apaisant rellax" data-rellax-speed="2">
+        <div class="slider__petals apaisant rellax animOpacity" data-rellax-speed="2">
             <div class="petal-1"></div>
             <div class="petal-2"></div>
             <div class="petal-3"></div>
@@ -145,16 +146,16 @@
      ---------------------------->
     <section class="creators">
         <div class="creators__container">
-            <div class="creators__imagesBloc">
+            <div class="creators__imagesBloc animOpacity">
                 <img class="creators__image" src="img/creatrices-medium.jpg"
                      srcset="img/creatrices-small 300w, img/creatrices-medium.jpg 600w, img/creatrices-large.jpg 900w"
                      alt="Les créatrices">
             </div>
 
             <div class="creators__infos">
-                <h3 class="creators__surtitle">une histoire mère-fille</h3>
-                <h2 class="creators__title">Les créatrices</h2>
-                <p class="creators__text">Accros aux infusions, fans de produits de qualité et de beaux packagings,
+                <h3 class="creators__surtitle animFromBottom">une histoire mère-fille</h3>
+                <h2 class="creators__title animOpacity">Les créatrices</h2>
+                <p class="creators__text animOpacity">Accros aux infusions, fans de produits de qualité et de beaux packagings,
                     ennuyées des décoctions médicamenteuses et des sachets aux saveurs mièvres, mère et fille se
                     retrouvent pour créer L’Infuseur : une marque qui leur ressemble.</p>
             </div>
@@ -168,10 +169,10 @@
     <section class="gamme">
         <div class="gamme__container">
             <div class="gamme__surtitle">
-                <p>La gamme</p>
+                <p class="animFromBottom">La gamme</p>
             </div>
             <div class="gamme__title">
-                <h3>Découvrez toute la gamme</h3>
+                <h3 class="animOpacity">Découvrez toute la gamme</h3>
             </div>
 
             <div class="gamme__produit">
@@ -307,8 +308,8 @@
     </div>
 </div>
 
-
 <script src="js/vendors.js"></script>
+<script src="https://cdn.polyfill.io/v2/polyfill.js?features=default,fetch,Promise"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
