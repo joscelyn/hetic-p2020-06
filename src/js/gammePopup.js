@@ -1,3 +1,4 @@
+//Define all globals variables
 let isModalOpen = false;
 let currentProduct = false;
 let jsonPath = '/js/json/popup-';
@@ -10,7 +11,7 @@ let modalNext = document.getElementsByClassName('popup__next')[0];
 let products = document.getElementsByClassName('gamme__presentation');
 let productsLength = products.length;
 
-
+//Open the modal when you click on a product
 [].forEach.call(products, function (product) {
     product.addEventListener('click', event => {
         event.preventDefault();
@@ -19,13 +20,14 @@ let productsLength = products.length;
     });
 });
 
-
+//Change the content of the modal when you click on previous
 modalPrev.addEventListener('click', event => {
     event.preventDefault();
 
     chooseProduct('prev');
 });
 
+//Change the content of the modal when you click on next
 modalNext.addEventListener('click', event => {
     event.preventDefault();
 
@@ -33,12 +35,13 @@ modalNext.addEventListener('click', event => {
 });
 
 
-
+//close the modal when you click on spawn
 modalClose.addEventListener('click', event => {
     event.stopPropagation();
     closeModal();
 });
 
+//Change the content of the modal when you press keyup
 document.addEventListener('keyup', event => {
     let e = event;
     let keyCode = e.keyCode;
@@ -58,11 +61,10 @@ if (windowWidth < 600) {
     });
 }
 
-
-
+//Define the product that you have ton show when you want to see previous or next product
 function chooseProduct(direction) {
     let productTriggeredDOM;
-
+//when the event act to show the a next product
     if (direction == 'next') {
         let productTriggered = currentProduct + 1;
         if (productTriggered < productsLength) {
@@ -83,7 +85,7 @@ function chooseProduct(direction) {
 }
 
 
-
+//function to change the content of the modal. Content is define by the .json you call.
 function changeModal(product) {
     let productName = product.dataset.produit;
     let productJson = jsonPath + productName + '.json';
@@ -114,7 +116,7 @@ function changeModal(product) {
         });
 }
 
-
+// Add a "active" class you let the popup becoming visible
 function openModal() {
     if (!isModalOpen) {
         modal.classList.add('active');
@@ -127,6 +129,7 @@ function openModal() {
     }
 }
 
+//remove active class to let the popup becoming invisible
 function closeModal() {
     if (isModalOpen) {
         modal.classList.remove('active');

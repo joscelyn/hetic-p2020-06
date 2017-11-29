@@ -66,10 +66,10 @@
     }
 
     &__title {
+        @include title;
         color: $blue;
         text-align: center;
         width: 100%;
-        @include title;
         margin: 2vh 0;
 
         @include large {
