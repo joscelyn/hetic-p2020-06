@@ -6,7 +6,7 @@
 let windowWidth = window.innerWidth;
 let lastScrollPos = window.pageYOffset || document.documentElement.scrollTop;
 
-let scrollOffset = 400;
+let scrollOffset = 360;
 let isEverythingActive = false;
 
 let sectionsData = {};
