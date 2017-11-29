@@ -15,7 +15,8 @@ let modalNext = document.getElementsByClassName('popup__next')[0];
 let products = document.getElementsByClassName('gamme__presentation');
 let productsLength = products.length;
 
-//Open the modal when you click on a product
+
+// Open the modal when you click on a product
 [].forEach.call(products, function (product) {
     product.addEventListener('click', event => {
         event.preventDefault();
@@ -24,14 +25,14 @@ let productsLength = products.length;
     });
 });
 
-//Change the content of the modal when you click on previous
+// Change the content of the modal when you click on previous
 modalPrev.addEventListener('click', event => {
     event.preventDefault();
 
     chooseProduct('prev');
 });
 
-//Change the content of the modal when you click on next
+// Change the content of the modal when you click on next
 modalNext.addEventListener('click', event => {
     event.preventDefault();
 
@@ -39,13 +40,13 @@ modalNext.addEventListener('click', event => {
 });
 
 
-//close the modal when you click on spawn
+// Close the modal when you click on close
 modalClose.addEventListener('click', event => {
     event.stopPropagation();
     closeModal();
 });
 
-//Change the content of the modal when you press keyup
+// Change the status of the modal when you press some keys
 document.addEventListener('keyup', event => {
     let e = event;
     let keyCode = e.keyCode;
@@ -65,10 +66,11 @@ if (windowWidth < 600) {
     });
 }
 
-//Define the product that you have ton show when you want to see previous or next product
+// Define the product that you have ton show when you want to see previous or next product
 function chooseProduct(direction) {
     let productTriggeredDOM;
-//when the event act to show the a next product
+
+    // When the event act to show the a next product
     if (direction == 'next') {
         let productTriggered = currentProduct + 1;
         if (productTriggered < productsLength) {
@@ -89,12 +91,12 @@ function chooseProduct(direction) {
 }
 
 
-//function to change the content of the modal. Content is define by the .json you call.
+// Function to change the content of the modal. Content is define by the .json you call.
 function changeModal(product) {
     let productName = product.dataset.produit;
     let productJson = jsonPath + productName + '.json';
 
-    // indexOf currentProduct
+    // indexOf the current product in the DOM
     currentProduct = 0;
     while ((product = product.previousElementSibling)) {
         currentProduct++;
@@ -104,20 +106,20 @@ function changeModal(product) {
         .then(response => {
             return response.json();
         }).then(data => {
-            document.querySelector('.popup__bigTitle p').innerHTML = data.name;
-            document.querySelector('.popup__definition').innerHTML = data.def;
-            document.querySelector('.--def').innerHTML = data.defContent;
-            document.querySelector('.--compo').innerHTML = data.composition;
-            document.querySelector('.popup__number p').innerHTML = data.number;
-            document.querySelector('.popup__image img').src = data.image;
-            document.querySelector('.popup__image img').srcset = data.imageset;
-            document.querySelector('.popup__image img').sizes = data.sizes;
+        document.querySelector('.popup__bigTitle p').innerHTML = data.name;
+        document.querySelector('.popup__definition').innerHTML = data.def;
+        document.querySelector('.--def').innerHTML = data.defContent;
+        document.querySelector('.--compo').innerHTML = data.composition;
+        document.querySelector('.popup__number p').innerHTML = data.number;
+        document.querySelector('.popup__image img').src = data.image;
+        document.querySelector('.popup__image img').srcset = data.imageset;
+        document.querySelector('.popup__image img').sizes = data.sizes;
 
-            openModal();
-        }).catch(() => {
-            closeModal();
-            alert('Impossible de charger le produit, veuillez réesayer plus tard.');
-        });
+        openModal();
+    }).catch(() => {
+        closeModal();
+        alert('Impossible de charger le produit, veuillez réesayer plus tard.');
+    });
 }
 
 // Add a "active" class you let the popup becoming visible
@@ -126,6 +128,7 @@ function openModal() {
         modal.classList.add('active');
         isModalOpen = true;
 
+        // Prevent scroll
         let scrollY = window.scrollY;
         window.onscroll = () => {
             window.scrollTo(0, scrollY);
@@ -133,7 +136,7 @@ function openModal() {
     }
 }
 
-//remove active class to let the popup becoming invisible
+// Remove active class to let the popup becoming invisible
 function closeModal() {
     if (isModalOpen) {
         modal.classList.remove('active');
