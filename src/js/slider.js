@@ -1,14 +1,20 @@
+/////////////////////
+// The functions that used in the slider section
+/////////////////////
+
+// Define all globals variables
 let windowWidth = window.innerWidth;
 let slides = document.getElementsByClassName('slide');
 let petals = document.getElementsByClassName('slider__petals')[0];
 let sliderContainer = document.getElementsByClassName('slider__container')[0];
 
+// If we are in mobile size
 if (windowWidth < 600) {
-
     let sliderNav = document.createElement('div');
     sliderNav.className = "slider__nav";
     sliderContainer.appendChild(sliderNav);
 
+    // We create the dots of the slider
     [].forEach.call(slides, function () {
         let newLi = document.createElement('li');
         sliderNav.appendChild(newLi);
@@ -30,6 +36,7 @@ if (windowWidth < 600) {
 
     slides[0].classList.add('active');
 
+    // We add the events to every slides
     [].forEach.call(slides, function (slide) {
         slide.addEventListener('click', event => {
             let activeSlide = document.querySelector('.slide.active');
@@ -47,7 +54,8 @@ if (windowWidth < 600) {
     });
 }
 
-// closest polyfill -- ref: https://developer.mozilla.org/fr/docs/Web/API/Element/closest
+
+// Closest polyfill -- ref: https://developer.mozilla.org/fr/docs/Web/API/Element/closest
 if (window.Element && !Element.prototype.closest) {
     Element.prototype.closest =
         function (s) {

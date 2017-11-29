@@ -1,6 +1,8 @@
-// Quote are visible when you scroll down
-// Determine if an element is in the visible viewport
+/////////////////////
+// The functions to animate the header and sections
+/////////////////////
 
+// Define all globals variables
 let lastScrollPos = window.pageYOffset || document.documentElement.scrollTop;
 
 let scrollOffset = 100;
@@ -12,6 +14,8 @@ let sections = document.getElementsByTagName('section');
     sectionsData[section.className] = section.offsetTop;
 });
 
+
+// Add the scroll event listener
 window.addEventListener('scroll', () => {
     checkHeader();
 
@@ -21,11 +25,13 @@ window.addEventListener('scroll', () => {
 });
 
 
+// Function that check if a section is in viewport
 checkSections();
 function checkSections() {
     let scrollPos = window.pageYOffset || document.documentElement.scrollTop;
     let scrollClientPos = scrollPos + window.innerHeight - scrollOffset;
 
+    // Read the sections object to see if the section is in viewport
     Object.keys(sectionsData).map(key => {
         if (scrollClientPos > sectionsData[key]) {
             let sectionTriggered = document.getElementsByClassName(key)[0];
@@ -34,6 +40,7 @@ function checkSections() {
             delete sectionsData[key];
         }
 
+        // If the sections object is empty, every section have been animated
         if (Object.keys(sectionsData).length === 0) {
             isEverythingActive = true;
         }
@@ -41,6 +48,7 @@ function checkSections() {
 }
 
 
+// Function to anime the flowers of the header
 function checkHeader() {
     let scrollPos = window.pageYOffset;
 
