@@ -6,5 +6,5 @@
 	"composition": "Romarin, Sauge, Thym, Menthe, Anis, Réglisse, Basilic, Cannelle, Pétales de Roses et Arôme naturel de Bergamote",
 	"image": "img/digestif-small.png",
 	"imageset": "img/digestif-small.png 300w, img/digestif-medium.png 600w, img/digestif-large.png 900w",
-	"sizes": "300px, (min-width:700px) 350px, (min-width:1000px) 500px"
+	"sizes": "400px, (min-width:700px) 600px, (min-width:1000px) 900px"
 }
