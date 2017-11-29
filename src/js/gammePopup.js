@@ -1,141 +1,138 @@
 // echap
 
+let isModalOpen = false;
+let currentProduct = false;
+let jsonPath = '/js/json/popup-';
+let windowWidth = window.innerWidth;
 
-
-
-
-// Get the modal
 let modal = document.getElementById('popup');
-
-// Get the <span> element that closes the modal
-let span = document.getElementsByClassName('popup__close')[0];
-
-// Get the button that opens the modal
+let modalClose = document.getElementsByClassName('popup__close')[0];
+let modalPrev = document.getElementsByClassName('popup__prev')[0];
+let modalNext = document.getElementsByClassName('popup__next')[0];
 let products = document.getElementsByClassName('gamme__presentation');
+let productsLength = products.length;
 
-let buttonUp = document.getElementsByClassName('popup__button--first');
-let buttonDown = document.getElementsByClassName('popup__button--second');
 
-function writeContent(file) {
-    fetch(file)
-        .then(response => response.json())
-        .then((data) => {
-            document.querySelector('.popup__bigTitle p').innerHTML = data.name;
-            document.querySelector('.popup__definition').innerHTML = data.def;
-            document.querySelector('.--def').innerHTML = data.defContent;
-            document.querySelector('.--compo').innerHTML = data.composition;
-            document.querySelector('.popup__number p').innerHTML = data.number;
-            document.querySelector('.popup__image img').src = data.image;
-            document.querySelector('.popup__image img').srcset = data.imageset;
-            document.querySelector('.popup__image img').alt = data.name;
-            document.querySelector('.popup__image img').sizes = data.sizes;
-        });
-}
-
-let i = 0,
-    y = 0,
-    z = 0,
-    key = 0;
-
-while (i < products.length) {
-    let product = products[i];
-
+[].forEach.call(products, function (product) {
     product.addEventListener('click', event => {
         event.preventDefault();
 
-        let productName = product.getAttribute('data-produit');
-        key = product.getAttribute('data-key');
-        let file = 'js/json/popup-' + productName + '.json';
-
-        //Let's show the modal with the right content
-        modal.style.display = 'block';
-        writeContent(file);
-
-        // In the modal, when you click on the arrow down
-        while (y < buttonDown.length) {
-            let button = buttonDown[y];
-
-            //EVENT
-            button.addEventListener('click', event => {
-                event.preventDefault();
-
-                if (key < 1) {
-                    key = 5;
-                } else {
-                    key--;
-                }
-
-                let product = products[key];
-                let productName = product.getAttribute('data-produit');
-                let file = 'js/json/popup-' + productName + '.json';
-                writeContent(file);
-            });
-
-            // Increment Y for the buttonUp event
-            y++;
-        }
-
-        // In the modal, when you click on the arrow up
-        while (z < buttonUp.length) {
-            let button = buttonUp[z];
-
-            //EVENT
-            button.addEventListener('click', (event) => {
-
-                event.preventDefault();
-
-                if (key > 4) {
-                    key = 0;
-                } else {
-                    key++;
-                }
-
-                let product = products[key];
-                let productName = product.getAttribute('data-produit');
-                let file = 'js/json/popup-' + productName + '.json';
-
-                //Let's show the modal with the right content
-                writeContent(file);
-
-            });
-
-            // Increment z for the buttonUp event
-            z++;
-        }
+        changeModal(product);
     });
-    i++;
+});
 
-}
 
-span.onclick = () => {
-    modal.style.display = 'none';
-};
+modalPrev.addEventListener('click', event => {
+    event.preventDefault();
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = (event) => {
-    if (event.target == modal) {
-        modal.style.display = 'none';
+    chooseProduct('prev');
+});
+
+modalNext.addEventListener('click', event => {
+    event.preventDefault();
+
+    chooseProduct('next');
+});
+
+
+
+modalClose.addEventListener('click', () => {
+    closeModal();
+});
+
+document.addEventListener('keyup', event => {
+    let e = event;
+    let keyCode = e.keyCode;
+
+    if (keyCode == 27) {
+        closeModal();
+    } else if (keyCode == 39 || keyCode == 40) {
+        chooseProduct('next');
+    } else if (keyCode == 37 || keyCode == 38) {
+        chooseProduct('prev');
     }
-};
+});
 
-// Lets activate the touch or swipe on mobile to change the content of the modal.
-
-if (window.matchMedia('(max-width: 600px)').matches) {
-
-    /* When on mobile device listen to events and change the content just like the arrow */
-    modal.addEventListener('click', (event) => {
+if (windowWidth < 600) {
+    modal.addEventListener('click', event => {
         event.preventDefault();
 
-        if (key > 4) {
-            key = 0;
-        } else {
-            key++;
-        }
-
-        let product = products[key];
-        let productName = product.getAttribute('data-produit');
-        let file = 'js/json/popup-' + productName + '.json';
-        writeContent(file);
-
+        chooseProduct('next');
     });
+}
+
+
+
+function chooseProduct(direction) {
+    let productTriggeredDOM;
+
+    if (direction == 'next') {
+        let productTriggered = currentProduct + 1;
+        if (productTriggered < productsLength) {
+            productTriggeredDOM = products[productTriggered];
+        } else {
+            productTriggeredDOM = products[0];
+        }
+    } else {
+        let productTriggered = currentProduct - 1;
+        if (productTriggered > -1) {
+            productTriggeredDOM = products[productTriggered];
+        } else {
+            productTriggeredDOM = products[productsLength - 1];
+        }
+    }
+
+    changeModal(productTriggeredDOM);
+}
+
+
+
+function changeModal(product) {
+    let productName = product.dataset.produit;
+    let productJson = jsonPath + productName + '.json';
+
+    // indexOf currentProduct
+    currentProduct = 0;
+    while ((product = product.previousElementSibling)) {
+        currentProduct++;
+    }
+
+    fetch(productJson)
+        .then(response => {
+            return response.json();
+        }).then(data => {
+        document.querySelector('.popup__bigTitle p').innerHTML = data.name;
+        document.querySelector('.popup__definition').innerHTML = data.def;
+        document.querySelector('.--def').innerHTML = data.defContent;
+        document.querySelector('.--compo').innerHTML = data.composition;
+        document.querySelector('.popup__number p').innerHTML = data.number;
+        document.querySelector('.popup__image img').src = data.image;
+
+        openModal();
+    }).catch(() => {
+        closeModal();
+        alert('Impossible de charger le produit, veuillez réesayer plus tard.');
+    })
+}
+
+
+function openModal() {
+    if (!isModalOpen) {
+        modal.style.display = 'block';
+        isModalOpen = true;
+
+        let scrollY = window.scrollY;
+        window.onscroll = () => {
+            window.scrollTo(0, scrollY);
+        };
+    }
+}
+
+function closeModal() {
+    if (isModalOpen) {
+        modal.style.display = 'none';
+        isModalOpen = false;
+
+        window.onscroll = () => { };
+    }
 }

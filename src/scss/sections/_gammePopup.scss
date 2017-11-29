@@ -216,60 +216,57 @@
         }
     }
 
+
     &__button {
         display: none;
+    }
 
-        @include medium {
-            z-index: 3;
+    @include medium {
+        &__button {
             display: block;
+            position: absolute;
+            top: 50%;
+            left: calc(55.1% - 25px);
+            display: flex;
+            flex-direction: column;
+            z-index: 3;
+        }
 
-            &--first a {
-                font-size: 1.5rem;
-                margin-top: 2%;
-                color: white;
-                background-color: $blue;
-                text-decoration: none;
-                border-radius: 0;
-                border: none;
-                z-index: 3;
-                transform: rotate(90deg);
-                text-align: center;
-                vertical-align: middle;
-                height: 30px;
-                width: 30px;
-                position: absolute;
-                top: 35%;
-                left: 55%;
-                cursor: pointer;
+        &__prev, &__next {
+            font-size: 2.4rem;
+            color: white;
+            background-color: $blue;
+            text-decoration: none;
+            z-index: 3;
+            transform: rotate(90deg);
+            text-align: center;
+            font-family: $typoSansSerif;
+            cursor: pointer;
+            padding: 0px 16px 7px;
+            transition: .3s;
 
-                &:hover {
-                    opacity: 0.5;
-                }
-
+            &:hover {
+                background: rgba($blue, .65);
+                transform: rotate(90deg) translate(-6px, 0);
             }
+        }
 
-            &--second  a {
-                font-size: 1.5rem;
-                margin-top: 2%;
-                color: white;
-                background-color: $blue;
-                text-decoration: none;
-                border-radius: 0;
-                border: none;
-                z-index: 3;
-                transform: rotate(90deg);
-                text-align: center;
-                vertical-align: middle;
-                height: 30px;
-                width: 30px;
-                position: absolute;
-                top: 40%;
-                left: 55%;
-                cursor: pointer;
+        &__next {
+            font-size: 2.4rem;
+            color: white;
+            background-color: $blue;
+            text-decoration: none;
+            z-index: 3;
+            transform: rotate(90deg);
+            text-align: center;
+            font-family: $typoSansSerif;
+            cursor: pointer;
+            padding: 0px 16px 7px;
+            transition: .3s;
 
-                &:hover {
-                    opacity: 0.5;
-                }
+            &:hover {
+                background: rgba($blue, .65);
+                transform: rotate(90deg) translate(6px, 0);
             }
         }
     }
@@ -280,7 +277,9 @@
         right: 10%;
         top: 5%;
         font-size: 40px;
+        font-weight: 600;
         cursor: pointer;
+        transition: .2s;
 
         @include large {
             right: 8%;
@@ -289,7 +288,7 @@
         }
 
         &:hover {
-            opacity: 0.5;
+            opacity: 0.7;
         }
     }
 }
