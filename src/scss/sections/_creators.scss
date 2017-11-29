@@ -3,16 +3,17 @@
 }
 
 .creators {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-top: 5%;
 
-    @include container;
+    &__container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        @include container;
 
-    @include large {
-        flex-direction: row;
-        align-items: center;
+        @include large {
+            flex-direction: row;
+            align-items: center;
+        }
     }
 
     &__imagesBloc {
@@ -37,12 +38,12 @@
         @include large {
             flex-direction: row;
             width: 80%;
-            margin: 10% 0 0;
+            margin: 10% 0 0 48px;
             padding: 0;
         }
     }
 
-    &__container {
+    &__infos {
         margin-top: 0px;
 
         @include large {

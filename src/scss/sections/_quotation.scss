@@ -3,6 +3,7 @@
     overflow: hidden;
 
     &__container {
+        position: relative;
         text-align: center;
         @include container;
     }
