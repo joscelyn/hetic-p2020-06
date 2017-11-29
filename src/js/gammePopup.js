@@ -1,5 +1,3 @@
-// echap
-
 let isModalOpen = false;
 let currentProduct = false;
 let jsonPath = '/js/json/popup-';
@@ -55,9 +53,9 @@ document.addEventListener('keyup', event => {
 });
 
 if (windowWidth < 600) {
-    modal.addEventListener('click', event => {
+    modal.addEventListener('click', () => {
         chooseProduct('next');
-    }, true);
+    });
 }
 
 
@@ -100,18 +98,20 @@ function changeModal(product) {
         .then(response => {
             return response.json();
         }).then(data => {
-        document.querySelector('.popup__bigTitle p').innerHTML = data.name;
-        document.querySelector('.popup__definition').innerHTML = data.def;
-        document.querySelector('.--def').innerHTML = data.defContent;
-        document.querySelector('.--compo').innerHTML = data.composition;
-        document.querySelector('.popup__number p').innerHTML = data.number;
-        document.querySelector('.popup__image img').src = data.image;
+            document.querySelector('.popup__bigTitle p').innerHTML = data.name;
+            document.querySelector('.popup__definition').innerHTML = data.def;
+            document.querySelector('.--def').innerHTML = data.defContent;
+            document.querySelector('.--compo').innerHTML = data.composition;
+            document.querySelector('.popup__number p').innerHTML = data.number;
+            document.querySelector('.popup__image img').src = data.image;
+            document.querySelector('.popup__image img').srcset = data.imageset;
+            document.querySelector('.popup__image img').sizes = data.sizes;
 
-        openModal();
-    }).catch(() => {
-        closeModal();
-        alert('Impossible de charger le produit, veuillez réesayer plus tard.');
-    })
+            openModal();
+        }).catch(() => {
+            closeModal();
+            alert('Impossible de charger le produit, veuillez réesayer plus tard.');
+        });
 }
 
 

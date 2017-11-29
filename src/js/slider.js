@@ -24,7 +24,7 @@ if (windowWidth < 600) {
 } else {
     let sliderTitle = document.createElement('h2');
     sliderTitle.className = "slider__title";
-    var sliderText = document.createTextNode("Fruité");
+    let sliderText = document.createTextNode("Fruité");
     sliderTitle.appendChild(sliderText);
     sliderContainer.appendChild(sliderTitle);
 
@@ -51,7 +51,7 @@ if (windowWidth < 600) {
 if (window.Element && !Element.prototype.closest) {
     Element.prototype.closest =
         function (s) {
-            var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+            let matches = (this.document || this.ownerDocument).querySelectorAll(s),
                 i,
                 el = this;
             do {

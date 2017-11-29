@@ -1,7 +1,6 @@
-import './header';
-import './product';
-import './quotation';
+import './scrollAnimation';
 import './slider';
+import './creators';
 import './gammePopup';
 
 let rellax = new Rellax('.rellax');
