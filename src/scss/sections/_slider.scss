@@ -183,6 +183,58 @@
     }
 }
 
+.slider__petals {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    div {
+        position: absolute;
+        height: 500px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        animation: float ease-in-out infinite;
+    }
+
+    .petal-1 {
+        top: 75%;
+        left: 0%;
+        width: 15%;
+    }
+
+    .petal-2 {
+        top: 40%;
+        left: 5%;
+        width: 6%;
+    }
+
+    .petal-3 {
+        top: 15%;
+        left: 60%;
+        width: 13%;
+    }
+
+    .petal-4 {
+        top: 20%;
+        left: 75%;
+        width: 18%;
+    }
+
+    .petal-5 {
+        top: 80%;
+        left: 55%;
+        width: 15%;
+    }
+
+    .petal-6 {
+        display: none;
+    }
+}
+
+
 @include medium {
     .slider__petals {
         position: absolute;
@@ -200,33 +252,40 @@
         }
 
         .petal-1 {
-            top: 81%;
-            left: 87%;
-            width: 3.2%;
+            top: 75%;
+            left: 0%;
+            width: 10%;
         }
 
         .petal-2 {
-            top: 12%;
-            left: 35%;
+            top: 40%;
+            left: 5%;
             width: 4.6%;
         }
 
         .petal-3 {
-            top: 72%;
-            left: 51%;
-            width: 5.3%;
+            top: 15%;
+            left: 60%;
+            width: 3%;
         }
 
         .petal-4 {
-            top: 78%;
-            left: 11%;
-            width: 6.8%;
+            top: 20%;
+            left: 95%;
+            width: 8%;
         }
 
         .petal-5 {
-            top: 37%;
-            left: 75%;
-            width: 7%;
+            top: 80%;
+            left: 55%;
+            width: 5%;
+        }
+
+        .petal-6 {
+            top: 50%;
+            left: 45%;
+            width: 10%;
+            opacity: 1;
         }
     }
 }
@@ -234,10 +293,11 @@
 $slideList: apaisant anti-oxydant fruite;
 
 @each $slide in $slideList {
-    @for $i from 1 to 6 {
+    @for $i from 1 to 7 {
         .slider__petals.#{$slide} .petal-#{$i} {
             animation-duration: ($i + 6) + s;
-            background-image: url("../img/petals/#{$slide}-#{$i}.svg");
+            background-image: url("../img/fruits/#{$slide}-#{$i}.svg");
+
         }
     }
 }
@@ -249,7 +309,7 @@ $slideList: apaisant anti-oxydant fruite;
         transform: translatey(0px);
     }
     50% {
-        transform: translatey(-30px);
+        transform: translatey(-50px);
     }
     100% {
         transform: translatey(0px);
