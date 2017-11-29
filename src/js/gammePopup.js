@@ -36,7 +36,8 @@ modalNext.addEventListener('click', event => {
 
 
 
-modalClose.addEventListener('click', () => {
+modalClose.addEventListener('click', event => {
+    event.stopPropagation();
     closeModal();
 });
 
@@ -55,10 +56,8 @@ document.addEventListener('keyup', event => {
 
 if (windowWidth < 600) {
     modal.addEventListener('click', event => {
-        event.preventDefault();
-
         chooseProduct('next');
-    });
+    }, true);
 }
 
 
@@ -118,7 +117,7 @@ function changeModal(product) {
 
 function openModal() {
     if (!isModalOpen) {
-        modal.style.display = 'block';
+        modal.classList.add('active');
         isModalOpen = true;
 
         let scrollY = window.scrollY;
@@ -130,7 +129,7 @@ function openModal() {
 
 function closeModal() {
     if (isModalOpen) {
-        modal.style.display = 'none';
+        modal.classList.remove('active');
         isModalOpen = false;
 
         window.onscroll = () => { };
