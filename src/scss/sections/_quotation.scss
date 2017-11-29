@@ -1,0 +1,114 @@
+.quotation {
+    padding: ($sectionPadding * 3) 0;
+    overflow: hidden;
+
+    &__container {
+        text-align: center;
+        @include container;
+    }
+
+
+    &__surtitle {
+        @include surtitle;
+    }
+
+    &__text {
+        position: relative;
+        display: inline-block;
+        margin-top: 20px;
+        font-size: 2rem;
+        color: #0E215D;
+        font-weight: normal;
+
+        @include medium {
+            font-size: 3.7rem;
+        }
+
+        @include large {
+            font-size: 4rem;
+        }
+
+        &:before, &:after {
+            content: "“";
+            position: absolute;
+            top: 80px;
+            left: -40px;
+            line-height: 0;
+            font-size: 22rem;
+            opacity: 0.1;
+            z-index: -2;
+
+            @include medium {
+                font-size: 38rem;
+                top: 100px;
+                left: -90px;
+            }
+
+            @include large {
+                top: 50px;
+                left: -200px;
+            }
+        }
+
+        &:after {
+            content: "”";
+            top: auto;
+            left: auto;
+            bottom: -90px;
+            right: -60px;
+
+            @include medium {
+                bottom: -150px;
+                right: -80px;
+            }
+
+            @include large {
+                bottom: -150px;
+                right: -270px;
+            }
+        }
+    }
+}
+
+.quotation__text.active {
+    &:before, &:after {
+        animation-name: opacity, mouvement;
+        animation-duration: 3s, 10s;
+        animation-iteration-count: 1, infinite;
+        animation-direction: normal, alternate;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear, linear;
+    }
+
+    &:after {
+        animation-delay: 0s, 2s;
+    }
+}
+
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+@keyframes mouvement {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(0deg) translateY(3px) translateX(4px);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg) translateY(-3px) translateX(-4px);
+    }
+}

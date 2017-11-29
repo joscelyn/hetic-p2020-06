@@ -9,3 +9,5 @@ function isInViewport(element) {
         rect.right <= (window.innerWidth || html.clientWidth)
     );
 }
+
+export {isInViewport};

@@ -1,0 +1,137 @@
+// echap
+
+let isModalOpen = false;
+let currentProduct = false;
+let jsonPath = '/js/json/popup-';
+let windowWidth = window.innerWidth;
+
+let modal = document.getElementById('popup');
+let modalClose = document.getElementsByClassName('popup__close')[0];
+let modalPrev = document.getElementsByClassName('popup__prev')[0];
+let modalNext = document.getElementsByClassName('popup__next')[0];
+let products = document.getElementsByClassName('gamme__presentation');
+let productsLength = products.length;
+
+
+[].forEach.call(products, function (product) {
+    product.addEventListener('click', event => {
+        event.preventDefault();
+
+        changeModal(product);
+    });
+});
+
+
+modalPrev.addEventListener('click', event => {
+    event.preventDefault();
+
+    chooseProduct('prev');
+});
+
+modalNext.addEventListener('click', event => {
+    event.preventDefault();
+
+    chooseProduct('next');
+});
+
+
+
+modalClose.addEventListener('click', event => {
+    event.stopPropagation();
+    closeModal();
+});
+
+document.addEventListener('keyup', event => {
+    let e = event;
+    let keyCode = e.keyCode;
+
+    if (keyCode == 27) {
+        closeModal();
+    } else if (keyCode == 39 || keyCode == 40) {
+        chooseProduct('next');
+    } else if (keyCode == 37 || keyCode == 38) {
+        chooseProduct('prev');
+    }
+});
+
+if (windowWidth < 600) {
+    modal.addEventListener('click', event => {
+        chooseProduct('next');
+    }, true);
+}
+
+
+
+function chooseProduct(direction) {
+    let productTriggeredDOM;
+
+    if (direction == 'next') {
+        let productTriggered = currentProduct + 1;
+        if (productTriggered < productsLength) {
+            productTriggeredDOM = products[productTriggered];
+        } else {
+            productTriggeredDOM = products[0];
+        }
+    } else {
+        let productTriggered = currentProduct - 1;
+        if (productTriggered > -1) {
+            productTriggeredDOM = products[productTriggered];
+        } else {
+            productTriggeredDOM = products[productsLength - 1];
+        }
+    }
+
+    changeModal(productTriggeredDOM);
+}
+
+
+
+function changeModal(product) {
+    let productName = product.dataset.produit;
+    let productJson = jsonPath + productName + '.json';
+
+    // indexOf currentProduct
+    currentProduct = 0;
+    while ((product = product.previousElementSibling)) {
+        currentProduct++;
+    }
+
+    fetch(productJson)
+        .then(response => {
+            return response.json();
+        }).then(data => {
+        document.querySelector('.popup__bigTitle p').innerHTML = data.name;
+        document.querySelector('.popup__definition').innerHTML = data.def;
+        document.querySelector('.--def').innerHTML = data.defContent;
+        document.querySelector('.--compo').innerHTML = data.composition;
+        document.querySelector('.popup__number p').innerHTML = data.number;
+        document.querySelector('.popup__image img').src = data.image;
+
+        openModal();
+    }).catch(() => {
+        closeModal();
+        alert('Impossible de charger le produit, veuillez réesayer plus tard.');
+    })
+}
+
+
+function openModal() {
+    if (!isModalOpen) {
+        modal.classList.add('active');
+        isModalOpen = true;
+
+        let scrollY = window.scrollY;
+        window.onscroll = () => {
+            window.scrollTo(0, scrollY);
+        };
+    }
+}
+
+function closeModal() {
+    if (isModalOpen) {
+        modal.classList.remove('active');
+        isModalOpen = false;
+
+        window.onscroll = () => { };
+    }
+}

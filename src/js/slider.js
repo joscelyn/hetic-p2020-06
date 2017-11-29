@@ -1,9 +1,10 @@
 let windowWidth = window.innerWidth;
-let slides = document.getElementsByClassName('slide')
-let petals = document.getElementsByClassName('slider__petals')[0]
+let slides = document.getElementsByClassName('slide');
+let petals = document.getElementsByClassName('slider__petals')[0];
+let sliderContainer = document.getElementsByClassName('slider__container')[0];
 
 if (windowWidth < 600) {
-    let sliderContainer = document.getElementsByClassName('slider__container')[0];
+
     let sliderNav = document.createElement('div');
     sliderNav.className = "slider__nav";
     sliderContainer.appendChild(sliderNav);
@@ -21,6 +22,12 @@ if (windowWidth < 600) {
         navContainer: '.slider__nav'
     });
 } else {
+    let sliderTitle = document.createElement('h2');
+    sliderTitle.className = "slider__title";
+    var sliderText = document.createTextNode("Fruité");
+    sliderTitle.appendChild(sliderText);
+    sliderContainer.appendChild(sliderTitle);
+
     slides[0].classList.add('active');
 
     [].forEach.call(slides, function (slide) {
@@ -34,21 +41,24 @@ if (windowWidth < 600) {
             if (eventSlide) {
                 eventSlide.classList.add('active')
                 petals.className = 'slider__petals ' + eventSlide.dataset.name;
+                sliderTitle.innerHTML = eventSlide.dataset.title;
             }
         });
     });
 }
 
-// closest polyfill
+// closest polyfill -- ref: https://developer.mozilla.org/fr/docs/Web/API/Element/closest
 if (window.Element && !Element.prototype.closest) {
     Element.prototype.closest =
-        function(s) {
+        function (s) {
             var matches = (this.document || this.ownerDocument).querySelectorAll(s),
                 i,
                 el = this;
             do {
                 i = matches.length;
-                while (--i >= 0 && matches.item(i) !== el) {};
+                while (--i >= 0 && matches.item(i) !== el) {
+                }
+                ;
             } while ((i < 0) && (el = el.parentElement));
             return el;
         };

@@ -1,0 +1,102 @@
+.creators {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+
+    @include container;
+
+    @include large {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__imagesBloc {
+        background: url("../img/creatrices-transparency.jpg") no-repeat padding-box top right;
+        background-size: contain;
+
+        @include large {
+            width: 60%;
+            background-size: 80%;
+            z-index: -1;
+            order: 2;
+        }
+    }
+
+    &__image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        width: 90%;
+        z-index: 1;
+
+        @include large {
+            flex-direction: row;
+            width: 80%;
+            margin: 10% 0 0;
+            padding: 0;
+        }
+    }
+
+    &__container {
+        margin-top: 20px;
+
+        @include large {
+            order: 1;
+            width: 40%;
+            margin-top: 2%;
+        }
+    }
+
+    &__surtitle {
+        text-align: center;
+        padding: 0;
+        margin-top: 5%;
+        margin-bottom: 5%;
+
+        @include surtitle;
+
+        @include large {
+            text-align: left;
+
+            &:after {
+                left: 0;
+            }
+        }
+    }
+
+    &__title {
+        color: $blue;
+        text-align: center;
+        width: 100%;
+        @include title;
+        margin: 2vh 0;
+
+        @include large {
+            flex-direction: row;
+            text-align: left;
+        }
+    }
+
+    &__text {
+        font-size: 1rem;
+        font-family: $typoSansSerif;
+        font-weight: lighter;
+        color: $blue;
+        letter-spacing: 0;
+        line-height: 28px;
+        text-align: center;
+        margin-top: 5%;
+        margin-right: auto;
+        margin-left: auto;
+        width: 80%;
+
+        @include large {
+            font-size: 1rem;
+            text-align: left;
+            width: 95%;
+            margin: 0;
+        }
+    }
+}

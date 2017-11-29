@@ -1,0 +1,17 @@
+.footer {
+    width: 100%;
+    height: 30vh;
+    background-color: $blue;
+
+    p {
+        margin: auto;
+        width: 60%;
+        color: white;
+        font-weight: light;
+        font-family: $typoSansSerif;
+        font-size: 0.8rem;
+        text-align: center;
+        padding-top: 22vh;
+    }
+
+}
