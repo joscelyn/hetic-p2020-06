@@ -1,5 +1,5 @@
-// echap
 
+//Define all globals variables
 let isModalOpen = false;
 let currentProduct = false;
 let jsonPath = '/js/json/popup-';
@@ -12,7 +12,7 @@ let modalNext = document.getElementsByClassName('popup__next')[0];
 let products = document.getElementsByClassName('gamme__presentation');
 let productsLength = products.length;
 
-
+//Open the modal when you click on a product
 [].forEach.call(products, function (product) {
     product.addEventListener('click', event => {
         event.preventDefault();
@@ -21,13 +21,14 @@ let productsLength = products.length;
     });
 });
 
-
+//Change the content of the modal when you click on previous
 modalPrev.addEventListener('click', event => {
     event.preventDefault();
 
     chooseProduct('prev');
 });
 
+//Change the content of the modal when you click on next
 modalNext.addEventListener('click', event => {
     event.preventDefault();
 
@@ -35,12 +36,13 @@ modalNext.addEventListener('click', event => {
 });
 
 
-
+//close the modal when you click on spawn
 modalClose.addEventListener('click', event => {
     event.stopPropagation();
     closeModal();
 });
 
+//Change the content of the modal when you press keyup
 document.addEventListener('keyup', event => {
     let e = event;
     let keyCode = e.keyCode;
@@ -55,16 +57,15 @@ document.addEventListener('keyup', event => {
 });
 
 if (windowWidth < 600) {
-    modal.addEventListener('click', event => {
+    modal.addEventListener('click', () => {
         chooseProduct('next');
-    }, true);
+    });
 }
 
-
-
+//Define the product that you have ton show when you want to see previous or next product
 function chooseProduct(direction) {
     let productTriggeredDOM;
-
+//when the event act to show the a next product
     if (direction == 'next') {
         let productTriggered = currentProduct + 1;
         if (productTriggered < productsLength) {
@@ -85,7 +86,7 @@ function chooseProduct(direction) {
 }
 
 
-
+//function to change the content of the modal. Content is define by the .json you call.
 function changeModal(product) {
     let productName = product.dataset.produit;
     let productJson = jsonPath + productName + '.json';
@@ -100,21 +101,23 @@ function changeModal(product) {
         .then(response => {
             return response.json();
         }).then(data => {
-        document.querySelector('.popup__bigTitle p').innerHTML = data.name;
-        document.querySelector('.popup__definition').innerHTML = data.def;
-        document.querySelector('.--def').innerHTML = data.defContent;
-        document.querySelector('.--compo').innerHTML = data.composition;
-        document.querySelector('.popup__number p').innerHTML = data.number;
-        document.querySelector('.popup__image img').src = data.image;
+            document.querySelector('.popup__bigTitle p').innerHTML = data.name;
+            document.querySelector('.popup__definition').innerHTML = data.def;
+            document.querySelector('.--def').innerHTML = data.defContent;
+            document.querySelector('.--compo').innerHTML = data.composition;
+            document.querySelector('.popup__number p').innerHTML = data.number;
+            document.querySelector('.popup__image img').src = data.image;
+            document.querySelector('.popup__image img').srcset = data.imageset;
+            document.querySelector('.popup__image img').sizes = data.sizes;
 
-        openModal();
-    }).catch(() => {
-        closeModal();
-        alert('Impossible de charger le produit, veuillez réesayer plus tard.');
-    })
+            openModal();
+        }).catch(() => {
+            closeModal();
+            alert('Impossible de charger le produit, veuillez réesayer plus tard.');
+        });
 }
 
-
+// Add a "active" class you let the popup becoming visible
 function openModal() {
     if (!isModalOpen) {
         modal.classList.add('active');
@@ -127,6 +130,7 @@ function openModal() {
     }
 }
 
+//remove active class to let the popup becoming invisible
 function closeModal() {
     if (isModalOpen) {
         modal.classList.remove('active');

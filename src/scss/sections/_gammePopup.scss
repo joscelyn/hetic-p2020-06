@@ -6,6 +6,7 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba(255, 255, 255, 0.98);
+    box-sizing: border-box;
     padding: 3%;
     margin: auto;
     overflow: hidden;
@@ -107,6 +108,7 @@
     &__text {
         margin-top: 2vh;
         padding: 5px;
+
     }
 
     &__bigTitle {
@@ -132,10 +134,9 @@
     }
 
     &__surtitle {
+        @include surtitle;
         width: 100%;
         margin: 0;
-
-        @include surtitle;
 
         &:after {
             margin-top: 5%;
@@ -157,11 +158,11 @@
     }
 
     h4 {
+        @include title;
         text-align: left;
         font-size: 1.4rem;
         width: 98%;
         margin-top: 2vh;
-        @include title;
 
         @include medium {
             font-size: 1.6rem;
@@ -228,7 +229,7 @@
         &__button {
             display: block;
             position: absolute;
-            top: 50%;
+            top: calc(50% - 50px);
             left: calc(55.1% - 25px);
             display: flex;
             flex-direction: column;
@@ -295,4 +296,3 @@
         }
     }
 }
-
