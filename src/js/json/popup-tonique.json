@@ -6,5 +6,5 @@
 	"composition": "Ecorces d’orange, Menthe douce, Ecorces de citron, Gingembre, Ginseng, Maté vert, Cannelle, Clous de girofle",
 	"image": "img/tonique-small.png",
 	"imageset": "img/tonique-small.png 300w, img/tonique-medium.png 600w, img/tonique-large.png 900w",
-	"sizes": "300px, (min-width:700px) 350px, (min-width:1000px) 500px"
+	"sizes": "400px, (min-width:700px) 600px, (min-width:1000px) 900px"
 }
