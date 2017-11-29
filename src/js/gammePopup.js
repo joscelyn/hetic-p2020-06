@@ -1,5 +1,8 @@
+/////////////////////
+// All the functions to control the modal of Gamme section
+/////////////////////
 
-//Define all globals variables
+// Define all globals variables
 let isModalOpen = false;
 let currentProduct = false;
 let jsonPath = '/js/json/popup-';
